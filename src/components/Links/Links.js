@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import Icon from '../Icon/Icon';
 
-const Links = ({links, color='black', className}) => {
+const Links = ({links, color='white', className}) => {
   return (
     <LinksContainer className={className}>
       {links.map(({icon, link, title}, i) => (

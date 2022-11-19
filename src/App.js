@@ -22,23 +22,19 @@ function App() {
         // image={sceneryImage}
         >
       
-        <ReactRoundedImage
-          image={profilepic}
-          roundedColor="#321124"
-          roundedSize="13"
-          hoverColor="#DD1144"
-          imageWidth={window.innerWidth/6}
-          imageHeight={window.innerWidth/6}
+        <ProfilePicComponent 
+         src ={profilepic}
+      
         />
        
 
         <Title>{title}</Title>
-        <StyledLinks links={links} color='black' />
+        <StyledLinks links={links} color='white' />
        
-        <ProjectsGrid projects={projects} />
+        
       </BackgroundSection>
 
-
+      <ProjectsGrid projects={projects} />
       <ReactTooltip />
     </PageContainer>
   );
@@ -48,7 +44,7 @@ const PageContainer = styled.div`margin:auto; width:100%;`;
 
 const BackgroundSection = styled(motion.div)`
   // background: linear-gradient( rgba(0,0,0,0),rgba(1,1,1,1)), url(${props => props.image});
-  background-color:black
+  background-color:black;
   // background-size: cover;
   // background-repeat: no-repeat;
   display: flex;
@@ -59,27 +55,33 @@ const BackgroundSection = styled(motion.div)`
   width:fit-content;
  
 `;
+const ProfilePicComponent =styled(motion.img)`
 
+max-width: 50%;
+height: auto;
+border-radius: 50%;
+align-self: center;
+`
+;
 const Title = styled(motion.h1)`
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
-  font-size: 64px;
+  font-size: 3em;
   line-height: 77px;
-
   color: #fff;
-  padding-left: 48px;
-  padding-bottom: 48px;
-
-  position: absolute;
+  text-align: center;
+  position: relative;
   bottom: 0;
   left: 0;
+  align-self: center;
 `;
 
 const StyledLinks = styled(Links)`
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
+  align-self: center;
 `;
 
 export default App;

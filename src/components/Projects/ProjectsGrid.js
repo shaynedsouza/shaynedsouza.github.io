@@ -8,12 +8,12 @@ const ProjectsGrid = ({projects}) => {
   const grid = {
     hidden: {
       opacity: 0,
-      y: 500,
+     
       borderWidth: 0
     },
     initial: {
       opacity: 1,
-      y: 0,
+    
     },
     hover: {
       borderWidth: 4
