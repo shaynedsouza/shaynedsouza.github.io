@@ -34,7 +34,7 @@ const BLOGS=
 
 const portfolioData = {
   title: 'Gourav Acharya',
-  image: 'https://wallpaperaccess.com/full/893245.jpg',
+  image: '',
   subtitle: 'I tell stories. Currently through games.',
   links: [
     {

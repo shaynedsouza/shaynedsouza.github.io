@@ -5,8 +5,8 @@ import portfolioData from './portfolioData';
 import ReactTooltip from 'react-tooltip';
 import "aos/dist/aos.css";
 import { motion } from 'framer-motion';
-
-
+import ReactRoundedImage from 'react-rounded-image';
+import profilepic from './profile.jpg'
 function App() {
 
 
@@ -14,31 +14,50 @@ function App() {
   const {title, subtitle, links, projects, image} = portfolioData;
 
   return (
-    <PageContainer>
+    <PageContainer >
       <BackgroundSection 
-        initial={{opacity: 0, y: 500}}
-        animate={{opacity: 1, y: 0}}
-        transition={{duration: .5}}
-        image={image}>
+        // initial={{opacity: 0, y: 500}}
+        // animate={{opacity: 1, y: 0}}
+        // transition={{duration: .5}}
+        // image={sceneryImage}
+        >
+      
+        <ReactRoundedImage
+          image={profilepic}
+          roundedColor="#321124"
+          roundedSize="13"
+          hoverColor="#DD1144"
+          imageWidth={window.innerWidth/6}
+          imageHeight={window.innerWidth/6}
+        />
+       
+
         <Title>{title}</Title>
         <StyledLinks links={links} color='black' />
+       
+        <ProjectsGrid projects={projects} />
       </BackgroundSection>
 
-      <ProjectsGrid projects={projects} />
+
       <ReactTooltip />
     </PageContainer>
   );
 }
 
-const PageContainer = styled.div``;
+const PageContainer = styled.div`margin:auto; width:100%;`;
 
 const BackgroundSection = styled(motion.div)`
-  width: 100%;
-  height: 90vh;
-  background: url(${props => props.image});
-  background-size: cover;
-  background-repeat: no-repeat;
+  // background: linear-gradient( rgba(0,0,0,0),rgba(1,1,1,1)), url(${props => props.image});
+  background-color:black
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  display: flex;
+  flex-direction:column;
+  margin:auto;
+  padding:10%; 
   position: relative;
+  width:fit-content;
+ 
 `;
 
 const Title = styled(motion.h1)`
