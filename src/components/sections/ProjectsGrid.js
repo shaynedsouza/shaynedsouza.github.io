@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Icon from '../Icon/Icon';
 import {Links as Dlink} from '../Links/Links';
 
-const ProjectsGrid = ({projects}) => {
+const ProjectsGrid = ({projects, type}) => {
 
   const grid = {
     hidden: {
@@ -44,7 +44,7 @@ const ProjectsGrid = ({projects}) => {
       {projects.map((project, i) => (
         <Link
           key={project.id}
-          to={`project/${project.id}`}
+          to={`${type}/${project.id}`}
         >
         <ProjectGridContainer
           initial='hidden'
@@ -52,7 +52,7 @@ const ProjectsGrid = ({projects}) => {
           whileHover='hover'
           variants={grid}
           index={i}>
-          <ProjectImage variants={image} image={project.images[0].link} />
+          <ProjectImage variants={image} image={project?.images[0]?.link} />
           <ProjectDetails  variants={details}>
           
             <Title>{project.title}</Title>

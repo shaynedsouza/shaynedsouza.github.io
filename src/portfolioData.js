@@ -19,18 +19,99 @@ const portfolio_types = {
   }
 }
 
-const BLOGS=
+const blogs= [
   {
-    blog1:{
-      id:"blog1",
-      title:"How I made a fishline arrow direction system for an isometric project"
-    },
-    blog2:{
-      id:"blog2",
-      title:"How I made an arrow guide system for a VR project"
-    }
-
+    id: 'letsstartatthebeginning',
+    title: 'Let\'s start at the beginning',
+    date: '11/23/2021',
+    subtitle: 'A short game that explores themes of guilt and penance. We had a fun time building it out. We aimed for the visual here and the small number of interactive elements hopefully help drive the story forward.',
+    type:portfolio_types.PROJECT_TYPES.GAME,
+    links: [
+      {
+        title: 'Itch',
+        icon: 'itch',
+        link: 'https://shaynedsouza.itch.io/lets-start-at-the-beginning'
+      }
+    ],
+    images: [
+      {
+        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+        title: 'Somethign better than nothing'
+      },
+      {
+        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+        title: ''
+      },
+      {
+        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+        title: ''
+      },
+      {
+        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+        title: ''
+      },
+      {
+        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+        title: ''
+      },
+      {
+        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+        title: ''
+      },
+      {
+        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+        title: ''
+      },
+      {
+        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+        title: ''
+      },
+      {
+        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+        title: ''
+      },
+      {
+        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+        title: ''
+      },
+    ],
+    videos: [{
+      id: 'SzL25FVRmLQ',
+      title: ''
+    }],
+    sections: [
+      {
+        title: 'Planning',
+        description: 'Officia minim eiusmod commodo consectetur anim sint quis proident pariatur velit culpa consequat nisi cillum. Consectetur id aliquip cillum ipsum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
+        image: {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: 'This was my planning'
+        },
+        video: {
+          id: 'SzL25FVRmLQ',
+          title: 'video'
+        }
+      },
+      {
+        title: 'Tech used',
+        list: [
+          {
+            label: 'html'
+          },
+          {
+            label: 'java'
+          },
+          {
+            label: 'unity'
+          }
+        ]
+      }
+    ],
+    bloglist:[
+      "blog1","blog2"
+    ]
   }
+]
 
 const portfolioData = {
   title: 'Gourav Acharya',
@@ -247,7 +328,8 @@ const portfolioData = {
         "blog1","blog2"
       ]
     }
-  ]
+  ],
+  blogs
 }
 
 export default portfolioData;

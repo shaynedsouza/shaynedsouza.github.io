@@ -6,7 +6,7 @@ import profilepic from '../profile.jpg'
 import portfolioData from '../portfolioData';
 
 const Home=(props) => {
-    const {title, subtitle, links, projects, image} = portfolioData;
+    const {title, subtitle, links, projects, image, blogs} = portfolioData;
     return (
       <PageContainer>
         <BackgroundSection>
@@ -15,7 +15,9 @@ const Home=(props) => {
           <Links links={links} color='white' />
         </BackgroundSection>
         <SectionTitle>Projects</SectionTitle>
-        <ProjectsGrid projects={projects} />
+        <ProjectsGrid type='project' projects={projects} />
+        <SectionTitle>Blogs</SectionTitle>
+        <ProjectsGrid type='blog' projects={blogs} />
         
       </PageContainer>
 
