@@ -118,7 +118,7 @@ const portfolioData = {
         }
       ],
       bloglist:[
-        "blog1"
+        {...BLOGS.blog1}, {...BLOGS.blog2}
       ]
     },
     {
@@ -223,7 +223,7 @@ const portfolioData = {
         }
       ],
       bloglist:[
-        "blog1","blog2"
+        {...BLOGS.blog1}, {...BLOGS.blog2}
       ]
     }
   ]

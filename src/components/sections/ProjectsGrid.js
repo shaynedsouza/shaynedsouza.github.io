@@ -1,19 +1,20 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Icon from '../Icon/Icon';
-import Links from '../Links/Links';
+import {Links as Dlink} from '../Links/Links';
 
 const ProjectsGrid = ({projects}) => {
 
   const grid = {
     hidden: {
       opacity: 0,
-     
+      y: 0,
       borderWidth: 0
     },
     initial: {
       opacity: 1,
-    
+      y: 0,
     },
     hover: {
       borderWidth: 4
@@ -31,7 +32,7 @@ const ProjectsGrid = ({projects}) => {
 
   const details = {
     initial: {
-      y: 220
+      y: "70%"
     },
     hover: {
       y: 0
@@ -41,6 +42,14 @@ const ProjectsGrid = ({projects}) => {
   return (
     <ProjectsGridContainer>
       {projects.map((project, i) => (
+        <Link
+        to={{
+          pathname: "/project",
+          search: "",
+          hash: "",
+          state: project
+        }}
+      >
         <ProjectGridContainer
           initial='hidden'
           whileInView={'initial'}
@@ -49,14 +58,13 @@ const ProjectsGrid = ({projects}) => {
           index={i}>
           <ProjectImage variants={image} image={project.images[0].link} />
           <ProjectDetails  variants={details}>
+          
             <Title>{project.title}</Title>
             <Subtitle>{project.subtitle}</Subtitle>
-            <Links color='white' links={project.links} />
-            <Button
-            >Learn more <Icon size={24} icon='arrowRight' /></Button>
           </ProjectDetails>
           
         </ProjectGridContainer>
+        </Link>
       ))}
     </ProjectsGridContainer>
   )
@@ -71,13 +79,16 @@ const ProjectsGridContainer = styled.div`
   flex-direction: column;
   row-gap: 48px;
 `;
-
+const AComponent = styled.a `
+color:inherit;
+    text-decoration:none;
+`
 const ProjectGridContainer = styled(motion.div)`
   width: 100%;
   height: 50vh;
   margin: 0 auto;
-  max-width: 1240px;
-  max-height: 1240px;
+  max-width: 400px;
+  max-height: 400px;
   overflow: hidden;
   position: relative;
   border-radius: 20px;
@@ -96,7 +107,7 @@ const ProjectImage = styled(motion.div)`
 
 const ProjectDetails = styled(motion.div)`
   width: 100%;
-  height: 40%;
+  height: 90%;
   
   backdrop-filter: blur(5px);
   background-color: rgba(0,0,0,0.6);
