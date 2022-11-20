@@ -6,7 +6,7 @@ const Links = ({links, color='white', className}) => {
   return (
     <LinksContainer className={className}>
       {links.map(({icon, link, title}, i) => (
-        <Link whileHover={{scale: 1.2}} color={color} href={link} target='_blank'>
+        <Link key={link} whileHover={{scale: 1.2}} color={color} href={link} target='_blank'>
           <Icon label={title} color={color} title={title} icon={icon} />
         </Link>
       ))}

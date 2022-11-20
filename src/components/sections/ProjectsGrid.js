@@ -43,13 +43,9 @@ const ProjectsGrid = ({projects}) => {
     <ProjectsGridContainer>
       {projects.map((project, i) => (
         <Link
-        to={{
-          pathname: "project/"+project.id,
-          search: "",
-          hash: "",
-          state: null
-        }}
-      >
+          key={project.id}
+          to={`project/${project.id}`}
+        >
         <ProjectGridContainer
           initial='hidden'
           whileInView={'initial'}
@@ -128,7 +124,7 @@ const Title = styled.h2`
   line-height: 44px;
 `;
 
-const Subtitle = styled.p`
+export const Subtitle = styled.p`
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;

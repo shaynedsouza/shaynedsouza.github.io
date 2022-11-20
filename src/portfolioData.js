@@ -54,6 +54,7 @@ const portfolioData = {
     {
       id: 'letsstartatthebeginning',
       title: 'Let\'s start at the beginning',
+      date: '11/23/2021',
       subtitle: 'A short game that explores themes of guilt and penance. We had a fun time building it out. We aimed for the visual here and the small number of interactive elements hopefully help drive the story forward.',
       type:portfolio_types.PROJECT_TYPES.GAME,
       links: [
@@ -66,41 +67,61 @@ const portfolioData = {
       images: [
         {
           link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: 'Somethign better than nothing'
+        },
+        {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
           title: ''
         },
         {
-          link: '',
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
           title: ''
         },
         {
-          link: '',
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
           title: ''
-        }
+        },
+        {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: ''
+        },
+        {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: ''
+        },
+        {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: ''
+        },
+        {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: ''
+        },
+        {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: ''
+        },
+        {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: ''
+        },
       ],
-      video: {
-        link: '',
-        title: '',
-        type: 'youtube'
-      },
+      videos: [{
+        id: 'SzL25FVRmLQ',
+        title: ''
+      }],
       sections: [
         {
           title: 'Planning',
           description: 'Officia minim eiusmod commodo consectetur anim sint quis proident pariatur velit culpa consequat nisi cillum. Consectetur id aliquip cillum ipsum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
           image: {
-            link: '',
-            title: ''
+            link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+            title: 'This was my planning'
           },
           video: {
-            link: '',
-            title: '',
-            type: 'youtube'
-          },
-          list: [
-            {
-              label: '',
-              link: 'url'
-            }
-          ]
+            id: 'SzL25FVRmLQ',
+            title: 'video'
+          }
         },
         {
           title: 'Tech used',

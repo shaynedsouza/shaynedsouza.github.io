@@ -1,78 +1,58 @@
 import styled from 'styled-components';
 import Links from '../components/Links/Links';
 import ProjectsGrid from '../components/sections/ProjectsGrid';
-import ReactTooltip from 'react-tooltip';
-import "aos/dist/aos.css";
 import { motion } from 'framer-motion';
 import profilepic from '../profile.jpg'
 import portfolioData from '../portfolioData';
 
 const Home=(props) => {
     const {title, subtitle, links, projects, image} = portfolioData;
-    return (<PageContainer >
-        <BackgroundSection 
-          >
-        
-          <ProfilePicComponent 
-           src ={profilepic}
-        
-          />
-         
+    return (
+      <PageContainer>
+        <BackgroundSection>
+          <ProfilePicComponent src ={profilepic} />
           <Title>{title}</Title>
-          <StyledLinks links={links} color='white' />
-         
-          
+          <Links links={links} color='white' />
         </BackgroundSection>
-        <Title>Projects</Title>
+        <SectionTitle>Projects</SectionTitle>
         <ProjectsGrid projects={projects} />
-        <ReactTooltip />
+        
       </PageContainer>
 
   )
 }
 
-const PageContainer = styled.div`margin:auto; width:100%;`;
+const PageContainer = styled.div`
+  color: white;
+  padding-left: 5rem;
+  padding-right: 5rem;
+`;
 
 const BackgroundSection = styled(motion.div)`
-  // background: linear-gradient( rgba(0,0,0,0),rgba(1,1,1,1)), url(${props => props.image});
-  background-color:black;
-  // background-size: cover;
-  // background-repeat: no-repeat;
   display: flex;
   flex-direction:column;
   margin:auto;
-  padding:10%; 
-  position: relative;
-  width:fit-content;
- 
+  width:100%;
+  justify-content: center;
+  align-items: center;
 `;
-const ProfilePicComponent =styled(motion.img)`
-
-max-width: 50%;
-height: auto;
-border-radius: 50%;
-align-self: center;
+const ProfilePicComponent = styled(motion.img)`
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  margin-top: 10rem;
 `
 ;
-const Title = styled(motion.h1)`
-  font-family: 'Inter';
+
+export const Title = styled(motion.h1)`
   font-style: normal;
   font-weight: 700;
-  font-size: 3em;
-  line-height: 77px;
-  color: #fff;
-  text-align: center;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  align-self: center;
+  font-size: 4em;
 `;
 
-const StyledLinks = styled(Links)`
-  position: relative;
-  top: 0;
-  right: 0;
-  align-self: center;
+export const SectionTitle = styled.h2`
+  font-weight: 700;
+  font-size: 2.5rem;
 `;
 
 
