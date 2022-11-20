@@ -5,11 +5,15 @@ import ReactTooltip from 'react-tooltip';
 import "aos/dist/aos.css";
 import { motion } from 'framer-motion';
 import profilepic from '../profile.jpg'
-
+import {useLocation} from "react-router-dom";
 
 const Project=({props}) => {
+
+
+  const name = window.location.pathname
     return (<div>
-         {props}
+      SDASDASDFASFASFDASDF
+         <p>{name}</p>
     </div>
 
   )
