@@ -5,7 +5,7 @@ import Blog from './routes/Blog';
 
 import "aos/dist/aos.css";
 import {
-  BrowserRouter, Routes,Route
+  BrowserRouter, Routes,Route,
 } from 'react-router-dom'
 function App() {
 
@@ -13,10 +13,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}>
-          <Route path="project" element={<Project />} />
-          <Route path="blog" element={<Blog />} />
-        </Route>
+
+         <Route exact path="/" element={<Home />}/>
+          <Route exact path="/project" element={<Project />} />
+          <Route exact path="/blog" element={<Blog />} />
+
       </Routes>
     
     </BrowserRouter>

@@ -44,10 +44,10 @@ const ProjectsGrid = ({projects}) => {
       {projects.map((project, i) => (
         <Link
         to={{
-          pathname: "/project",
+          pathname: "project",
           search: "",
           hash: "",
-          state: project
+          state: {"g":"a"}
         }}
       >
         <ProjectGridContainer

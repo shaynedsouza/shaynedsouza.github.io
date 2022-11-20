@@ -7,9 +7,9 @@ import { motion } from 'framer-motion';
 import profilepic from '../profile.jpg'
 
 
-const Project=(props) => {
+const Project=({props}) => {
     return (<div>
-         {props.location.state}
+         {props}
     </div>
 
   )
