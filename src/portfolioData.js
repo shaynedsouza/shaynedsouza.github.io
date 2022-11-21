@@ -23,6 +23,7 @@ const blogs =
 [  
   {
     id:'howheadturn',
+    span:'2',
     links: [
       {
         ...portfolio_types.ICON_TYPES.RESUME,
@@ -39,7 +40,7 @@ const blogs =
     ],
     time:"November 11, 2022",
     index:0,
-    title: 'How I made a creepy-head-follow-you mechanic',
+    title: '[DEV POST]How I made a creepy-head-follow-you mechanic',
     image:{
       link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png'
     },
@@ -47,7 +48,7 @@ const blogs =
     blogsections:[
       {
         blogsectiontitle:"asdad",
-        blogsectiontext: "asdasdasdadasdadad",
+        blogsectiontext: "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
         bloggridsections :[
             {
               list: [
@@ -170,6 +171,9 @@ const portfolioData = {
           },
           
           span: 2
+        },
+        {
+          ...blogs[0]
         }
       ]
     },

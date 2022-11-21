@@ -77,7 +77,13 @@ const ProjectInnerContainer = styled.div`
   }
 `;
 
-
+const BlogTextContainer = styled.div`
+  inline-size: 60%;
+  overflow-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+`
 
 const Text = styled.p`
 `;
@@ -87,11 +93,11 @@ const BlogSections=({blogsections})=>{
 return(
   blogsections.map((blogsection, i) => (
     <div>
-    <div className='divider'><span></span><span>blogsection.blogsectiontitle</span><span></span></div>
+    <div className='divider'><span></span><span>{blogsection.blogsectiontitle}</span><span></span></div>
+ 
+    <BlogTextContainer>{blogsection.blogsectiontext}</BlogTextContainer>
     <br></br>
-    <p>blogsection.blogsectiontext</p>
-    
-    <MyStaggeredGrid sections = {blogsection.bloggridsections}></MyStaggeredGrid>
+    <MyStaggeredGrid width="500" sections = {blogsection.bloggridsections}></MyStaggeredGrid>
    </div>
  ))
  

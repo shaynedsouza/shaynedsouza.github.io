@@ -32,8 +32,10 @@ const Home = (props) => {
         <Links links={links} color='white' />
       </BackgroundSection>
       <div className='divider'><span></span><span>Projects</span><span></span></div>
+      <br></br>
       <MyStaggeredGrid sections={projects} width={"500"} />
-      <div className='divider'><span></span><span>Blogs</span><span></span></div>
+      <div className='divider'><span></span><span>Dev Posts</span><span></span></div>
+      <br></br>
       <MyStaggeredGrid width={"500"} sections={blogs} />
 
     </PageContainer>

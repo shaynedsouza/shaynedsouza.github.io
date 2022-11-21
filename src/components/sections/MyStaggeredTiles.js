@@ -22,20 +22,21 @@ const MyStaggeredTiles = ({ section, iter }) => {
     >
       <SectionContainer 
         whileHover={{
-          ...lodash.isEmpty(image) && lodash.isEmpty(video) && {
+          ...(!lodash.isEmpty(image) || !lodash.isEmpty(video) || !lodash.isEmpty(externallink)) &&
+          {
             scale: 1.2,
             zIndex: 32
           }
         }}
       >
         {!lodash.isEmpty(title) && (
-          <CommonSectionDiv height={height}>
+          <CommonSectionDiv >
             <Text>{title}</Text>
           </CommonSectionDiv>
         )}
 
         {!lodash.isEmpty(list) && (
-          <CommonSectionDiv height={height}>
+          <CommonSectionDiv >
             <List>
               {list.map(listitem => (
                 <ListItem>{listitem.label}</ListItem>
@@ -45,13 +46,13 @@ const MyStaggeredTiles = ({ section, iter }) => {
         )}
 
         {!lodash.isEmpty(video) && (
-          <CommonSectionDiv height={height}>
+          <CommonSectionDiv >
             <Video title={video.title} allowfullscreen="allowfullscreen" src={`https://www.youtube.com/embed/${video.id}`} />
           </CommonSectionDiv>
         )}
 
         {!lodash.isEmpty(image) && (
-          <CommonSectionDiv height={height}>
+          <CommonSectionDiv >
             <Image
               small={image.link}
               large={image.link}
