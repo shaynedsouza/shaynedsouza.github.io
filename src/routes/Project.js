@@ -9,6 +9,7 @@ import portfolioData from '../portfolioData';
 import {useLocation, useParams} from "react-router-dom";
 import lodash from 'lodash-es';
 import { SectionTitle, Title } from './Home';
+import Masonry from 'react-masonry-css';
 
 const Project=() => {
   const {id} = useParams();
@@ -27,7 +28,7 @@ const Project=() => {
         <Text>{date}</Text>
         <Subtitle>{subtitle}</Subtitle>
         <Links links={links} color='white' />
-        {!lodash.isEmpty(images) && (
+        {/* {!lodash.isEmpty(images) && (
           <SectionContainer>
             <SectionTitle>Gallery</SectionTitle>
             <ImagesContainer>
@@ -39,9 +40,9 @@ const Project=() => {
               ))}
             </ImagesContainer>
           </SectionContainer>
-        )}
+        )} */}
 
-        {!lodash.isEmpty(videos) && (
+        {/* {!lodash.isEmpty(videos) && (
           <SectionContainer>
             <SectionTitle>Videos</SectionTitle>
             <ImagesContainer>
@@ -53,12 +54,22 @@ const Project=() => {
               ))}
             </ImagesContainer>
           </SectionContainer>
-        )}
+        )} */}
         
+        <StyledMasonry
+          breakpointCols={{
+            default: 3,
+            1100: 3,
+            700: 2,
+            500: 1
+          }}
+          columnClassName='masonry-grid-column'
+        >
+          {sections.map((section, i) => (
+            <Section key={i} section={section} iter={i} />
+          ))}
+        </StyledMasonry>
         
-        {sections.map((section, i) => (
-          <Section key={i} section={section} />
-        ))}
       </ProjectInnerContainer>
       
     </ProjectContainer>
@@ -67,35 +78,35 @@ const Project=() => {
 }
 
 
-const Section = ({section}) => {
-  const {title, description, image, list, video } = section;
+const Section = ({section, iter}) => {
+  const {title, description, image, list, video, span=1, height } = section;
 
   return (
-    <SectionContainer>
-      <SectionTitle>{title}</SectionTitle>
-      <Subtitle>{description}</Subtitle>
-      {!lodash.isEmpty(list) && (
-        <ul>
-          {list.map(listitem => (
-            <li>{listitem.label}</li>
-          ))}
-        </ul>
-      )}
+      <SectionContainer className='masonry-grid-column' span={span}>
+        <SectionTitle height={height}>{title}</SectionTitle>
+        <Subtitle >{description}</Subtitle>
+        {!lodash.isEmpty(list) && (
+          <ul>
+            {list.map(listitem => (
+              <li>{listitem.label}</li>
+            ))}
+          </ul>
+        )}
 
-      {!lodash.isEmpty(image) && (
-        <>
-          <Image big src={image.link} />
-          <Text>{image.title}</Text>
-        </>
-      )}
+        {!lodash.isEmpty(image) && (
+          <>
+            <Image big src={image.link} />
+            <Text>{image.title}</Text>
+          </>
+        )}
 
-      {!lodash.isEmpty(video) && (
-        <>
-          <Video big title={video.title} allowfullscreen="allowfullscreen" src={`https://www.youtube.com/embed/${video.id}`} />
-          <Text>{video.title}</Text>
-        </>
-      )}
-    </SectionContainer>
+        {!lodash.isEmpty(video) && (
+          <>
+            <Video big title={video.title} allowfullscreen="allowfullscreen" src={`https://www.youtube.com/embed/${video.id}`} />
+            <Text>{video.title}</Text>
+          </>
+        )}
+      </SectionContainer>
   )
 }
 
@@ -149,10 +160,34 @@ const ImagesContainer = styled.div`
 const Text = styled.p`
 `;
 
+const SectionGrid = styled.div`
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: masonary;
+  grid-gap: 2rem;
+`;
 
+const GridItem = styled.div``;
 
 const SectionContainer  = styled.div`
-  margin-top: 4rem;
+  border: 2px solid white;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 4px 7px 32px 0px rgba(232,232,232,0.75);
+`;
+
+const StyledMasonry = styled(Masonry)`
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+
+  .masonry-grid-column {
+    padding-left: 30px; /* gutter size */
+    background-clip: padding-box;
+    margin-bottom: 30px;
+  }
 `;
 
 export default Project;

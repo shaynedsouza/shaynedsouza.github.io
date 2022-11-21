@@ -124,14 +124,12 @@ const Title = styled.h2`
   line-height: 44px;
 `;
 
-export const Subtitle = styled.p`
+export const Subtitle = styled.div`
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 21px;
-
-  width: 80%;
-  margin-top: 24px;
+  // margin-top: 24px;
 `;
 
 const Button = styled(motion.button)`

@@ -193,19 +193,21 @@ const portfolioData = {
       }],
       sections: [
         {
-          title: 'Planning',
-          description: 'Officia minim eiusmod commodo consectetur anim sint quis proident pariatur velit culpa consequat nisi cillum. Consectetur id aliquip cillum ipsum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
-          image: {
-            link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-            title: 'This was my planning'
-          },
-          video: {
-            id: 'SzL25FVRmLQ',
-            title: 'video'
-          }
+          description: 'Officia ',
+    
         },
         {
-          title: 'Tech used',
+          description: 'Officia minim eiusmod commodo consectetur anim sum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
+    
+        },
+        {
+          description: 'Officia minim eiusmod commodo consectetur anim sint quis proident pariatur velit culpa consequat nisi cillum. Consectetur id aliquip cillum ipsum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
+      
+        },
+        {
+          description: 'Officia minim eiusmod commodo consectetur anim sint quis proident pariatur velit culpa consequat nisi cillum. Consectetur id aliquip cillum ipsum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
+        },
+        {
           list: [
             {
               label: 'html'
@@ -217,117 +219,24 @@ const portfolioData = {
               label: 'unity'
             }
           ]
+        },
+        {
+          video: {
+            id: 'SzL25FVRmLQ'
+          },
+          span: 2
+        },
+        {
+          span: 2,
+          image: {
+            link: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f?w=162&auto=format'
+          }
         }
       ],
       bloglist:[
         "blog1","blog2"
       ]
     },
-    {
-      id: 'letsstartatthebeginning1',
-      title: 'Let\'s start at the beginning',
-      subtitle: 'A short game that explores themes of guilt and penance. We had a fun time building it out. We aimed for the visual here and the small number of interactive elements hopefully help drive the story forward.',
-      type:portfolio_types.PROJECT_TYPES.GAME,
-      links: [
-        {
-          title: 'Itch',
-          icon: 'itch',
-          link: 'https://shaynedsouza.itch.io/lets-start-at-the-beginning'
-        },
-        {
-          title: 'Itch',
-          icon: 'itch',
-          link: 'https://shaynedsouza.itch.io/lets-start-at-the-beginning'
-        },
-        {
-          title: 'Itch',
-          icon: 'itch',
-          link: 'https://shaynedsouza.itch.io/lets-start-at-the-beginning'
-        },
-        {
-          title: 'Itch',
-          icon: 'itch',
-          link: 'https://shaynedsouza.itch.io/lets-start-at-the-beginning'
-        },
-        {
-          title: 'Itch',
-          icon: 'itch',
-          link: 'https://shaynedsouza.itch.io/lets-start-at-the-beginning'
-        },
-        {
-          title: 'Itch',
-          icon: 'itch',
-          link: 'https://shaynedsouza.itch.io/lets-start-at-the-beginning'
-        },
-        {
-          title: 'Itch',
-          icon: 'itch',
-          link: 'https://shaynedsouza.itch.io/lets-start-at-the-beginning'
-        },
-        {
-          title: 'Itch',
-          icon: 'itch',
-          link: 'https://shaynedsouza.itch.io/lets-start-at-the-beginning'
-        }
-      ],
-      images: [
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-        {
-          link: '',
-          title: ''
-        },
-        {
-          link: '',
-          title: ''
-        }
-      ],
-      video: {
-        link: '',
-        title: '',
-        type: 'youtube'
-      },
-      sections: [
-        {
-          title: 'Planning',
-          description: 'Officia minim eiusmod commodo consectetur anim sint quis proident pariatur velit culpa consequat nisi cillum. Consectetur id aliquip cillum ipsum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
-          image: {
-            link: '',
-            title: ''
-          },
-          video: {
-            link: '',
-            title: '',
-            type: 'youtube'
-          },
-          list: [
-            {
-              label: '',
-              link: 'url'
-            }
-          ]
-        },
-        {
-          title: 'Tech used',
-          list: [
-            {
-              label: 'html'
-            },
-            {
-              label: 'java'
-            },
-            {
-              label: 'unity'
-            }
-          ]
-        }
-      ],
-      bloglist:[
-        "blog1","blog2"
-      ]
-    }
   ],
   blogs
 }
