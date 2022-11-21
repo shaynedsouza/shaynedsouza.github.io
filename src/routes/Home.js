@@ -4,20 +4,26 @@ import ProjectsGrid from '../components/sections/ProjectsGrid';
 import { motion } from 'framer-motion';
 import profilepic from '../profile.jpg'
 import portfolioData from '../portfolioData';
-
+import MyStaggeredGrid from '../components/sections/MyStaggeredGrid';
 const Home=(props) => {
     const {title, subtitle, links, projects, image, blogs} = portfolioData;
     return (
       <PageContainer>
         <BackgroundSection>
           <ProfilePicComponent src ={profilepic} />
-          <Title>{title}</Title>
+          <Title style={{
+
+textAlign: "center",
+alignItems: "center",
+justifyContent: "center",
+
+}}>{title}</Title>
           <Links links={links} color='white' />
         </BackgroundSection>
-        <SectionTitle>Projects</SectionTitle>
-        <ProjectsGrid type='project' projects={projects} />
-        <SectionTitle>Blogs</SectionTitle>
-        <ProjectsGrid type='blog' projects={blogs} />
+        <div className='divider'><span></span><span>Projects</span><span></span></div>
+        <MyStaggeredGrid sections={projects} width={"500"} />
+        <div className='divider'><span></span><span>Blogs</span><span></span></div>
+        <MyStaggeredGrid width={"500"}  sections={blogs} />
         
       </PageContainer>
 

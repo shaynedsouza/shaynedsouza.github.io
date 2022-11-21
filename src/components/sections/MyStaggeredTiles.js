@@ -6,12 +6,13 @@ import lodash from 'lodash-es';
 import styled from 'styled-components';
 
 const MyStaggeredTiles = ({ section, iter }) => {
-  const { title, description, image, list, video, span = 1 } = section;
+  const { title, description, image, list, video, span } = section;
   let [height, setHeight] = useState("px");
   const ref = useRef(null)
   useEffect(() => {
     setHeight(ref.current.clientHeight + "px")
   }, [])
+  console.log("span "+span)
   return (
 
     <StaggeredGridItem

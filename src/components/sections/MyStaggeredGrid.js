@@ -5,12 +5,12 @@ import {
 } from "react-staggered-grid";
 
 
-const MyStaggeredGrid = ({ sections }) => {
-
+const MyStaggeredGrid = ({ sections, width="300"}) => {
+  console.log('sections',sections)
   return(
   <StaggeredGrid
 
-    columnWidth={"300"} // width of each column , don't pass if you want it to be gridWidth / columns
+    columnWidth={width} // width of each column , don't pass if you want it to be gridWidth / columns
     columns={0}
     alignment={StaggeredAlignment.Center}
     useElementWidth={true} // this would force css styled width (100%) , when false gridWidth = columnWidth * columnWidth
@@ -21,8 +21,9 @@ const MyStaggeredGrid = ({ sections }) => {
     repositionOnResize={true}
 
   >
-
+   
     {sections.map((section, i) => (
+     
       <MyStaggeredTiles key={i} section={section} iter={i} />
     ))}
 

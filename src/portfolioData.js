@@ -136,8 +136,14 @@ const portfolioData = {
       id: 'letsstartatthebeginning',
       title: 'Let\'s start at the beginning',
       time: "1 week",
+      span: 1,
       team:"Gourav Acharya, Shayne Dsouza",
       subtitle: 'A PT like short horror game that explores themes of guilt and penance.',
+        
+        image: {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png'
+        }
+        ,
       type:portfolio_types.PROJECT_TYPES.GAME,
       links: [
         {
@@ -241,6 +247,122 @@ const portfolioData = {
         "blog1","blog2"
       ]
     },
+    {
+      id: 'letsstartatthebeginning',
+      title: 'Let\'s start at the beginning',
+      time: "1 week",
+      span: 1,
+      team:"Gourav Acharya, Shayne Dsouza",
+      subtitle: 'A PT like short horror game that explores themes of guilt and penance.',
+        
+        image: {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png'
+        }
+        ,
+      type:portfolio_types.PROJECT_TYPES.GAME,
+      links: [
+        {
+          title: 'Itch',
+          icon: 'itch',
+          link: 'https://shaynedsouza.itch.io/lets-start-at-the-beginning'
+        }
+      ],
+      images: [
+        {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: 'Somethign better than nothing'
+        },
+        {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: ''
+        },
+        {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: ''
+        },
+        {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: ''
+        },
+        {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: ''
+        },
+        {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: ''
+        },
+        {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: ''
+        },
+        {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: ''
+        },
+        {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: ''
+        },
+        {
+          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
+          title: ''
+        },
+      ],
+      videos: [{
+        id: 'SzL25FVRmLQ',
+        title: ''
+      }],
+      sections: [
+        { height :"10",
+          description: 'Officia ',
+    
+        },
+        { height :"85",
+          description: 'Officia minim eiusmod commodo consectetur anim sum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
+    
+        },
+        { height :"300",
+          description: 'Officia minim eiusmod commodo consectetur anim sint quis proident pariatur velit culpa consequat nisi cillum. Consectetur id aliquip cillum ipsum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
+      
+        },
+        { height :"400",
+          description: 'Officia minim eiusmod commodo consectetur anim sint quis proident pariatur velit culpa consequat nisi cillum. Consectetur id aliquip cillum ipsum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
+        },
+        { height :"300",
+          list: [
+            {
+              label: 'html'
+            },
+            {
+              label: 'java'
+            },
+            {
+              label: 'unity'
+            }
+          ]
+        },
+        
+        {
+          span: 2,
+          height :"300",
+          image: {
+            link: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f?w=162&auto=format'
+          }
+        },
+        {
+          video: {
+            id: 'SzL25FVRmLQ'
+          },
+          height :"300",
+          span: 2
+        }
+      ],
+      bloglist:[
+        "blog1","blog2"
+      ]
+    }
+    
   ],
   blogs
 }
