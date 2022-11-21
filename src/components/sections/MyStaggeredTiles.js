@@ -6,103 +6,62 @@ import lodash from 'lodash-es';
 import styled from 'styled-components';
 import ModalImage from "react-modal-image";
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion';
+
+
 const MyStaggeredTiles = ({ section, iter }) => {
-  const { title, description, image, list, video, span,externallink } = section;
+  const { title, description, image, list, video, span, externallink } = section;
   let [height, setHeight] = useState("px");
   const ref = useRef(null)
-  const gridpart = <StaggeredGridItem
-  index={iter}
-  spans={span}
-  style={{ transition: "left 0.3s ease,top 0.3s ease" }}
-  ref={ref}
->
-  <SectionContainer>
-
-    <div
-      style={{
-        width: "100%",
-        height: height,
-        textAlign: "center",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-
-      }}
-      onLoad={
-        (e) => {
-
-        }
-      }
+  const gridpart = (
+    <StaggeredGridItem
+      index={iter}
+      spans={span}
+      style={{ transition: "left 0.3s ease,top 0.3s ease" }}
+      ref={ref}
     >
-      {title}
-    </div>
-
-
-    {!lodash.isEmpty(list) && (
-      <div
-        style={{
-          width: "100%",
-          height: height,
-          textAlign: "center",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center"
+      <SectionContainer 
+        whileHover={{
+          ...lodash.isEmpty(image) && lodash.isEmpty(video) && {
+            scale: 1.2,
+            zIndex: 32
+          }
         }}
       >
-        <ul>
-          {list.map(listitem => (
-            <li>{listitem.label}</li>
-          ))}
-        </ul>
-      </div>
-    )}
+        {!lodash.isEmpty(title) && (
+          <CommonSectionDiv height={height}>
+            <Text>{title}</Text>
+          </CommonSectionDiv>
+        )}
 
+        {!lodash.isEmpty(list) && (
+          <CommonSectionDiv height={height}>
+            <List>
+              {list.map(listitem => (
+                <ListItem>{listitem.label}</ListItem>
+              ))}
+            </List>
+          </CommonSectionDiv>
+        )}
 
+        {!lodash.isEmpty(video) && (
+          <CommonSectionDiv height={height}>
+            <Video title={video.title} allowfullscreen="allowfullscreen" src={`https://www.youtube.com/embed/${video.id}`} />
+          </CommonSectionDiv>
+        )}
 
-    {!lodash.isEmpty(video) && (
-
-      <div
-        style={{
-          width: "100%",
-          height: height,
-          textAlign: "center",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center"
-        }}
-      >
-        <Video title={video.title} allowfullscreen="allowfullscreen" src={`https://www.youtube.com/embed/${video.id}`} />
-      </div>
-    )}
-
-    {!lodash.isEmpty(image) && (
-      <div
-        style={{
-          width: "100%",
-          height: height + "px",
-          textAlign: "center",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center"
-        }}
-      >
-        <ModalImage
-        style={{ width: "200px",
-          objectFit: "cover"}}
-          small={image.link}
-          large={image.link}
-          alt="Hello World!"
-        />
-      </div>
-    )}
-  </SectionContainer>
-
-</StaggeredGridItem >
-
+        {!lodash.isEmpty(image) && (
+          <CommonSectionDiv height={height}>
+            <Image
+              small={image.link}
+              large={image.link}
+              alt="Hello World!"
+            />
+          </CommonSectionDiv>
+        )}
+      </SectionContainer>
+    </StaggeredGridItem >
+  )
     
   useEffect(() => {
     setHeight(ref.current.clientHeight + "px")
@@ -113,18 +72,18 @@ const MyStaggeredTiles = ({ section, iter }) => {
    if(lodash.isEmpty(externallink))
       return gridpart
       
-  return <Link
+  return (
+    <Link
       key={section.id}
       to={externallink}
       style={{textDecoration: 'none', color: "white"}}
     >
       {gridpart}
-      </Link>
-    
-
+    </Link>
+  )
 }
 
-const Image = styled.img`
+const Image = styled(ModalImage)`
   width: 100%;
   height: ${props => props.big ? '80vh' : '30vh'};
   object-fit: cover;
@@ -138,11 +97,39 @@ const Video = styled.iframe.attrs({
   border: none;
 `;
 
-const SectionContainer = styled.div`
-  border: 2px solid white;
+const SectionContainer = styled(motion.div)`
+  background: linear-gradient(85deg,#434343,#262626);
+  /* border: 2px solid white; */
   border-radius: 1rem;
   padding: 1rem;
-  box-shadow: 4px 7px 32px 0px rgba(232,232,232,0.75);
+  box-shadow: -2rem 0 3rem -2rem #000;
 `;
+
+const Text = styled.p`
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+`;
+
+const CommonSectionDiv = styled.div`
+  /* width: 100%; */
+  /* height: ${props => props.height + "px"}; */
+  /* text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+`;
+
+const List = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+`;
+
+const ListItem = styled.li`
+  text-decoration: none;
+`;
+
 
 export default MyStaggeredTiles;

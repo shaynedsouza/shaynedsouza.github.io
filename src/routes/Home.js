@@ -45,6 +45,7 @@ const PageContainer = styled.div`
   color: white;
   padding-left: 5rem;
   padding-right: 5rem;
+  height: 100vh;
 `;
 
 const BackgroundSection = styled(motion.div)`

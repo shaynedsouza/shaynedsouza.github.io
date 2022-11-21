@@ -21,7 +21,8 @@ const portfolio_types = {
 
 const blogs = 
 [  
-    {id:'howheadturn',
+  {
+    id:'howheadturn',
     links: [
       {
         ...portfolio_types.ICON_TYPES.RESUME,

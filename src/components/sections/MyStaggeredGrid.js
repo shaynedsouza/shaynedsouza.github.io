@@ -6,24 +6,21 @@ import {
 
 
 const MyStaggeredGrid = ({ sections, width="300"}) => {
-  console.log("sections "+sections)
+  console.log("sections ", sections)
   return(
   <StaggeredGrid
-
     columnWidth={width} // width of each column , don't pass if you want it to be gridWidth / columns
     columns={0}
     alignment={StaggeredAlignment.Center}
     useElementWidth={true} // this would force css styled width (100%) , when false gridWidth = columnWidth * columnWidth
     fitHorizontalGap={true}
     calculateHeight={true}
-    horizontalGap={10}
-    verticalGap={10}
+    horizontalGap={24}
+    verticalGap={24}
     repositionOnResize={true}
 
   >
- 
     {sections.map((section, i) => (
-     
       <MyStaggeredTiles key={i} section={section} iter={i} />
     ))}
 
