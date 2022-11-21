@@ -138,6 +138,7 @@ const portfolioData = {
       time: "1 week",
       span: 1,
       team:"Gourav Acharya, Shayne Dsouza",
+      externallink:"/project/letsstartatthebeginning",
       subtitle: 'A PT like short horror game that explores themes of guilt and penance.',
         
         image: {
