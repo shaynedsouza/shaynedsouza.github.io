@@ -1,24 +1,52 @@
 import styled from 'styled-components';
-import Links, {Links as DLinks} from '../components/Links/Links';
+import Links, { Links as DLinks } from '../components/Links/Links';
 import ProjectsGrid, { Subtitle } from '../components/sections/ProjectsGrid';
 import ReactTooltip from 'react-tooltip';
 import "aos/dist/aos.css";
 import { motion } from 'framer-motion';
 import profilepic from '../profile.jpg'
 import portfolioData from '../portfolioData';
-import {useLocation, useParams} from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import lodash from 'lodash-es';
 import { SectionTitle, Title } from './Home';
-import Masonry from 'react-masonry-css';
-
-const Project=() => {
-  const {id} = useParams();
+import  { useRef,useEffect,useState } from 'react';
+// import Masonry from 'react-masonry-css';
+import {
+  StaggeredAlignment,
+  StaggeredGrid,
+  StaggeredGridItem,
+  StaggeredGridItemFunctional,
+  StaggeredItemSpan
+} from "react-staggered-grid";
+const Project = () => {
+  const { id } = useParams();
 
   const project = portfolioData.projects.find(p => {
     return p.id === id
   })
 
-  const {title, subtitle, links, images, videos, sections, date} = project
+  const { title, subtitle, links, images, videos, sections, date } = project
+  // let sections1=[{title:"asd",span:"1"},
+  // {title:"asd",span:"1"},
+  // {title:"asd",span:"1"},
+  // {title:"asd",span:"1"},
+  // {title:"asd",span:"1"},
+  // {title:"asd",span:"1"},
+  // {title:"asd",span:"2"},
+  // {title:"asd",span:"2"},
+  // {title:"asd",height:"315",span:"1"},
+  // {title:"asd",height:"315",span:"1"},
+  // {title:"asd",height:"315",span:"1"},
+  // {title:"asd",height:"315",span:"1"},
+  // {title:"asd",height:"315",span:"1"},
+  // {title:"asd",height:"315",span:"1"},
+  // {title:"asd",height:"315",span:"1"},
+  // {title:"asd",height:"315",span:"1"},
+  // {title:"asd",height:"315",span:"1"},
+  // {title:"asd",height:"315",span:"1"},
+  // {title:"asd",height:"315",span:"1"},
+  // {title:"asd",height:"315",span:"1"},
+  //]
   console.log('🚀 ~ file: Project.js ~ line 17 ~ Project ~ project', project)
 
   return (
@@ -28,85 +56,145 @@ const Project=() => {
         <Text>{date}</Text>
         <Subtitle>{subtitle}</Subtitle>
         <Links links={links} color='white' />
-        {/* {!lodash.isEmpty(images) && (
-          <SectionContainer>
-            <SectionTitle>Gallery</SectionTitle>
-            <ImagesContainer>
-              {images.map(image => (
-                <ImageContainer key={image.title}>
-                  <Image src={image.link} alt={image.title} />
-                  <Text>{image.title}</Text>
-                </ImageContainer>
-              ))}
-            </ImagesContainer>
-          </SectionContainer>
-        )} */}
 
-        {/* {!lodash.isEmpty(videos) && (
-          <SectionContainer>
-            <SectionTitle>Videos</SectionTitle>
-            <ImagesContainer>
-              {videos.map(video => (
-                <ImageContainer key={video.title}>
-                  <Video title={video.title} allowfullscreen="allowfullscreen" src={`https://www.youtube.com/embed/${video.id}`} />
-                  <Text>{video.title}</Text>
-                </ImageContainer>
-              ))}
-            </ImagesContainer>
-          </SectionContainer>
-        )} */}
-        
-        <StyledMasonry
-          breakpointCols={{
-            default: 3,
-            1100: 3,
-            700: 2,
-            500: 1
-          }}
-          columnClassName='masonry-grid-column'
+        <StaggeredGrid
+
+          columnWidth={"300"} // width of each column , don't pass if you want it to be gridWidth / columns
+          columns={0}
+          alignment={StaggeredAlignment.Center}
+          useElementWidth={true} // this would force css styled width (100%) , when false gridWidth = columnWidth * columnWidth
+          fitHorizontalGap={true}
+          calculateHeight={true}
+          horizontalGap={10}
+          verticalGap={10}
+          repositionOnResize={true}
+      
         >
+
           {sections.map((section, i) => (
             <Section key={i} section={section} iter={i} />
           ))}
-        </StyledMasonry>
-        
+
+        </StaggeredGrid>
+
       </ProjectInnerContainer>
-      
-    </ProjectContainer>
+
+    </ProjectContainer >
 
   )
 }
 
 
-const Section = ({section, iter}) => {
-  const {title, description, image, list, video, span=1, height } = section;
-
+const Section = ({ section, iter }) => {
+  const { title, description, image, list, video, span = 1 } = section;
+  let [height, setHeight] = useState("px");
+  const ref = useRef(null)
+  useEffect(() => {
+    setHeight(ref.current.clientHeight+"px")
+  },[])
   return (
-      <SectionContainer className='masonry-grid-column' span={span}>
-        <SectionTitle height={height}>{title}</SectionTitle>
-        <Subtitle >{description}</Subtitle>
+
+    <StaggeredGridItem
+      index={iter}
+      spans={span}
+      style={{ transition: "left 0.3s ease,top 0.3s ease" }}
+      ref={ref}
+    >
+      <SectionContainer>
+
+        <div
+          style={{
+            width: "100%",
+            height: height ,
+            textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+         
+          }}
+          onLoad={
+           (e)=>{
+
+           }   
+          }
+        >
+          {title}
+        </div>
+        <div
+          style={{
+            width: "100%",
+            height: height ,
+            textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center"
+          }}
+        >
+
+          {description}
+        </div>
+
+ 
         {!lodash.isEmpty(list) && (
-          <ul>
-            {list.map(listitem => (
-              <li>{listitem.label}</li>
-            ))}
-          </ul>
+             <div
+             style={{
+               width: "100%",
+               height: height ,
+               textAlign: "center",
+               display: "flex",
+               flexDirection: "column",
+               alignItems: "center",
+               justifyContent: "center"
+             }}
+           >
+             <ul>
+               {list.map(listitem => (
+                 <li>{listitem.label}</li>
+               ))}
+             </ul>
+           </div>
+        )}
+
+
+
+        {!lodash.isEmpty(video) && (
+       
+       <div
+       style={{
+         width: "100%",
+         height: height ,
+         textAlign: "center",
+         display: "flex",
+         flexDirection: "column",
+         alignItems: "center",
+         justifyContent: "center"
+       }}
+     >
+     <Video title={video.title}  allowfullscreen="allowfullscreen" src={`https://www.youtube.com/embed/${video.id}`} />
+     </div>
         )}
 
         {!lodash.isEmpty(image) && (
-          <>
-            <Image big src={image.link} />
-            <Text>{image.title}</Text>
-          </>
-        )}
-
-        {!lodash.isEmpty(video) && (
-          <>
-            <Video big title={video.title} allowfullscreen="allowfullscreen" src={`https://www.youtube.com/embed/${video.id}`} />
-            <Text>{video.title}</Text>
-          </>
+                <div
+                style={{
+                  width: "100%",
+                  height: height + "px",
+                  textAlign: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center"
+                }}
+              >
+                <Image  src={image.link}></Image>
+              </div>
         )}
       </SectionContainer>
+
+    </StaggeredGridItem >
+
   )
 }
 
@@ -121,7 +209,6 @@ const ProjectInnerContainer = styled.div`
   padding-left: 4rem;
   padding-right: 4rem;
   margin-top: 6rem;
-
   @media screen and (max-width: 500px){
     padding-left: 2rem;
     padding-right: 2rem;
@@ -129,6 +216,15 @@ const ProjectInnerContainer = styled.div`
   }
 `;
 
+const StaggeredSection = styled.div`
+width: "100%",
+height: ${props => props.height + "px"},
+textAlign: "center",
+display: "flex",
+flexDirection: "column",
+alignItems: "center",
+justifyContent: "center"
+`
 const Image = styled.img`
   width: 100%;
   height: ${props => props.big ? '80vh': '30vh'};
@@ -149,7 +245,6 @@ const ImageContainer = styled.div`
 
 const ImagesContainer = styled.div`
   display: grid;
-
   @media screen and (min-width: 1024px) {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -169,25 +264,12 @@ const SectionGrid = styled.div`
 
 const GridItem = styled.div``;
 
-const SectionContainer  = styled.div`
+const SectionContainer = styled.div`
   border: 2px solid white;
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: 4px 7px 32px 0px rgba(232,232,232,0.75);
 `;
 
-const StyledMasonry = styled(Masonry)`
-  display: -webkit-box; /* Not needed if autoprefixing */
-  display: -ms-flexbox; /* Not needed if autoprefixing */
-  display: flex;
-  margin-left: -30px; /* gutter size offset */
-  width: auto;
-
-  .masonry-grid-column {
-    padding-left: 30px; /* gutter size */
-    background-clip: padding-box;
-    margin-bottom: 30px;
-  }
-`;
 
 export default Project;

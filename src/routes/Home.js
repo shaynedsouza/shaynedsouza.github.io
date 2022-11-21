@@ -47,14 +47,15 @@ const ProfilePicComponent = styled(motion.img)`
 ;
 
 export const Title = styled(motion.h1)`
+   
   font-style: normal;
   font-weight: 700;
   font-size: 4em;
 `;
 
-export const SectionTitle = styled.h2`
+export const SectionTitle = styled.div`
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 1rem;
 `;
 
 

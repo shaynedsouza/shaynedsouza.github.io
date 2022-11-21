@@ -192,22 +192,22 @@ const portfolioData = {
         title: ''
       }],
       sections: [
-        {
+        { height :"10",
           description: 'Officia ',
     
         },
-        {
+        { height :"85",
           description: 'Officia minim eiusmod commodo consectetur anim sum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
     
         },
-        {
+        { height :"300",
           description: 'Officia minim eiusmod commodo consectetur anim sint quis proident pariatur velit culpa consequat nisi cillum. Consectetur id aliquip cillum ipsum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
       
         },
-        {
+        { height :"400",
           description: 'Officia minim eiusmod commodo consectetur anim sint quis proident pariatur velit culpa consequat nisi cillum. Consectetur id aliquip cillum ipsum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
         },
-        {
+        { height :"300",
           list: [
             {
               label: 'html'
@@ -220,17 +220,20 @@ const portfolioData = {
             }
           ]
         },
+        
+        {
+          span: 2,
+          height :"300",
+          image: {
+            link: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f?w=162&auto=format'
+          }
+        },
         {
           video: {
             id: 'SzL25FVRmLQ'
           },
+          height :"300",
           span: 2
-        },
-        {
-          span: 2,
-          image: {
-            link: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f?w=162&auto=format'
-          }
         }
       ],
       bloglist:[
