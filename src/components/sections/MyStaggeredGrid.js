@@ -6,7 +6,7 @@ import {
 
 
 const MyStaggeredGrid = ({ sections, width="300"}) => {
-  console.log('sections',sections)
+  console.log("sections "+sections)
   return(
   <StaggeredGrid
 
@@ -21,7 +21,7 @@ const MyStaggeredGrid = ({ sections, width="300"}) => {
     repositionOnResize={true}
 
   >
-   
+ 
     {sections.map((section, i) => (
      
       <MyStaggeredTiles key={i} section={section} iter={i} />

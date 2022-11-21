@@ -1,103 +1,61 @@
 import styled from 'styled-components';
-import Links, {Links as DLinks} from '../components/Links/Links';
+import Links, { Links as DLinks } from '../components/Links/Links';
 import ProjectsGrid, { Subtitle } from '../components/sections/ProjectsGrid';
-import ReactTooltip from 'react-tooltip';
 import "aos/dist/aos.css";
-import { motion } from 'framer-motion';
-import profilepic from '../profile.jpg'
-import portfolioData from '../portfolioData';
-import {useLocation, useParams} from "react-router-dom";
+import portfolioData from "../portfolioData"
+import { useLocation, useParams } from "react-router-dom";
 import lodash from 'lodash-es';
 import { SectionTitle, Title } from './Home';
 
-const Blog=() => {
-  const {id} = useParams();
-  console.log('🚀 ~ file: Blog.js ~ line 15 ~ Blog ~ id', id)
+import MyStaggeredGrid from '../components/sections/MyStaggeredGrid';
+// import Masonry from 'react-masonry-css';
 
-  const project = portfolioData.blogs.find(p => {
+const Blog = () => {
+  const { id } = useParams();
+  const blogs= portfolioData['blogs']
+  const blog = blogs.find(p => {
     return p.id === id
   })
-  console.log('🚀 ~ file: Blog.js ~ line 19 ~ project ~ project', project)
 
-  const {title, subtitle, links, images, videos, sections, date} = project
-  console.log('🚀 ~ file: Project.js ~ line 17 ~ Project ~ project', project)
+  const { title, time,image,blogsections,links } = blog
 
   return (
     <ProjectContainer>
       <ProjectInnerContainer>
-        <Title>{title}</Title>
-        <Text>{date}</Text>
-        <Subtitle>{subtitle}</Subtitle>
-        <Links links={links} color='white' />
-        {!lodash.isEmpty(images) && (
-          <SectionContainer>
-            <SectionTitle>Gallery</SectionTitle>
-            <ImagesContainer>
-              {images.map(image => (
-                <ImageContainer key={image.title}>
-                  <Image src={image.link} alt={image.title} />
-                  <Text>{image.title}</Text>
-                </ImageContainer>
-              ))}
-            </ImagesContainer>
-          </SectionContainer>
-        )}
 
-        {!lodash.isEmpty(videos) && (
-          <SectionContainer>
-            <SectionTitle>Videos</SectionTitle>
-            <ImagesContainer>
-              {videos.map(video => (
-                <ImageContainer key={video.title}>
-                  <Video title={video.title} allowfullscreen="allowfullscreen" src={`https://www.youtube.com/embed/${video.id}`} />
-                  <Text>{video.title}</Text>
-                </ImageContainer>
-              ))}
-            </ImagesContainer>
-          </SectionContainer>
-        )}
+        <Title style={{
+
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+
+        }}>{title}</Title>
+
+
+        <Links style={{
+
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%"
+        }} links={links} color='white' />
+
+        <Text style={{
+
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%"
+        }}>Published on: {time}</Text>
+
+        <br></br>
         
+        <BlogSections blogsections ={blogsections}></BlogSections>
         
-        {sections.map((section, i) => (
-          <Section key={i} section={section} />
-        ))}
       </ProjectInnerContainer>
-      
-    </ProjectContainer>
 
-  )
-}
+    </ProjectContainer >
 
-
-const Section = ({section}) => {
-  const {title, description, image, list, video } = section;
-
-  return (
-    <SectionContainer>
-      <SectionTitle>{title}</SectionTitle>
-      <Subtitle>{description}</Subtitle>
-      {!lodash.isEmpty(list) && (
-        <ul>
-          {list.map(listitem => (
-            <li>{listitem.label}</li>
-          ))}
-        </ul>
-      )}
-
-      {!lodash.isEmpty(image) && (
-        <>
-          <Image big src={image.link} />
-          <Text>{image.title}</Text>
-        </>
-      )}
-
-      {!lodash.isEmpty(video) && (
-        <>
-          <Video big title={video.title} allowfullscreen="allowfullscreen" src={`https://www.youtube.com/embed/${video.id}`} />
-          <Text>{video.title}</Text>
-        </>
-      )}
-    </SectionContainer>
   )
 }
 
@@ -112,7 +70,6 @@ const ProjectInnerContainer = styled.div`
   padding-left: 4rem;
   padding-right: 4rem;
   margin-top: 6rem;
-
   @media screen and (max-width: 500px){
     padding-left: 2rem;
     padding-right: 2rem;
@@ -120,41 +77,25 @@ const ProjectInnerContainer = styled.div`
   }
 `;
 
-const Image = styled.img`
-  width: 100%;
-  height: ${props => props.big ? '80vh': '30vh'};
-  object-fit: cover;
-`;
 
-const Video = styled.iframe.attrs({
-  allowFullScreen: true
-})`
-  width: 100%;
-  height: ${props => props.big ? '80vh': '30vh'};
-  border: none;
-`;
-
-const ImageContainer = styled.div`
-  width: 100%;
-`;
-
-const ImagesContainer = styled.div`
-  display: grid;
-
-  @media screen and (min-width: 1024px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 15px;
-`;
 
 const Text = styled.p`
 `;
 
 
-
-const SectionContainer  = styled.div`
-  margin-top: 4rem;
-`;
+const BlogSections=({blogsections})=>{
+return(
+  blogsections.map((blogsection, i) => (
+    <div>
+    <div className='divider'><span></span><span>blogsection.blogsectiontitle</span><span></span></div>
+    <br></br>
+    <p>blogsection.blogsectiontext</p>
+    
+    <MyStaggeredGrid sections = {blogsection.bloggridsections}></MyStaggeredGrid>
+   </div>
+ ))
+ 
+)
+}
 
 export default Blog;

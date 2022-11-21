@@ -20,7 +20,7 @@ const Project = () => {
     return p.id === id
   })
 
-  const { title, subtitle, links, images, videos, sections, time, team } = project
+  const { title, description, links, images, videos, sections, time, team } = project
 
 
   return (
@@ -66,7 +66,7 @@ const Project = () => {
           alignItems: "center",
           justifyContent: "center",
           width: "100%"
-        }} > <b>{subtitle}</b></Subtitle>
+        }} > <b>{description}</b></Subtitle>
 
 
      

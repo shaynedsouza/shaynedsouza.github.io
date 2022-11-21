@@ -1,31 +1,42 @@
 import styled from 'styled-components';
 import Links from '../components/Links/Links';
-import ProjectsGrid from '../components/sections/ProjectsGrid';
+import ProjectsGrid, { Subtitle } from '../components/sections/ProjectsGrid';
 import { motion } from 'framer-motion';
 import profilepic from '../profile.jpg'
 import portfolioData from '../portfolioData';
 import MyStaggeredGrid from '../components/sections/MyStaggeredGrid';
-const Home=(props) => {
-    const {title, subtitle, links, projects, image, blogs} = portfolioData;
-    return (
-      <PageContainer>
-        <BackgroundSection>
-          <ProfilePicComponent src ={profilepic} />
-          <Title style={{
+const Home = (props) => {
+ 
+  const { title, subtitle, links,projects,  image, blogs } = portfolioData;
 
-textAlign: "center",
-alignItems: "center",
-justifyContent: "center",
+  console.log(portfolioData)
 
-}}>{title}</Title>
-          <Links links={links} color='white' />
-        </BackgroundSection>
-        <div className='divider'><span></span><span>Projects</span><span></span></div>
-        <MyStaggeredGrid sections={projects} width={"500"} />
-        <div className='divider'><span></span><span>Blogs</span><span></span></div>
-        <MyStaggeredGrid width={"500"}  sections={blogs} />
-        
-      </PageContainer>
+  return (
+    <PageContainer>
+      <BackgroundSection>
+        <ProfilePicComponent src={profilepic} />
+        <Title style={{
+
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+
+        }}>{title}</Title>
+        <Subtitle style={{
+
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+
+        }}>{subtitle}</Subtitle>
+        <Links links={links} color='white' />
+      </BackgroundSection>
+      <div className='divider'><span></span><span>Projects</span><span></span></div>
+      <MyStaggeredGrid sections={projects} width={"500"} />
+      <div className='divider'><span></span><span>Blogs</span><span></span></div>
+      <MyStaggeredGrid width={"500"} sections={blogs} />
+
+    </PageContainer>
 
   )
 }
@@ -50,7 +61,7 @@ const ProfilePicComponent = styled(motion.img)`
   border-radius: 50%;
   margin-top: 10rem;
 `
-;
+  ;
 
 export const Title = styled(motion.h1)`
    

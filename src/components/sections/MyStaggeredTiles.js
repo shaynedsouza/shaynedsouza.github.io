@@ -37,20 +37,6 @@ const MyStaggeredTiles = ({ section, iter }) => {
     >
       {title}
     </div>
-    <div
-      style={{
-        width: "100%",
-        height: height,
-        textAlign: "center",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center"
-      }}
-    >
-
-      {description}
-    </div>
 
 
     {!lodash.isEmpty(list) && (
@@ -121,7 +107,7 @@ const MyStaggeredTiles = ({ section, iter }) => {
   useEffect(() => {
     setHeight(ref.current.clientHeight + "px")
   }, [])
-  console.log("span " + span)
+
 
  
    if(lodash.isEmpty(externallink))

@@ -1,7 +1,7 @@
 const portfolio_types = {
-  PROJECT_TYPES:{
-    GAME:"Game Projects",
-    WRITING :"Writing projects"
+  PROJECT_TYPES: {
+    GAME: "Game Projects",
+    WRITING: "Writing projects"
   },
   ICON_TYPES: {
     RESUME: {
@@ -19,103 +19,69 @@ const portfolio_types = {
   }
 }
 
-const blogs= [
-  {
-    id: 'letsstartatthebeginning',
-    title: 'Let\'s start at the beginning',
-    date: '11/23/2021',
-    subtitle: 'A short game that explores themes of guilt and penance. We had a fun time building it out. We aimed for the visual here and the small number of interactive elements hopefully help drive the story forward.',
-    type:portfolio_types.PROJECT_TYPES.GAME,
+const blogs = 
+[  
+    {id:'howheadturn',
     links: [
       {
-        title: 'Itch',
-        icon: 'itch',
-        link: 'https://shaynedsouza.itch.io/lets-start-at-the-beginning'
-      }
-    ],
-    images: [
-      {
-        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-        title: 'Somethign better than nothing'
+        ...portfolio_types.ICON_TYPES.RESUME,
+        link: 'https://drive.google.com/file/d/1TeSsqsNpOI3QtdA-86nEfs4M6WwNNvoL/view?usp=sharing'
       },
       {
-        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-        title: ''
+        ...portfolio_types.ICON_TYPES.GITHUB,
+        link: 'https://www.github.com/kvoththebloodless'
       },
       {
-        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-        title: ''
-      },
-      {
-        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-        title: ''
-      },
-      {
-        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-        title: ''
-      },
-      {
-        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-        title: ''
-      },
-      {
-        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-        title: ''
-      },
-      {
-        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-        title: ''
-      },
-      {
-        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-        title: ''
-      },
-      {
-        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-        title: ''
+        ...portfolio_types.ICON_TYPES.LINKEDIN,
+        link: 'https://www.linkedin.com/in/gourav-acharya/'
       },
     ],
-    videos: [{
-      id: 'SzL25FVRmLQ',
-      title: ''
-    }],
-    sections: [
+    time:"November 11, 2022",
+    index:0,
+    title: 'How I made a creepy-head-follow-you mechanic',
+    image:{
+      link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png'
+    },
+    externallink:"/blog/howheadturn",
+    blogsections:[
       {
-        title: 'Planning',
-        description: 'Officia minim eiusmod commodo consectetur anim sint quis proident pariatur velit culpa consequat nisi cillum. Consectetur id aliquip cillum ipsum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
-        image: {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: 'This was my planning'
-        },
-        video: {
-          id: 'SzL25FVRmLQ',
-          title: 'video'
-        }
+        blogsectiontitle:"asdad",
+        blogsectiontext: "asdasdasdadasdadad",
+        bloggridsections :[
+            {
+              list: [
+                {
+                  label: 'html'
+                },
+                {
+                  label: 'java'
+                },
+                {
+                  label: 'unity'
+                }
+              ]
+            }
+        ]
       },
       {
-        title: 'Tech used',
-        list: [
-          {
-            label: 'html'
-          },
-          {
-            label: 'java'
-          },
-          {
-            label: 'unity'
-          }
+        blogsectiontitle:"asdad",
+        blogsectiontext: "asdasdasdadasdadad",
+        bloggridsections :[
+            {
+              image: {
+                link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png'
+              }
+            }
         ]
       }
-    ],
-    bloglist:[
-      "blog1","blog2"
     ]
   }
 ]
 
 const portfolioData = {
+
+  // My Profile Data
   title: 'Gourav Acharya',
-  image: '',
   subtitle: 'I tell stories. Currently through games.',
   links: [
     {
@@ -131,21 +97,13 @@ const portfolioData = {
       link: 'https://www.linkedin.com/in/gourav-acharya/'
     }
   ],
+
+  //The projects
   projects: [
     {
       id: 'letsstartatthebeginning',
-      title: 'Let\'s start at the beginning',
       time: "1 week",
-      span: 1,
-      team:"Gourav Acharya, Shayne Dsouza",
-      externallink:"/project/letsstartatthebeginning",
-      subtitle: 'A PT like short horror game that explores themes of guilt and penance.',
-        
-        image: {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png'
-        }
-        ,
-      type:portfolio_types.PROJECT_TYPES.GAME,
+      team: "Gourav Acharya, Shayne Dsouza",
       links: [
         {
           title: 'Itch',
@@ -153,69 +111,39 @@ const portfolioData = {
           link: 'https://shaynedsouza.itch.io/lets-start-at-the-beginning'
         }
       ],
-      images: [
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: 'Somethign better than nothing'
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-      ],
-      videos: [{
-        id: 'SzL25FVRmLQ',
-        title: ''
-      }],
+      image: {
+        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png'
+      },
+
+      //Grid Data for home page
+      title: 'Let\'s start at the beginning',
+      span: 1,
+      externallink: "/project/letsstartatthebeginning",
+      description: 'A PT like short horror game that explores themes of guilt and penance.',
+
+      // Grid Data for Detail Project Page
       sections: [
-        { height :"10",
-          description: 'Officia ',
-    
+        {
+          
+          title: 'Officia',
+
         },
-        { height :"85",
-          description: 'Officia minim eiusmod commodo consectetur anim sum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
-    
+        {
+          
+          title: 'Officia minim eiusmod commodo consectetur anim sum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
+
         },
-        { height :"300",
-          description: 'Officia minim eiusmod commodo consectetur anim sint quis proident pariatur velit culpa consequat nisi cillum. Consectetur id aliquip cillum ipsum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
-      
+        {
+          
+          title: 'Officia minim eiusmod commodo consectetur anim sint quis proident pariatur velit culpa consequat nisi cillum. Consectetur id aliquip cillum ipsum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
+
         },
-        { height :"400",
-          description: 'Officia minim eiusmod commodo consectetur anim sint quis proident pariatur velit culpa consequat nisi cillum. Consectetur id aliquip cillum ipsum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
+        {
+          
+          title: 'Officia minim eiusmod commodo consectetur anim sint quis proident pariatur velit culpa consequat nisi cillum. Consectetur id aliquip cillum ipsum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
         },
-        { height :"300",
+        {
+          
           list: [
             {
               label: 'html'
@@ -228,10 +156,9 @@ const portfolioData = {
             }
           ]
         },
-        
+
         {
-          span: 2,
-          height :"300",
+          span: 2, 
           image: {
             link: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f?w=162&auto=format'
           }
@@ -240,132 +167,15 @@ const portfolioData = {
           video: {
             id: 'SzL25FVRmLQ'
           },
-          height :"300",
+          
           span: 2
         }
-      ],
-      bloglist:[
-        "blog1","blog2"
       ]
     },
-    {
-      id: 'letsstartatthebeginning',
-      title: 'Let\'s start at the beginning',
-      time: "1 week",
-      span: 1,
-      team:"Gourav Acharya, Shayne Dsouza",
-      subtitle: 'A PT like short horror game that explores themes of guilt and penance.',
-        
-        image: {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png'
-        }
-        ,
-      type:portfolio_types.PROJECT_TYPES.GAME,
-      links: [
-        {
-          title: 'Itch',
-          icon: 'itch',
-          link: 'https://shaynedsouza.itch.io/lets-start-at-the-beginning'
-        }
-      ],
-      images: [
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: 'Somethign better than nothing'
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-        {
-          link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png',
-          title: ''
-        },
-      ],
-      videos: [{
-        id: 'SzL25FVRmLQ',
-        title: ''
-      }],
-      sections: [
-        { height :"10",
-          description: 'Officia ',
-    
-        },
-        { height :"85",
-          description: 'Officia minim eiusmod commodo consectetur anim sum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
-    
-        },
-        { height :"300",
-          description: 'Officia minim eiusmod commodo consectetur anim sint quis proident pariatur velit culpa consequat nisi cillum. Consectetur id aliquip cillum ipsum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
-      
-        },
-        { height :"400",
-          description: 'Officia minim eiusmod commodo consectetur anim sint quis proident pariatur velit culpa consequat nisi cillum. Consectetur id aliquip cillum ipsum deserunt qui elit nostrud quis veniam. Esse anim et reprehenderit proident mollit sit commodo sit in mollit qui voluptate dolore.',
-        },
-        { height :"300",
-          list: [
-            {
-              label: 'html'
-            },
-            {
-              label: 'java'
-            },
-            {
-              label: 'unity'
-            }
-          ]
-        },
-        
-        {
-          span: 2,
-          height :"300",
-          image: {
-            link: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f?w=162&auto=format'
-          }
-        },
-        {
-          video: {
-            id: 'SzL25FVRmLQ'
-          },
-          height :"300",
-          span: 2
-        }
-      ],
-      bloglist:[
-        "blog1","blog2"
-      ]
-    }
-    
+   
   ],
   blogs
 }
 
 export default portfolioData;
+
