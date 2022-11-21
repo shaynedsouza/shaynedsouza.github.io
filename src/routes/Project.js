@@ -25,29 +25,8 @@ const Project = () => {
     return p.id === id
   })
 
-  const { title, subtitle, links, images, videos, sections, date } = project
-  // let sections1=[{title:"asd",span:"1"},
-  // {title:"asd",span:"1"},
-  // {title:"asd",span:"1"},
-  // {title:"asd",span:"1"},
-  // {title:"asd",span:"1"},
-  // {title:"asd",span:"1"},
-  // {title:"asd",span:"2"},
-  // {title:"asd",span:"2"},
-  // {title:"asd",height:"315",span:"1"},
-  // {title:"asd",height:"315",span:"1"},
-  // {title:"asd",height:"315",span:"1"},
-  // {title:"asd",height:"315",span:"1"},
-  // {title:"asd",height:"315",span:"1"},
-  // {title:"asd",height:"315",span:"1"},
-  // {title:"asd",height:"315",span:"1"},
-  // {title:"asd",height:"315",span:"1"},
-  // {title:"asd",height:"315",span:"1"},
-  // {title:"asd",height:"315",span:"1"},
-  // {title:"asd",height:"315",span:"1"},
-  // {title:"asd",height:"315",span:"1"},
-  //]
-  console.log('🚀 ~ file: Project.js ~ line 17 ~ Project ~ project', project)
+  const { title, subtitle, links, images, videos, sections, time, team } = project
+
 
   return (
     <ProjectContainer>
@@ -61,24 +40,38 @@ const Project = () => {
 
         }}>{title}</Title>
 
-        <div style={{
+
+        <Links style={{
 
           textAlign: "center",
           alignItems: "center",
           justifyContent: "center",
           width: "100%"
-        }
-        } >
-         links: <Links style={{
+        }} links={links} color='white' />
 
-textAlign: "center",
-alignItems: "center",
-justifyContent: "center",
-width: "100%"
-} links={links} color='white' />
-      </div>
-      <Text>{date}</Text>
-      <Subtitle>{subtitle}</Subtitle>
+        <Text style={{
+
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%"
+        }}>Time taken: {time}</Text>
+      
+        <Text style={{
+
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%"
+        }}>Team: {team}</Text>
+          <br></br>
+        <Subtitle style={{
+
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%"
+        }} > <b>{subtitle}</b></Subtitle>
 
 
 
@@ -102,7 +95,6 @@ width: "100%"
         ))}
 
       </StaggeredGrid>
-
     </ProjectInnerContainer>
 
     </ProjectContainer >

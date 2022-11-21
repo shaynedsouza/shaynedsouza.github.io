@@ -135,8 +135,9 @@ const portfolioData = {
     {
       id: 'letsstartatthebeginning',
       title: 'Let\'s start at the beginning',
-      date: '11/23/2021',
-      subtitle: 'A short game that explores themes of guilt and penance. We had a fun time building it out. We aimed for the visual here and the small number of interactive elements hopefully help drive the story forward.',
+      time: "1 week",
+      team:"Gourav Acharya, Shayne Dsouza",
+      subtitle: 'A PT like short horror game that explores themes of guilt and penance.',
       type:portfolio_types.PROJECT_TYPES.GAME,
       links: [
         {
