@@ -9,7 +9,7 @@ import portfolioData from '../portfolioData';
 import { useLocation, useParams } from "react-router-dom";
 import lodash from 'lodash-es';
 import { SectionTitle, Title } from './Home';
-import  { useRef,useEffect,useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 // import Masonry from 'react-masonry-css';
 import {
   StaggeredAlignment,
@@ -52,32 +52,58 @@ const Project = () => {
   return (
     <ProjectContainer>
       <ProjectInnerContainer>
-        <Title>{title}</Title>
-        <Text>{date}</Text>
-        <Subtitle>{subtitle}</Subtitle>
-        <Links links={links} color='white' />
 
-        <StaggeredGrid
+        <Title style={{
 
-          columnWidth={"300"} // width of each column , don't pass if you want it to be gridWidth / columns
-          columns={0}
-          alignment={StaggeredAlignment.Center}
-          useElementWidth={true} // this would force css styled width (100%) , when false gridWidth = columnWidth * columnWidth
-          fitHorizontalGap={true}
-          calculateHeight={true}
-          horizontalGap={10}
-          verticalGap={10}
-          repositionOnResize={true}
-      
-        >
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
 
-          {sections.map((section, i) => (
-            <Section key={i} section={section} iter={i} />
-          ))}
+        }}>{title}</Title>
 
-        </StaggeredGrid>
+        <div style={{
 
-      </ProjectInnerContainer>
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%"
+        }
+        } >
+         links: <Links style={{
+
+textAlign: "center",
+alignItems: "center",
+justifyContent: "center",
+width: "100%"
+} links={links} color='white' />
+      </div>
+      <Text>{date}</Text>
+      <Subtitle>{subtitle}</Subtitle>
+
+
+
+      <div className='divider'><span></span><span>Gallery</span><span></span></div>
+      <StaggeredGrid
+
+        columnWidth={"300"} // width of each column , don't pass if you want it to be gridWidth / columns
+        columns={0}
+        alignment={StaggeredAlignment.Center}
+        useElementWidth={true} // this would force css styled width (100%) , when false gridWidth = columnWidth * columnWidth
+        fitHorizontalGap={true}
+        calculateHeight={true}
+        horizontalGap={10}
+        verticalGap={10}
+        repositionOnResize={true}
+
+      >
+
+        {sections.map((section, i) => (
+          <Section key={i} section={section} iter={i} />
+        ))}
+
+      </StaggeredGrid>
+
+    </ProjectInnerContainer>
 
     </ProjectContainer >
 
@@ -90,8 +116,8 @@ const Section = ({ section, iter }) => {
   let [height, setHeight] = useState("px");
   const ref = useRef(null)
   useEffect(() => {
-    setHeight(ref.current.clientHeight+"px")
-  },[])
+    setHeight(ref.current.clientHeight + "px")
+  }, [])
   return (
 
     <StaggeredGridItem
@@ -105,18 +131,18 @@ const Section = ({ section, iter }) => {
         <div
           style={{
             width: "100%",
-            height: height ,
+            height: height,
             textAlign: "center",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-         
+
           }}
           onLoad={
-           (e)=>{
+            (e) => {
 
-           }   
+            }
           }
         >
           {title}
@@ -124,7 +150,7 @@ const Section = ({ section, iter }) => {
         <div
           style={{
             width: "100%",
-            height: height ,
+            height: height,
             textAlign: "center",
             display: "flex",
             flexDirection: "column",
@@ -136,60 +162,60 @@ const Section = ({ section, iter }) => {
           {description}
         </div>
 
- 
+
         {!lodash.isEmpty(list) && (
-             <div
-             style={{
-               width: "100%",
-               height: height ,
-               textAlign: "center",
-               display: "flex",
-               flexDirection: "column",
-               alignItems: "center",
-               justifyContent: "center"
-             }}
-           >
-             <ul>
-               {list.map(listitem => (
-                 <li>{listitem.label}</li>
-               ))}
-             </ul>
-           </div>
+          <div
+            style={{
+              width: "100%",
+              height: height,
+              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center"
+            }}
+          >
+            <ul>
+              {list.map(listitem => (
+                <li>{listitem.label}</li>
+              ))}
+            </ul>
+          </div>
         )}
 
 
 
         {!lodash.isEmpty(video) && (
-       
-       <div
-       style={{
-         width: "100%",
-         height: height ,
-         textAlign: "center",
-         display: "flex",
-         flexDirection: "column",
-         alignItems: "center",
-         justifyContent: "center"
-       }}
-     >
-     <Video title={video.title}  allowfullscreen="allowfullscreen" src={`https://www.youtube.com/embed/${video.id}`} />
-     </div>
+
+          <div
+            style={{
+              width: "100%",
+              height: height,
+              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center"
+            }}
+          >
+            <Video title={video.title} allowfullscreen="allowfullscreen" src={`https://www.youtube.com/embed/${video.id}`} />
+          </div>
         )}
 
         {!lodash.isEmpty(image) && (
-                <div
-                style={{
-                  width: "100%",
-                  height: height + "px",
-                  textAlign: "center",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center"
-                }}
-              >
-                <Image  src={image.link}></Image>
-              </div>
+          <div
+            style={{
+              width: "100%",
+              height: height + "px",
+              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center"
+            }}
+          >
+            <Image src={image.link}></Image>
+          </div>
         )}
       </SectionContainer>
 
@@ -227,7 +253,7 @@ justifyContent: "center"
 `
 const Image = styled.img`
   width: 100%;
-  height: ${props => props.big ? '80vh': '30vh'};
+  height: ${props => props.big ? '80vh' : '30vh'};
   object-fit: cover;
 `;
 
@@ -235,7 +261,7 @@ const Video = styled.iframe.attrs({
   allowFullScreen: true
 })`
   width: 100%;
-  height: ${props => props.big ? '80vh': '30vh'};
+  height: ${props => props.big ? '80vh' : '30vh'};
   border: none;
 `;
 
