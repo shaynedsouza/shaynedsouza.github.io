@@ -175,12 +175,12 @@ const portfolioData = {
         {
           ...blogs[0]
         },
-        {
-          video: {
-            link: 'https://v6p9d9t4.ssl.hwcdn.net/html/4381277/WebGl/index.html'
-          },
-          span: 2
-        }
+        // {
+        //   video: {
+        //     link: 'https://v6p9d9t4.ssl.hwcdn.net/html/4381277/WebGl/index.html'
+        //   },
+        //   span: 2
+        // }
       ]
     },
    

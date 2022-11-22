@@ -7,11 +7,16 @@ import styled from 'styled-components';
 import ModalImage from "react-modal-image";
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
+import { Modal } from '@mui/material';
+import { Box } from '@mui/system';
 
 
 const MyStaggeredTiles = ({ section, iter }) => {
   const { title, description, image, list, video, span, externallink } = section;
   let [height, setHeight] = useState("px");
+
+  const [open, setOpen] = useState(false);
+
   const ref = useRef(null)
   const gridpart = (
     <StaggeredGridItem
@@ -54,13 +59,33 @@ const MyStaggeredTiles = ({ section, iter }) => {
         {!lodash.isEmpty(image) && (
           <CommonSectionDiv >
             <Image
-              small={image.link}
-              large={image.link}
+              onClick={() => setOpen(true)}
+              src={image.link}
               alt="Hello World!"
             />
+             <Modal
+                open={open}
+                onClose={() => setOpen(false)}
+              >
+                <Box sx={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  width: '80%',
+                  bgcolor: 'background.paper',
+                  border: '2px solid #000',
+                  boxShadow: 24,
+                  p: 4,
+                }}>
+                  <Image big src={image.link}/>
+
+                </Box>
+              </Modal>
           </CommonSectionDiv>
         )}
       </SectionContainer>
+     
     </StaggeredGridItem >
   )
     
@@ -84,7 +109,7 @@ const MyStaggeredTiles = ({ section, iter }) => {
   )
 }
 
-const Image = styled(ModalImage)`
+const Image = styled.img`
   width: 100%;
   height: ${props => props.big ? '80vh' : '30vh'};
   object-fit: cover;
