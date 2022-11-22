@@ -25,7 +25,7 @@ const MyStaggeredTiles = ({ section, iter }) => {
           ...(!lodash.isEmpty(image) || !lodash.isEmpty(video) || !lodash.isEmpty(externallink)) &&
           {
             scale: 1.2,
-            zIndex: 32
+            zIndex: 60
           }
         }}
       >
@@ -47,7 +47,7 @@ const MyStaggeredTiles = ({ section, iter }) => {
 
         {!lodash.isEmpty(video) && (
           <CommonSectionDiv >
-            <Video title={video.title} allowfullscreen="allowfullscreen" src={`https://www.youtube.com/embed/${video.id}`} />
+            <Video title={video.title} allowfullscreen="allowfullscreen" src={video.link} />
           </CommonSectionDiv>
         )}
 
@@ -96,6 +96,7 @@ const Video = styled.iframe.attrs({
   width: 100%;
   height: ${props => props.big ? '80vh' : '30vh'};
   border: none;
+  overflow:hidden;
 `;
 
 const SectionContainer = styled(motion.div)`
@@ -103,6 +104,7 @@ const SectionContainer = styled(motion.div)`
   /* border: 2px solid white; */
   border-radius: 1rem;
   padding: 1rem;
+  z-index:2;
   box-shadow: -2rem 0 3rem -2rem #000;
 `;
 

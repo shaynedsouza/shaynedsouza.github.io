@@ -167,13 +167,19 @@ const portfolioData = {
         },
         {
           video: {
-            id: 'SzL25FVRmLQ'
+            link: 'https://www.youtube.com/embed/SzL25FVRmLQ'
           },
           
           span: 2
         },
         {
           ...blogs[0]
+        },
+        {
+          video: {
+            link: 'https://v6p9d9t4.ssl.hwcdn.net/html/4381277/WebGl/index.html'
+          },
+          span: 2
         }
       ]
     },

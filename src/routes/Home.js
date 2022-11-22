@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import Links from '../components/Links/Links';
-import ProjectsGrid, { Subtitle } from '../components/sections/ProjectsGrid';
 import { motion } from 'framer-motion';
 import profilepic from '../profile.jpg'
 import portfolioData from '../portfolioData';
 import MyStaggeredGrid from '../components/sections/MyStaggeredGrid';
+import { Subtitle } from '../components/common/StyledComponents';
 const Home = (props) => {
  
   const { title, subtitle, links,projects,  image, blogs } = portfolioData;

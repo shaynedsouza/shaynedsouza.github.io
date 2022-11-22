@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Links, { Links as DLinks } from '../components/Links/Links';
-import ProjectsGrid, { Subtitle } from '../components/sections/ProjectsGrid';
+import { Subtitle } from '../components/common/StyledComponents';
 import "aos/dist/aos.css";
 import portfolioData from "../portfolioData"
 import { useLocation, useParams } from "react-router-dom";
@@ -40,13 +40,13 @@ const Blog = () => {
           width: "100%"
         }} links={links} color='white' />
 
-        <Text style={{
+        <Subtitle style={{
 
           textAlign: "center",
           alignItems: "center",
           justifyContent: "center",
           width: "100%"
-        }}>Published on: {time}</Text>
+        }}>Published on: {time}</Subtitle>
 
         <br></br>
         

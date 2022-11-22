@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Links, { Links as DLinks } from '../components/Links/Links';
-import ProjectsGrid, { Subtitle } from '../components/sections/ProjectsGrid';
+import { Subtitle } from '../components/common/StyledComponents';
 import ReactTooltip from 'react-tooltip';
 import "aos/dist/aos.css";
 import { motion } from 'framer-motion';
