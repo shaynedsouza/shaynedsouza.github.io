@@ -97,7 +97,7 @@ return(
  
     <BlogTextContainer>{blogsection.blogsectiontext}</BlogTextContainer>
     <br></br>
-    <MyStaggeredGrid width="500" sections = {blogsection.bloggridsections}></MyStaggeredGrid>
+    <MyStaggeredGrid width="1024" sections = {blogsection.bloggridsections}></MyStaggeredGrid>
    </div>
  ))
  

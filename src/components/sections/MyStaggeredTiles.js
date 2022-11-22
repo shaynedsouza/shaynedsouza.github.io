@@ -61,7 +61,7 @@ const MyStaggeredTiles = ({ section, iter }) => {
             <Image
               onClick={() => setOpen(true)}
               src={image.link}
-              alt="Hello World!"
+              alt="image"
             />
              <Modal
                 open={open}
@@ -72,13 +72,13 @@ const MyStaggeredTiles = ({ section, iter }) => {
                   top: '50%',
                   left: '50%',
                   transform: 'translate(-50%, -50%)',
-                  width: '80%',
+                  width: 'fit-content',
                   bgcolor: 'background.paper',
-                  border: '2px solid #000',
+                  border: '2px solid #fff',
                   boxShadow: 24,
-                  p: 4,
+                  p: 1,
                 }}>
-                  <Image big src={image.link}/>
+                  <img src={image.link}/>
 
                 </Box>
               </Modal>

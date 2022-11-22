@@ -5,7 +5,7 @@ import Blog from './routes/Blog';
 
 import "aos/dist/aos.css";
 import {
-  BrowserRouter, Routes,Route,
+  HashRouter, Routes,Route,
 } from 'react-router-dom'
 import ReactTooltip from 'react-tooltip';
 function App() {
@@ -13,14 +13,14 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      < HashRouter>
         <Routes>
             <Route exact path="/" element={<Home />}/>
             <Route exact path="/project/:id" element={<Project />} />
             <Route exact path="/blog/:id" element={<Blog />} />
             <Route path='*' element={<Home />}/>
         </Routes>    
-      </BrowserRouter>
+      </ HashRouter>
       <ReactTooltip />
     </>
     
