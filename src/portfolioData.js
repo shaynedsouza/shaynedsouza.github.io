@@ -159,6 +159,247 @@ const blogs =
       }
       
     ]
+  },
+  {
+    id:'howisometric',
+    span:'1',
+    links: [
+      
+    ],
+    time:"November 20, 2022",
+    index:0,
+    title: 'How I made a custom sprite rendering logic to give the occlusion effect in a fully 2D isometric game.',
+    image:{
+      link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/ItsNotReal/occlusion.JPG?raw=true'
+    },
+    externallink:"/blog/howisometric",
+    blogsections:[
+      {
+        blogsectiontitle:"Situation",
+        blogsectiontext: "For a fully isometric game (A traps based mechanic where one trap triggers the other and there is furniture in the room that aids the trap effects.) made with only 2D assets there comes a giant issue of how to show overlap. If an object A and object B are occupying the same space how do we decide what's rendered before and what's after.",
+        bloggridsections:[
+         
+        ]
+      },
+      {
+        blogsectiontitle:"Task",
+        blogsectiontext: "The task is to figure out how to render sprites when overlapping while working with the following restrictions",
+        bloggridsections :[
+          {list:[
+            {label:"A trap like for eg. a catapult only take up one grid space. A furniture item can take as many places as it needs to."},
+           {label:"A trap can't be placed directly over a fully occupied tile but can be placed on a partially occupied one [As marked red-for no and blue for yes in the image below]"},
+            {label:"Don't overlap furniture objects."}
+          ],
+          image:
+          {
+              link:"https://github.com/kvoththebloodless/MediaDump/blob/master/ItsNotReal/markvalid.JPG?raw=true"
+          }
+        }
+        ]
+      },
+      {
+        blogsectiontitle:"Approach",
+        blogsectiontext: "We watched this excellent video by Scott Steffers of Kingdom of Knight game and prepared the following approach to solving the problem. We learnt that for isometric games the rendering logic should be over whichever two sprites that are intersecting."+
+        " For this isometric game, the lower and the more left you go, the more you will be brought to the front. With that in mind here were the steps. ",
+        bloggridsections :[
+          {
+          video:
+          {
+              link:"https://www.youtube.com/embed/yRZlVrinw9I"
+          }
+        },
+        {
+          list:[
+            {label:"Note: when I say x and y it means in grid space the horizontal and vertical respectively."},
+            {label:"Calculate in grid space, where the furniture and traps, i,e, both types of interactables are present. Initially it's just the furniture till you place the trap."},
+            {label:"Now once we have those values, when we start to place a trap on the grid we perform the following check each frame as we move the trap"}
+          ],
+          image:{
+            link:"https://github.com/kvoththebloodless/MediaDump/blob/master/ItsNotReal/inrblogfindextremeties.JPG?raw=true"
+          }
+        },
+        {
+          list:[
+            {label: "1) If the trap is interacting with another trap then render based on the point to point check"},
+            {label: "1.a) If both have the same y value then sort based on x values. i.e, the lower the x value the more the sprite rendering order."},
+            {label: "1.b) If both have the same x value then similarly lower the y value, the more your sprite order."},
+          ],
+            image:{
+              link:"https://github.com/kvoththebloodless/MediaDump/blob/master/ItsNotReal/inrpointopointcheck.JPG?raw=true"
+            }
+        },
+        {
+          list:[
+            {label: "2) If the trap is interacting with a furniture we follow the following logic"},
+            {label: "2.a) Calculate the diagonal extremeties of the furniture that the trap is intersecting with."},
+            {label: "2.b) We take the diagonal that passes through (xmin,ymax) and (xmax,ymin) because that satisfies our rendering rule about \"the lower and the more left you go, the more you will be brought to the front. With that in mind here were the steps. \""},
+            {label: "2.c) Then take the cross product of the vector to trap position and the diagonal vector and if the cross product is negative for z then trap's rendering order is less than furniture as trap is behind the furniture and vice versa for positive z"}
+          ],
+            image:{
+              link:"https://github.com/kvoththebloodless/MediaDump/blob/master/ItsNotReal/inrpointtolinecheck.JPG?raw=true"
+            }
+        }
+        ]
+      },
+      {
+        blogsectiontitle:"Results",
+        blogsectiontext: "You can see that For a partially covered tile that the trap tries to occupy,  as we move the trap around the room it occludes when behind the furniture and shows up again when in front of it. ",
+        bloggridsections :[
+            {
+              image:{link:"https://github.com/kvoththebloodless/MediaDump/blob/master/ItsNotReal/inrspriterendering.gif?raw=true"}
+            }
+        ]
+      }
+      
+    ]
+  },
+  {
+    id:'howfishline',
+    span:'1',
+    links: [
+      
+    ],
+    time:"November 20, 2022",
+    index:0,
+    title: 'How I made a custom fishline projectile effect to display where a trap\'s area of effect reaches',
+    image:{
+      link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/ItsNotReal/inr.JPG?raw=true'
+    },
+    externallink:"/blog/howfishline",
+    blogsections:[
+      {
+        blogsectiontitle:"Situation",
+        blogsectiontext: "In our game -it\'s not real, we use traps to trigger other traps and create a domino effect. For a mechanic like such, we need a way to see the area of effect for a trap. So for eg, a catapult trap will need to show where the object it throws will land.",
+        bloggridsections:[
+         
+        ]
+      },
+      {
+        blogsectiontitle:"Task",
+        blogsectiontext: "The task is to figure out how to show a fishline effect, i.e, a projectile line that shows where the object will land once thrown.",
+        bloggridsections :[
+          
+        ]
+      },
+      {
+        blogsectiontitle:"Approach",
+        blogsectiontext: "A very common law of motion is every F= MA, now from that equation we have a derived motion equation ",
+        bloggridsections :[
+          {
+            span:2,
+        title:"Distance= Initial Velocity*timetaken + 0.5*acceleration*timetaken^2 or typed as S=ut+0.5 at^2" 
+        },
+        {span:2,
+          list:[
+            {label:"We first need to calculate what's the initial velocity as we will come to use it in the latter steps."},
+            {label:"To calculate initial velocity, we can use that formula for motion and that gives us : InitialVelocity = (Distance+0.5*gravitymultiplier*timetaken*timetaken)/timetaken"},
+            {label:"In the case of this game, that means knowing the position in world space of the  grid tile we are starting from(world position of trap), the direction in which we launch(catapult launches up), And then the time we expect it to reach the final tile. "},
+            {label:"Gravity multiplier will be a positive value as we replaced the negative of acceleration by a positive instead."},
+            {label:"We store all that in a kineticinfo object."}
+          ],
+          image:{
+            link:"https://github.com/kvoththebloodless/MediaDump/blob/master/ItsNotReal/inrfishlinekinematiconfo.JPG?raw=true"
+          }
+        },
+        { span:2,
+          list:[
+            {label: "Now to render the fishline we need to draw line renderer points all the way from start to finish."},
+            {label: "Using the kinematic info object we have the initial velocity, time(t) that should be taken for the object to reach the final tile and we know the initial position of the catapult"},
+            {label: "Now, suppose we have n number of line renderer points to render. And we know that total time that should be taken to reach is 't' and given in the kinematic info object. So by that logic at every t1=t/n value there will be a point of line renderer"},
+            {label: "So now if we iterate over all the points and using the same formula S=ut+0.5 at^2 we do S2=S1+ut1+0.5*gravitymultiplier*gravityacceleration*t1*t1 and that way S2 gives us the position of that linerenderer point."},
+            {label: "And that's how we render a fishline from one position to another."}
+          ],
+            image:{
+              link:"https://github.com/kvoththebloodless/MediaDump/blob/master/ItsNotReal/inrfishlinerender.JPG?raw=true"
+            }
+        }
+        ]
+      },
+      {
+        blogsectiontitle:"Results",
+        blogsectiontext: "You can see that the fishline that forms from the catapult",
+        bloggridsections :[
+            {
+              image:{link:"https://github.com/kvoththebloodless/MediaDump/blob/master/ItsNotReal/inrfishline.gif?raw=true"}
+            }
+        ]
+      }
+      
+    ]
+  },
+  {
+    id:'howransomware',
+    span:'1',
+    links: [
+      
+    ],
+    time:"November 20, 2022",
+    index:0,
+    title: 'How I made the ransomware seem more sentient and sinister by adjusting the animation through code',
+    image:{
+      link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwrobbervirus.gif?raw=true'
+    },
+    externallink:"/blog/howransomware",
+    blogsections:[
+      {
+        blogsectiontitle:"Situation",
+        blogsectiontext: "For the WillWindowsWin game we had different viruses popping up and trying to damage Will. So Ransomware was obviously drawn like a typical old school movie robber. We needed to give it a sinister character.",
+        bloggridsections:[
+         
+        ]
+      },
+      {
+        blogsectiontitle:"Task",
+        blogsectiontext: "The task is to make the Ransomware feel more sinister.",
+        bloggridsections :[
+          
+        ]
+      },
+      {
+        blogsectiontitle:"Approach",
+        blogsectiontext: "The ransomware virus is just a 2D sprite at the end of the day. So Here is how I approached this task.",
+        bloggridsections :[
+        
+        {span:2,
+          list:[
+            {label:"First I created a collection of frames for the ransomware animation"},
+            
+          ],
+          image:{
+            link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/ransomgiffffff.gif?raw=true"
+          }
+        },
+        { span:2,
+          list:[
+            {label: "I make sure the time is unifor such that right at the mid point of the state, the ransomware shoudl translate forward. This implies that When the ransomware's tentacles push  that's when it should move. Representing an octopus type movement as it's designed."},
+         
+          ],
+            image:{
+              link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/ransomware.JPG?raw=true"
+            }
+        },
+        { span:2,
+          list:[
+            {label: "And finally thirdly, I increase the speed of the animation and the distance travelled when it detects the player so it can shoot up at it. And that increases the tension."},
+         
+          ],
+            image:{
+              link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/triggehunt.JPG?raw=true"
+            }
+        }
+        ]
+      },
+      {
+        blogsectiontitle:"Results",
+        blogsectiontext: "You can see the ransomware feels like a very real threa to Will Windows",
+        bloggridsections :[
+            {
+              image:{link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwrobbervirus.gif?raw=true"}
+            }
+        ]
+      }
+      
+    ]
   }
 ]
 const jobs =[
@@ -221,7 +462,7 @@ const jobs =[
       { span:2,
         title: "Mask yourself advt.",
         video:{
-          link:"https://www.youtube.com/embed/Zn7_0jN12cs"
+          link:"https://www.youtube.com/embed/Zn7_0jN12cs" 
         }
       }
     ]
@@ -364,6 +605,8 @@ const portfolioData = {
   // My Profile Data
   title: 'Gourav Acharya',
   subtitle: 'I tell stories. Currently through games.',
+  location:"Santa Ana California",
+  email:"gouravacharya19@gmail.com",
   links: [
     {
       ...portfolio_types.ICON_TYPES.RESUME,
@@ -541,8 +784,118 @@ const portfolioData = {
           ...blogs[1]
         },
       ]
-    }
+    },
+    {
+      id: 'inr',
+      time: "1 week",
+      team: "Gourav Acharya, Shayne Dsouza",
+      image: {
+        link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/ItsNotReal/inr.JPG?raw=true'
+      },
 
+      //Grid Data for home page
+      title: 'It\'s not real',
+      span: 1,
+      externallink: "/project/inr",
+      description: 'A small prototype to try and make an isometric game.',
+
+      // Grid Data for Detail Project Page
+      sections: [
+        
+        
+        {
+          
+          title: 'An isometric tom and jerry Trap-O-Matic+Monster inc. inspired game from early 2000 flash games. A monster will trigger one trap which in turn will trigger other traps till the child gets really scared.'
+
+        },
+        {
+          title:'Made using',
+          list: [
+            {
+              label: 'Unity'
+            }
+          ]
+        },
+        {
+          span: 2, 
+          image: {
+            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/ItsNotReal/inrfishline.gif?raw=true'
+          }
+        },
+        {
+          ...blogs[2]
+        },
+        {
+          ...blogs[3]
+        }
+      ]
+    }
+,
+
+{
+  id: 'www',
+  time: "1 week",
+  team: "Gourav Acharya, Shayne Dsouza",
+  image: {
+    link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwmainscreen.JPG?raw=true'
+  },
+
+  //Grid Data for home page
+  title: 'Will Windows Win',
+  span: 1,
+  externallink: "/project/www",
+  description: 'A small prototype to try and make an infinite runner game. ',
+
+  // Grid Data for Detail Project Page
+  sections: [
+    
+    
+    {
+      
+      title: 'You are Bill, creator of Doors XB OS. You are trapped in your own creation and have to collect  Commando Prompt icons and avoid viruses.'
+
+    },
+    {
+      title:'Made using',
+      list: [
+        {
+          label: 'Unity'
+        }
+      ]
+    },
+    {
+      span: 2, 
+      image: {
+        link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwmainscreen.JPG?raw=true'
+      }
+    },
+    {
+     span:1,
+     image:{
+      link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwbill.JPG?raw=true"
+     }
+    },
+    {
+      text:"The trickiest part was getting the sprite mask between the computer screen right so that if there's a gap between the screens, it never seems like will just glitched out.",
+      image:{link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/gap.gif?raw=true"}
+    },
+    {
+      title:"There was parallax also put into the background and some errors persisted in the back not attacking Will.",
+      image:{
+        link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwerror.jpg?raw=true"
+      }
+    },
+    {
+      title:"Had a fun final screen",
+      image:{
+        link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwnevergonna.gif?raw=true"
+      }
+    }
+    ,{
+      ...blogs[4]
+    }
+  ]
+}
   ],
   blogs,jobs
 }

@@ -6,8 +6,8 @@ import portfolioData from '../portfolioData';
 import MyStaggeredGrid from '../components/sections/MyStaggeredGrid';
 import { Subtitle } from '../components/common/StyledComponents';
 const Home = (props) => {
- 
-  const { title, subtitle, links,projects,  image, blogs,jobs } = portfolioData;
+
+  const { title, subtitle, links, projects, location, email, image, blogs, jobs } = portfolioData;
 
   console.log(portfolioData)
 
@@ -22,15 +22,33 @@ const Home = (props) => {
           justifyContent: "center",
 
         }}>{title}</Title>
-        <Subtitle style={{
 
+
+        <Subtitle style={{
           textAlign: "center",
           alignItems: "center",
           justifyContent: "center",
+        }}>
+          Location: {location}
+        </Subtitle>
 
-        }}>{subtitle}</Subtitle>
+        <Subtitle style={{
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+        }}>
+          email: {email}
+        </Subtitle>
         <Links links={links} color='white' />
       </BackgroundSection>
+      <br></br>
+      <b>        <Subtitle style={{
+
+        textAlign: "center",
+        alignItems: "center",
+        justifyContent: "center",
+
+      }}>{subtitle}</Subtitle></b>
       <div className='divider'><span></span><span>Jobs</span><span></span></div>
       <MyStaggeredGrid sections={jobs} width={"500"} />
       <div className='divider'><span></span><span>Personal Projects</span><span></span></div>
