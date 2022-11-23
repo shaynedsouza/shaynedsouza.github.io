@@ -155,7 +155,7 @@ const CommonSectionDiv = styled.div`
 `;
 
 const List = styled.ul`
-  list-style: none;
+  padding:1rem;
   display: flex;
   flex-direction: column;
   row-gap: 2rem;

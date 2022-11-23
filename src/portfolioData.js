@@ -163,6 +163,70 @@ const blogs =
 ]
 const jobs =[
   {
+    id: 'appetizer',
+    time: "06/2020-12/2020",
+    team: "Gourav Acharya, Unnamed Developer",
+    image: {
+      link: 'https://appetizermobile.com/wp-content/uploads/2016/01/AppetizerMobile-logo_dark.png'
+    },
+
+    //Grid Data for home page
+    title: 'Unity Developer Intern',
+    span: 1,
+    externallink: "/job/appetizer",
+    description: 'Mask Yourself was the offical companion app of The Masked Singer® show on Fox.',
+
+    // Grid Data for Detail Project Page
+    sections: [
+      
+      
+      {
+        
+        title: 'As unity developer intern I was given the impossible task of solely developing the whole app from scratch within 3 months for Android, IOS and WebGL!'
+
+      },
+      {
+        title:'Made using',
+        list: [
+      
+            {label: 'Unity'},
+            {label: 'Firebase'},
+            {label: 'Javascript'},
+            {label: 'html'},
+            {label: 'css'}
+        ]
+      },
+      {
+        title:"Mask Yourself was released in 2020!",
+        image:{link:"https://github.com/kvoththebloodless/MediaDump/blob/master/MaskYourself/mask3.gif?raw=true"}
+      },
+      {
+      title: "Dev Tasks in Brief",
+      span :3,
+      list:[
+        {label: "Created a custom javascript plugin that used the browser implementation of camera for the WebGL version of the app."},
+        {label: "Along with all the customized UI screens I also developed an infinite scrollbar custom UI element by extending Unity's UI components. It had animations for scaling and fading too."},
+        {label: "Worked with another developer to setup a pipeline so that new costumes added to the app on a day to day basis were pre-processed for compositing user's head image and creating the costume."},
+        {label: "Optimized the memory usage and added variations for logic and content that allowed app to run similarly across the 3 platforms."},
+        {label: "Developed a workflow where branding was added to the images based on zipcode provided by the player."},
+        {label: "Integrated push message notification,analytics and remote control using Firebase. Remote control allowed app to be in maintainance mode when needed."},
+        {label: "Provided live hotfixes to get the app working for the Launch event."},
+        {label: "Deployed the app to AppStore, PlayStore and to Fox's official Mask Yourself Website."}
+      ],
+      tweet:"1339259774504902656",
+      },
+      {span:1,
+       tweet:"1331689113943240704"
+      },
+      { span:2,
+        title: "Mask yourself advt.",
+        video:{
+          link:"https://www.youtube.com/embed/Zn7_0jN12cs"
+        }
+      }
+    ]
+  },
+  {
     id: 'summitvr',
     time: "Dec 2020-July 2022",
     team: "Gourav Acharya, Jill Wallitschek, Aaron Lau, Thomas Vause",
@@ -273,6 +337,26 @@ const jobs =[
           title: "I also reworked the REST API using flask and PostgreSQL and separated dev from prod servers",
       },
     ]
+  },
+
+  {
+    id: 'amazon',
+    time: "08/2022-11/2022",
+    team: "Gourav Acharya",
+    image: {
+      link: 'http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png'
+    },
+
+    //Grid Data for home page
+    title: 'Game Software Engineer (SDE-1)',
+    span: 1,
+    externallink: "/job/amazon",
+    description: 'Worked on an undisclosed experimental game that integrated different Amazon devices together to create an immersive experience.',
+    sections:[
+      {span:2, title: "Prime focus was on owning and developing game mechanics and Optimizing toolkits."}
+    ]
+
+
   }
 ]
 const portfolioData = {
@@ -385,7 +469,7 @@ const portfolioData = {
 
         {
           video: {
-            link: 'https://www.youtube.com/embed/SzL25FVRmLQ'
+            link: 'https://www.youtube.com/embed/SzL25FVRmLQ' 
           },
           
           span: 2
