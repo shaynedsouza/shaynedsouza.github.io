@@ -10,9 +10,10 @@ import { motion } from 'framer-motion';
 import { Modal } from '@mui/material';
 import { Box } from '@mui/system';
 
+import { TwitterTweetEmbed } from 'react-twitter-embed';
 
 const MyStaggeredTiles = ({ section, iter }) => {
-  const { title, description, image, list, video, span, externallink } = section;
+  const { title, image, list, video, span, externallink,tweet } = section;
   let [height, setHeight] = useState("px");
 
   const [open, setOpen] = useState(false);
@@ -84,6 +85,11 @@ const MyStaggeredTiles = ({ section, iter }) => {
               </Modal>
           </CommonSectionDiv>
         )}
+        {!lodash.isEmpty(tweet)&&
+            (<TwitterTweetEmbed
+          tweetId={tweet}/>)
+        }
+        
       </SectionContainer>
      
     </StaggeredGridItem >
@@ -111,8 +117,8 @@ const MyStaggeredTiles = ({ section, iter }) => {
 
 const Image = styled.img`
   width: 100%;
-  height: ${props => props.big ? '80vh' : '30vh'};
-  object-fit: cover;
+  height: 100%;
+  object-fit: scale-down;;
 `;
 
 const Video = styled.iframe.attrs({

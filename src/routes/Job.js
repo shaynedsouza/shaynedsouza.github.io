@@ -13,10 +13,10 @@ import { SectionTitle, Title } from './Home';
 import MyStaggeredGrid from '../components/sections/MyStaggeredGrid';
 // import Masonry from 'react-masonry-css';
 
-const Project = () => {
+const Job = () => {
   const { id } = useParams();
 
-  const project = portfolioData.projects.find(p => {
+  const project = portfolioData.jobs.find(p => {
     return p.id === id
   })
 
@@ -52,7 +52,7 @@ const Project = () => {
           alignItems: "center",
           justifyContent: "center",
           width: "100%"
-        }}>Time taken: {time}</Text>
+        }}>Worked from {time}</Text>
       }
 
 {!lodash.isEmpty(team)&&
@@ -115,4 +115,4 @@ const Text = styled.p`
 
 
 
-export default Project;
+export default Job;

@@ -3,10 +3,19 @@ import {
   StaggeredAlignment,
   StaggeredGrid,
 } from "react-staggered-grid";
-
+import { useRef, useEffect, useState } from 'react';
 
 const MyStaggeredGrid = ({ sections, width="300"}) => {
   console.log("sections ", sections)
+
+  const [time, setTime] = useState(Date.now());
+
+  useEffect(() => {
+    const interval = setInterval(() => setTime(Date.now()), 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
   return(
   <StaggeredGrid
     columnWidth={width} // width of each column , don't pass if you want it to be gridWidth / columns

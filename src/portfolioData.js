@@ -23,7 +23,7 @@ const blogs =
 [  
   {
     id:'howheadturn',
-    span:'2',
+    span:'1',
     links: [
       
     ],
@@ -99,9 +99,182 @@ const blogs =
       }
       
     ]
+  },
+  {
+    id:'howbulbeffect',
+    span:'1',
+    links: [
+      
+    ],
+    time:"November 11, 2022",
+    index:0,
+    title: 'How I made the bulb radius- creepy crawlie effect',
+    image:{
+      link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/YouAreNotAlone/YNACRAWLIES.jpg?raw=true'
+    },
+    externallink:"/blog/howbulbeffect",
+    blogsections:[
+      {
+        blogsectiontitle:"Situation",
+        blogsectiontext: "The aim of the \'you are not alone\' little prototype was to see if we can create a light based mechanic. Being the halloween season we settled on a bulb character who needs to solve puzzles and get through doors"+
+        "and make sure the light never goes out. So once you pick up a battery and consume it, the light radius will increase and otherwise it will slowly diminish until the creepy crawlies who only stay in the darkness surround you.",
+        bloggridsections:[]
+      },
+      {
+        blogsectiontitle:"Task",
+        blogsectiontext: "The steps to achieve head following and lightning were as follows",
+        bloggridsections :[
+            { 
+              list: [
+                {label: "Have a creepy crawlie monster rigged with crawling animation"},
+                {label: "Have the light radius/area of effect distinguish over time"},
+                {label: "Based on the radius,keep the crawlies at the periphery to increase tension."},
+                {label: "Once the light reduces to zero, the crawlies will get you."}
+              ]
+            }
+        ]
+      },
+      {
+        blogsectiontitle:"Approach",
+        blogsectiontext: "The first thing was to reduce the area of effect and intensity at the same time. Fortunately unity's light system already has an area of effect and intensity parameter and all that was needed was to have a coroutine that diminished both "+
+        "linearly over time and set a radius that can be used by the creepy crawlie script! We use Navmesh to bake a movement plane and have our agents - the creepy crawlies move based on location given.",
+        bloggridsections :[
+            { title :"Area of light [courtesy of unity's website]",
+             image:{link:"https://docs.unity3d.com/uploads/Main/Light-Point.jpg"}
+            },
+            {
+              title:"Creepy Crawlie movement manager. Based on radius interface which is injected in, we use that radius to set the crawlies at the circumference",
+              image:{link:"https://github.com/kvoththebloodless/MediaDump/blob/master/YouAreNotAlone/spread%20circle.JPG?raw=true"}
+            }
+        ]
+      },
+      {
+        blogsectiontitle:"Results",
+        blogsectiontext: "You can see the creepy crawlies running once the light effect increases as the radius resets their location to the new circumference!",
+        bloggridsections :[
+            {
+              image:{link:"https://github.com/kvoththebloodless/MediaDump/blob/master/YouAreNotAlone/ynabulbeffect.gif?raw=true"}
+            }
+        ]
+      }
+      
+    ]
   }
 ]
+const jobs =[
+  {
+    id: 'summitvr',
+    time: "Dec 2020-July 2022",
+    team: "Gourav Acharya, Jill Wallitschek, Aaron Lau, Thomas Vause",
+    image: {
+      link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/SciVista/Summitvrlogo.gif?raw=true'
+    },
 
+    //Grid Data for home page
+    title: 'Unity Developer at Scivista',
+    span: 1,
+    externallink: "/job/summitvr",
+    description: 'SummitVR is a VR based data visualization software that allows collaboration and contains a family of tools to provide a high utility workflow',
+
+    // Grid Data for Detail Project Page
+    sections: [
+      
+      
+      {
+        
+        title: 'As unity developer my primary work was in creation of various widgets, systems and the biggest addition which was the DLC management system.'
+
+      },
+      {
+        title:'Made using',
+        list: [
+      
+            {label: 'Unity'},
+            {label: 'Angular'},
+            {label: 'AWS stack'},
+            {label: 'PostgreSQL'},
+            {label: 'Python'}
+         
+        ]
+      },
+      {
+        span: 2, 
+        image: {
+          link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/SciVista/Summitvrlogo.gif?raw=true'
+        }
+      },
+      {
+        span: 1, 
+        title:"The DLC Management system helped deliver new environments in the form of assetbundles that get cached and improved loading times by 70% [Click on the picture to see in full]",
+        image:{
+          link:"https://github.com/kvoththebloodless/MediaDump/blob/master/SciVista/environments.JPG?raw=true"
+        }
+        
+      },
+      {
+        span: 2, 
+        title: "HelperText System: Helped display points of interest around a virtual room and the controller itself",
+        image: {
+          link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/SciVista/helpertext.gif?raw=true'
+        }
+      },
+      {
+      title: "Features of the HelperText System",
+      span :2,
+      list:[
+        {label: "Used a gaze based detection system finely tuned to dial in on player's gaze when put on the information button"},
+        {label: "Had a Data Driven setup where a JSON file of tags and information to display for objects of that type were fetched and localized and displayed when the player needed help"}
+      ]
+      },
+      {span:2,
+        title: "Static Lobby Space: Developed the mechanics for movement and interaction in a static space with an infinite space inside it.",
+        image:{
+          link:"https://github.com/kvoththebloodless/MediaDump/blob/master/SciVista/lobbyspace.gif?raw=true"
+        }
+      },
+      { span:2,
+        title: "Features of Static Lobby Space",
+        list:[
+          {label: "The movement was carried out by pulling youself around the room"},
+          {label: "A ball of infinite space lay in the middle which was the workspace."},
+          {label: "Once you click the force field you enter the infinite space and collaborators outside in the static space still see you as a small player working."}
+        ]
+      },
+      {
+        span: 2, 
+        title: "QuickActionWidget: Made a widget wheel which helps cache your top most used widgets and allows you to quickly spawn them",
+        image: {
+          link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/SciVista/quickaction.gif?raw=true'
+        }
+      },
+      {
+        span: 2, 
+        title: "SharedWebBrowserWidget: Developed a widget that allows you to have a personal web browser and also stream its contents to the rest of the room",
+        image: {
+          link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/SciVista/webbrowser.gif?raw=true'
+        }
+      },
+      {
+        title: "WebBrowserWidget work breakdown",
+        span :2,
+        list:[
+          {label: "Created the widget on Unity side so that one could search for a webpage and also scale the resolution."},
+          {label: "Setup a socket streaming server that worked with sessions and would be responsible for streaming to all clients in a session"}
+        ]
+        },
+        { span:2,
+          title: "I integrated Stripe Payment into the platform to commercialize the product as a subscription service[Click to expanded view]",
+          image:{
+            link: "https://raw.githubusercontent.com/kvoththebloodless/MediaDump/master/SciVista/subscription.JPG"
+          }
+        },
+      {
+        span:1,
+          title: "I also reworked the REST API using flask and PostgreSQL and separated dev from prod servers",
+      },
+    ]
+  }
+]
 const portfolioData = {
 
   // My Profile Data
@@ -124,6 +297,7 @@ const portfolioData = {
 
   //The projects
   projects: [
+    
     {
       id: 'letsstartatthebeginning',
       time: "1 week",
@@ -243,25 +417,18 @@ const portfolioData = {
       ]
     },
     {
-      id: 'letsstartatthebeginning',
+      id: 'yna',
       time: "1 week",
       team: "Gourav Acharya, Shayne Dsouza",
-      links: [
-        {
-          title: 'Itch',
-          icon: 'itch',
-          link: 'https://shaynedsouza.itch.io/lets-start-at-the-beginning'
-        }
-      ],
       image: {
-        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png'
+        link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/YouAreNotAlone/YNAMENU.jpg?raw=true'
       },
 
       //Grid Data for home page
-      title: 'Let\'s start at the beginning',
+      title: 'You are not alone.',
       span: 1,
-      externallink: "/project/letsstartatthebeginning",
-      description: 'A PT like short horror game that explores themes of guilt and penance.',
+      externallink: "/project/yna",
+      description: 'A small prototype to try out light based mechanics.',
 
       // Grid Data for Detail Project Page
       sections: [
@@ -269,7 +436,7 @@ const portfolioData = {
         
         {
           
-          title: '\"This is an absolutely amazing game! It gave me the chills the whole time! This is how you do a horror game!\"- A reviewer for the jam',
+          title: 'Bulby the lightbulb has to save the day, his main obstacles- the poorly designed levels.'
 
         },
         {
@@ -277,91 +444,37 @@ const portfolioData = {
           list: [
             {
               label: 'Unity'
-            },
-            {
-              label: 'Mixamo'
-            },
-            {
-              label: 'Blender'
             }
           ]
         },
         {
           span: 2, 
           image: {
-            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/Lets/letsallred.jpg?raw=true'
+            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/YouAreNotAlone/ynaplatfomring.gif?raw=true'
           }
         },
         {
           span: 2, 
-          image: {
-            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/Lets/letscrawlies.gif?raw=true'
-          }
-        },
-        {
+          title:"As the field of light effect reduces the crawlies draw closer"
           
-          title: 'Ranked 13 in Horror and Story out of 221 entries for Scream Jam 2021!'
-
         },
         {
           span: 2, 
           image: {
-            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/Lets/letsdevil.jpg?raw=true'
+            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/YouAreNotAlone/ynabulbeffect.gif?raw=true'
           }
         },
         {
-          span: 2, 
-          image: {
-            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/Lets/letseyesred.gif?raw=true'
-          }
+        title: "Obi rope was also used to carry out some rope cutting and trolley systems."
         },
         {
-          
-          title: '\"Pretty cool game.  I like how the story unfolds as the character walks through the house over and over again - it gave me the feeling that he was in some kind of purgatory. Scares were well done and not too over the top.\"- A reviewer for the jam',
-
-        },
-        {
-          span: 2, 
-          image: {
-            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/Lets/letsheadturn.gif?raw=true'
-          }
-        },
-
-        {
-          video: {
-            link: 'https://www.youtube.com/embed/SzL25FVRmLQ'
-          },
-          
-          span: 2
-        },
-        {
-          title:'Made using',
-          list: [
-            {
-              label: 'Unity'
-            },
-            {
-              label: 'Mixamo'
-            },
-            {
-              label: 'Blender'
-            }
-          ]
-        },
-        { title:"JayStudioGaming Reacts!",
-          video: {
-            link: 'https://www.youtube.com/embed//BiR9WzF13P8'
-          },
-          
-          span: 2
-        },
-        {
-          ...blogs[0]
+          ...blogs[1]
         },
       ]
     }
+
   ],
-  blogs
+  blogs,jobs
 }
 
 export default portfolioData;

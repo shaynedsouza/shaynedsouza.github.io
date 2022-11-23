@@ -1,7 +1,7 @@
 import Home from './routes/Home'
 import Project from './routes/Project';
 import Blog from './routes/Blog';
-
+import Job from './routes/Job'
 
 import "aos/dist/aos.css";
 import {
@@ -18,6 +18,7 @@ function App() {
             <Route exact path="/" element={<Home />}/>
             <Route exact path="/project/:id" element={<Project />} />
             <Route exact path="/blog/:id" element={<Blog />} />
+            <Route exact path="/job/:id" element ={<Job/>}/>
             <Route path='*' element={<Home />}/>
         </Routes>    
       </ HashRouter>

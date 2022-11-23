@@ -22,16 +22,18 @@ const Blog = () => {
   return (
     <ProjectContainer>
       <ProjectInnerContainer>
+      {!lodash.isEmpty(title)
+      &&<Title style={{
 
-        <Title style={{
+        textAlign: "center",
+        alignItems: "center",
+        justifyContent: "center",
 
-          textAlign: "center",
-          alignItems: "center",
-          justifyContent: "center",
+      }}>{title}</Title>
 
-        }}>{title}</Title>
-
-
+      }
+        
+        {!lodash.isEmpty(links)&&
         <Links style={{
 
           textAlign: "center",
@@ -40,6 +42,8 @@ const Blog = () => {
           width: "100%"
         }} links={links} color='white' />
 
+      }
+       {!lodash.isEmpty(time)&&
         <Subtitle style={{
 
           textAlign: "center",
@@ -47,10 +51,11 @@ const Blog = () => {
           justifyContent: "center",
           width: "100%"
         }}>Published on: {time}</Subtitle>
-
+      }
         <br></br>
-        
+        {!lodash.isEmpty(blogsections)&&
         <BlogSections blogsections ={blogsections}></BlogSections>
+}
         
       </ProjectInnerContainer>
 
@@ -94,10 +99,9 @@ return(
   blogsections.map((blogsection, i) => (
     <div>
     <div className='divider'><span></span><span>{blogsection.blogsectiontitle}</span><span></span></div>
- 
     <BlogTextContainer>{blogsection.blogsectiontext}</BlogTextContainer>
     <br></br>
-    <MyStaggeredGrid width="1024" sections = {blogsection.bloggridsections}></MyStaggeredGrid>
+    <MyStaggeredGrid width="500" sections = {blogsection.bloggridsections}></MyStaggeredGrid>
    </div>
  ))
  
