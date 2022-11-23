@@ -7,7 +7,7 @@ import MyStaggeredGrid from '../components/sections/MyStaggeredGrid';
 import { Subtitle } from '../components/common/StyledComponents';
 const Home = (props) => {
 
-  const { title, subtitle, links, projects, location, email, image, blogs, jobs } = portfolioData;
+  const { title, subtitle, links, projects,visastatus, location, email, image, blogs, jobs } = portfolioData;
 
   console.log(portfolioData)
 
@@ -32,6 +32,13 @@ const Home = (props) => {
           Location: {location}
         </Subtitle>
 
+        <Subtitle style={{
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+        }}>
+          Visa Status: {visastatus}
+        </Subtitle>
         <Subtitle style={{
           textAlign: "center",
           alignItems: "center",

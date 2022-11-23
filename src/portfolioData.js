@@ -606,6 +606,7 @@ const portfolioData = {
   title: 'Gourav Acharya',
   subtitle: 'I tell stories. Currently through games.',
   location:"Santa Ana California",
+  visastatus:"On H1B",
   email:"gouravacharya19@gmail.com",
   links: [
     {
