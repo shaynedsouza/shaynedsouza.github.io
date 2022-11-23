@@ -413,20 +413,6 @@ const portfolioData = {
 
         },
         {
-          title:'Made using',
-          list: [
-            {
-              label: 'Unity'
-            },
-            {
-              label: 'Mixamo'
-            },
-            {
-              label: 'Blender'
-            }
-          ]
-        },
-        {
           span: 2, 
           image: {
             link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/Lets/letsallred.jpg?raw=true'
