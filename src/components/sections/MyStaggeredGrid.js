@@ -4,9 +4,14 @@ import {
   StaggeredGrid,
 } from "react-staggered-grid";
 import { useRef, useEffect, useState } from 'react';
+import useWindowSize from '../../utils/hooks/useWindowSize';
+
+
 
 const MyStaggeredGrid = ({ sections, width="300"}) => {
   console.log("sections ", sections)
+
+  const { width: currentWidth } = useWindowSize()
 
   const [time, setTime] = useState(Date.now());
 
@@ -18,7 +23,7 @@ const MyStaggeredGrid = ({ sections, width="300"}) => {
   }, []);
   return(
   <StaggeredGrid
-    columnWidth={width} // width of each column , don't pass if you want it to be gridWidth / columns
+    columnWidth={currentWidth < 500 ? currentWidth - 20 : width} // width of each column , don't pass if you want it to be gridWidth / columns
     columns={0}
     alignment={StaggeredAlignment.Center}
     useElementWidth={true} // this would force css styled width (100%) , when false gridWidth = columnWidth * columnWidth
