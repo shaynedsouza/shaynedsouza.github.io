@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      < HashRouter>
+      <HashRouter>
         <Routes>
             <Route exact path="/" element={<Home />}/>
             <Route exact path="/project/:id" element={<Project />} />
