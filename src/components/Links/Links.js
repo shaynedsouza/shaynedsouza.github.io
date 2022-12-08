@@ -4,7 +4,7 @@ import Icon from '../Icon/Icon';
 
 const Links = ({links, color='white', className,style}) => {
   return (
-    <LinksContainer style={style}className={className}>
+    <LinksContainer>
       {links.map(({icon, link, title}, i) => (
         <Link key={link} whileHover={{scale: 1.2}} color={color} href={link} target='_blank'>
           <Icon label={title} color={color} title={title} icon={icon} />
@@ -15,8 +15,9 @@ const Links = ({links, color='white', className,style}) => {
 }
 
 const LinksContainer = styled.div`
-  width: fit-content;
+  width: 100%;
   display: flex;
+  justify-content: center;
   column-gap: 8px;
   padding-right: 16px;
   padding-top: 16px;

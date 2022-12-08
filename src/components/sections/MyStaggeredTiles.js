@@ -11,6 +11,7 @@ import { Modal } from '@mui/material';
 import { Box } from '@mui/system';
 
 import { TwitterTweetEmbed } from 'react-twitter-embed';
+import { SectionContainer } from '../common/StyledComponents';
 
 const MyStaggeredTiles = ({ section, iter }) => {
   const { title, image, list, video, span, externallink,tweet } = section;
@@ -26,11 +27,11 @@ const MyStaggeredTiles = ({ section, iter }) => {
       style={{ transition: "left 0.3s ease,top 0.3s ease" }}
       ref={ref}
     >
-      <SectionContainer 
+      <SectionContainer
         whileHover={{
           ...(!lodash.isEmpty(image) || !lodash.isEmpty(video) || !lodash.isEmpty(externallink)) &&
           {
-            scale: 1.2,
+            scale: 1.05,
             zIndex: 60
           }
         }}
@@ -64,25 +65,14 @@ const MyStaggeredTiles = ({ section, iter }) => {
               src={image.link}
               alt="image"
             />
-             <Modal
-                open={open}
-                onClose={() => setOpen(false)}
-              >
-                <Box sx={{
-                  position: 'absolute',
-                  top: '50%',
-                  left: '50%',
-                  transform: 'translate(-50%, -50%)',
-                  width: 'fit-content',
-                  bgcolor: 'background.paper',
-                  border: '2px solid #fff',
-                  boxShadow: 24,
-                  p: 1,
-                }}>
-                  <img src={image.link}/>
-
-                </Box>
-              </Modal>
+            <Modal
+              open={open}
+              onClose={() => setOpen(false)}
+            >
+              <ModalContainer>
+                <BigImage src={image.link} />
+              </ModalContainer>
+            </Modal>
           </CommonSectionDiv>
         )}
         {!lodash.isEmpty(tweet)&&
@@ -91,7 +81,6 @@ const MyStaggeredTiles = ({ section, iter }) => {
         }
         
       </SectionContainer>
-     
     </StaggeredGridItem >
   )
     
@@ -115,6 +104,19 @@ const MyStaggeredTiles = ({ section, iter }) => {
   )
 }
 
+const ModalContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+`;
+
+const BigImage = styled.img`
+  width: 90vw;
+  height: 80vh;
+  object-fit: contain;
+`;
+
 const Image = styled.img`
   width: 100%;
   height: 100%;
@@ -130,18 +132,10 @@ const Video = styled.iframe.attrs({
   overflow:hidden;
 `;
 
-const SectionContainer = styled(motion.div)`
-  background: linear-gradient(85deg,#434343,#262626);
-  /* border: 2px solid white; */
-  border-radius: 1rem;
-  padding: 1rem;
-  z-index:2;
-  box-shadow: -2rem 0 3rem -2rem #000;
-`;
-
 const Text = styled.p`
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  font-weight: 800;
 `;
 
 const CommonSectionDiv = styled.div`
@@ -163,6 +157,8 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   text-decoration: none;
+  font-size: 1.2rem;
+  word-break: break-all;
 `;
 
 

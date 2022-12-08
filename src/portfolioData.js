@@ -68,8 +68,11 @@ const blogs =
         +" Now comes the simplest part, the code! And all it is, is telling the neck bone to rotate to look at the camera",
         bloggridsections :[
             {
+              span: 4,
               list: [
-                {label: "NeckBone.transform.lookAt(Camera.main.transform,Vector3.up)"}
+                {
+                  label: "NeckBone.transform.lookAt(Camera.main.transform,Vector3.up)",
+                }
               ]
             }
         ]
@@ -585,7 +588,7 @@ const jobs =[
     time: "08/2022-11/2022",
     team: "Gourav Acharya",
     image: {
-      link: 'http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png'
+      link: 'https://pbs.twimg.com/profile_images/1400682167072550916/0OohkdB4_400x400.jpg'
     },
 
     //Grid Data for home page
@@ -625,7 +628,6 @@ const portfolioData = {
 
   //The projects
   projects: [
-    
     {
       id: 'letsstartatthebeginning',
       time: "1 week",
@@ -830,73 +832,71 @@ const portfolioData = {
           ...blogs[3]
         }
       ]
-    }
-,
-
-{
-  id: 'www',
-  time: "1 week",
-  team: "Gourav Acharya, Shayne Dsouza",
-  image: {
-    link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwmainscreen.JPG?raw=true'
-  },
-
-  //Grid Data for home page
-  title: 'Will Windows Win',
-  span: 1,
-  externallink: "/project/www",
-  description: 'A small prototype to try and make an infinite runner game. ',
-
-  // Grid Data for Detail Project Page
-  sections: [
-    
-    
-    {
-      
-      title: 'You are Bill, creator of Doors XB OS. You are trapped in your own creation and have to collect  Commando Prompt icons and avoid viruses.'
-
     },
     {
-      title:'Made using',
-      list: [
-        {
-          label: 'Unity'
-        }
-      ]
-    },
-    {
-      span: 2, 
+      id: 'www',
+      time: "1 week",
+      team: "Gourav Acharya, Shayne Dsouza",
       image: {
         link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwmainscreen.JPG?raw=true'
-      }
-    },
-    {
-     span:1,
-     image:{
-      link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwbill.JPG?raw=true"
-     }
-    },
-    {
-      text:"The trickiest part was getting the sprite mask between the computer screen right so that if there's a gap between the screens, it never seems like will just glitched out.",
-      image:{link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/gap.gif?raw=true"}
-    },
-    {
-      title:"There was parallax also put into the background and some errors persisted in the back not attacking Will.",
-      image:{
-        link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwerror.jpg?raw=true"
-      }
-    },
-    {
-      title:"Had a fun final screen",
-      image:{
-        link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwnevergonna.gif?raw=true"
-      }
+      },
+
+      //Grid Data for home page
+      title: 'Will Windows Win',
+      span: 1,
+      externallink: "/project/www",
+      description: 'A small prototype to try and make an infinite runner game. ',
+
+      // Grid Data for Detail Project Page
+      sections: [
+        
+        
+        {
+          
+          title: 'You are Bill, creator of Doors XB OS. You are trapped in your own creation and have to collect  Commando Prompt icons and avoid viruses.'
+
+        },
+        {
+          title:'Made using',
+          list: [
+            {
+              label: 'Unity'
+            }
+          ]
+        },
+        {
+          span: 2, 
+          image: {
+            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwmainscreen.JPG?raw=true'
+          }
+        },
+        {
+        span:1,
+        image:{
+          link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwbill.JPG?raw=true"
+        }
+        },
+        {
+          text:"The trickiest part was getting the sprite mask between the computer screen right so that if there's a gap between the screens, it never seems like will just glitched out.",
+          image:{link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/gap.gif?raw=true"}
+        },
+        {
+          title:"There was parallax also put into the background and some errors persisted in the back not attacking Will.",
+          image:{
+            link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwerror.jpg?raw=true"
+          }
+        },
+        {
+          title:"Had a fun final screen",
+          image:{
+            link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwnevergonna.gif?raw=true"
+          }
+        }
+        ,{
+          ...blogs[4]
+        }
+      ]
     }
-    ,{
-      ...blogs[4]
-    }
-  ]
-}
   ],
   blogs,jobs
 }

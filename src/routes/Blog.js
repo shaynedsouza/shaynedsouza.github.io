@@ -22,45 +22,18 @@ const Blog = () => {
   return (
     <ProjectContainer>
       <ProjectInnerContainer>
-      {!lodash.isEmpty(title)
-      &&<Title style={{
-
-        textAlign: "center",
-        alignItems: "center",
-        justifyContent: "center",
-
-      }}>{title}</Title>
-
+      {!lodash.isEmpty(title) && <Title>{title}</Title>}
+        {!lodash.isEmpty(links) &&
+          <Links links={links} color='white' />
       }
-        
-        {!lodash.isEmpty(links)&&
-        <Links style={{
-
-          textAlign: "center",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100%"
-        }} links={links} color='white' />
-
+      {!lodash.isEmpty(time)&&
+        <Subtitle>Published on: {time}</Subtitle>
       }
-       {!lodash.isEmpty(time)&&
-        <Subtitle style={{
-
-          textAlign: "center",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100%"
-        }}>Published on: {time}</Subtitle>
-      }
-        <br></br>
-        {!lodash.isEmpty(blogsections)&&
+      {!lodash.isEmpty(blogsections)&&
         <BlogSections blogsections ={blogsections}></BlogSections>
-}
-        
+      }
       </ProjectInnerContainer>
-
-    </ProjectContainer >
-
+    </ProjectContainer>
   )
 }
 
@@ -82,12 +55,8 @@ const ProjectInnerContainer = styled.div`
   }
 `;
 
-const BlogTextContainer = styled.div`
-  inline-size: 60%;
-  overflow-wrap: break-word;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
+const BlogDescription = styled.div`
+  font-size: 1.2rem;
 `
 
 const Text = styled.p`
@@ -99,9 +68,9 @@ return(
   blogsections.map((blogsection, i) => (
     <div>
     <div className='divider'><span></span><span>{blogsection.blogsectiontitle}</span><span></span></div>
-    <BlogTextContainer>{blogsection.blogsectiontext}</BlogTextContainer>
+    <BlogDescription>{blogsection.blogsectiontext}</BlogDescription>
     <br></br>
-    <MyStaggeredGrid width="500" sections = {blogsection.bloggridsections}></MyStaggeredGrid>
+    <MyStaggeredGrid sections = {blogsection.bloggridsections}></MyStaggeredGrid>
    </div>
  ))
  

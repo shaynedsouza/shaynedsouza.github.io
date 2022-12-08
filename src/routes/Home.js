@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import profilepic from '../profile.jpg'
 import portfolioData from '../portfolioData';
 import MyStaggeredGrid from '../components/sections/MyStaggeredGrid';
-import { Subtitle } from '../components/common/StyledComponents';
+import { SectionContainer, Subtitle } from '../components/common/StyledComponents';
 import { Icon as BXIcon, Link } from '@mui/material';
-import { FaBriefcaseMedical, FaEnvelope, FaEnvelopeOpen, FaMapMarker, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaBriefcase, FaBriefcaseMedical, FaEnvelope, FaEnvelopeOpen, FaMapMarker, FaMapMarkerAlt } from 'react-icons/fa';
 const Home = (props) => {
 
   const { title, subtitle, links, projects,visastatus, location, email, image, blogs, jobs } = portfolioData;
@@ -18,28 +18,35 @@ const Home = (props) => {
       <BackgroundSection>
         <ProfilePicComponent src={profilepic} />
         <Title>{title}</Title>
-        <ProfileInformationContainer>
+        <Row>
+          <Quote style={{marginTop: 20}}>{subtitle}</Quote>
+        </Row>
+        <SectionContainer>
           <Row>
-            <Icon component={FaMapMarkerAlt} />
-            <Subtitle>
-              {location}
-            </Subtitle>
+            <IconAndText>
+              <Icon component={FaMapMarkerAlt} />
+              <Subtitle>
+                {location}
+              </Subtitle>
+            </IconAndText>
+            
+            <IconAndText>
+              <Icon component={FaBriefcase} />
+              <Subtitle>{visastatus}</Subtitle>
+            </IconAndText>
+
+            <IconAndText>
+              <Icon component={FaEnvelope} />
+              <Link color='#fff' href={`mailto:${email}`}><Subtitle>{email}</Subtitle></Link>
+            </IconAndText>
+            
           </Row>
 
           <Row>
-            <Subtitle bold>Visa status</Subtitle>
-            <Subtitle>{visastatus}</Subtitle>
+            <Links links={links} color='white' />
           </Row>
-          
-          <Row>
-            <Icon component={FaEnvelope} />
-            <Link color='#fff' href={`mailto:${email}`}><Subtitle>{email}</Subtitle></Link>
-          </Row>
-          
-          
-        </ProfileInformationContainer>
-        <Links links={links} color='white' />
-        <Subtitle style={{marginTop: 20}}>{subtitle}</Subtitle>
+        </SectionContainer>
+        
       </BackgroundSection>
       <Divider>Jobs</Divider>
       <MyStaggeredGrid width='500' sections={jobs} />
@@ -56,12 +63,19 @@ const Home = (props) => {
 const Divider = ({children}) => (
   <DividerContainer>
     <span />
-    <span>
+    <b>
       {children}
-    </span>
+    </b>
     <span />
   </DividerContainer>
 )
+
+const Quote = styled.p`
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #999;
+`;
 
 const DividerContainer = styled.div.attrs({className: 'divider'})`
   display: table; 
@@ -91,6 +105,7 @@ const BackgroundSection = styled(motion.div)`
   width:100%;
   justify-content: center;
   align-items: center;
+  row-gap: 24px;
 `;
 const ProfilePicComponent = styled(motion.img)`
   width: 30rem;
@@ -122,23 +137,17 @@ export const SectionTitle = styled.div`
 const Icon = styled(BXIcon)`
   justify-self: center;
   align-self: center;
-  margin-right: 20px;
-`;
-
-const ProfileInformationContainer = styled.div`
-  margin-top: 16px;
-  margin-bottom: 16px;
-  border: 3px solid white;
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 16px;
-  border-radius: 10px;
 `;
 
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
+  column-gap: 1rem;
+`;
+
+const IconAndText = styled.div`
+  display: flex;
+  column-gap: 8px;
 `;
 
 
