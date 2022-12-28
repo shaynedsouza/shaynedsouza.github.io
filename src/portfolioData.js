@@ -20,7 +20,20 @@ const portfolio_types = {
 }
 
 const blogs = 
-[  
+[  {
+  id:'howcamnav',
+  span:'1',
+  links: [
+    
+  ],
+  time:"December 27, 2022",
+  index:0,
+  title: 'How to make camera navigation that’s like the scene view in Unity',
+  image:{
+    link: 'https://miro.medium.com/max/640/1*g4pVzL0MmHb0zYTtcjWtqA.gif'
+  },
+  externallink:"https://medium.com/@gouravacharya19/how-to-make-camera-navigation-thats-like-the-scene-view-in-unity-61a3b5fc43ef"
+},
   {
     id:'howheadturn',
     span:'1',

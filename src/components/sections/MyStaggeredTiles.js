@@ -92,7 +92,10 @@ const MyStaggeredTiles = ({ section, iter }) => {
  
    if(lodash.isEmpty(externallink))
       return gridpart
-      
+   if(externallink.includes("https"))   
+      return <a href={externallink} style={{textDecoration: 'none', color: "white"}}>
+        {gridpart}
+      </a>
   return (
     <Link
       key={section.id}
