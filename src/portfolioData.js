@@ -627,7 +627,7 @@ const portfolioData = {
   links: [
     {
       ...portfolio_types.ICON_TYPES.RESUME,
-      link: 'https://drive.google.com/file/d/1TeSsqsNpOI3QtdA-86nEfs4M6WwNNvoL/view?usp=sharing'
+      link: 'https://drive.google.com/file/d/1sfQFGkLdY2JaOpWZlr9EHOiE3DNL9uwc/view?usp=sharing'
     },
     {
       ...portfolio_types.ICON_TYPES.GITHUB,
