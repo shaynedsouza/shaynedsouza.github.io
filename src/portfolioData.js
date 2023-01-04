@@ -619,11 +619,11 @@ const jobs =[
 const portfolioData = {
 
   // My Profile Data
-  title: 'Gourav Acharya',
-  subtitle: 'I tell stories. Currently through games.',
-  location:"Santa Ana, California",
-  visastatus:"On H1B",
-  email:"gouravacharya19@gmail.com",
+  title: 'Shayne Dsouza',
+  subtitle: 'Game developer, professional bathroom singer.',
+  location:"Mumbai, India",
+  visastatus:"Freelancer",
+  email:"shayneneildsouza@gmail.com",
   links: [
     {
       ...portfolio_types.ICON_TYPES.RESUME,
@@ -631,11 +631,11 @@ const portfolioData = {
     },
     {
       ...portfolio_types.ICON_TYPES.GITHUB,
-      link: 'https://www.github.com/kvoththebloodless'
+      link: 'https://github.com/shaynedsouza'
     },
     {
       ...portfolio_types.ICON_TYPES.LINKEDIN,
-      link: 'https://www.linkedin.com/in/gourav-acharya/'
+      link: 'https://www.linkedin.com/in/shayne-dsouza-284755134/'
     }
   ],
 
