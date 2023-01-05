@@ -452,12 +452,16 @@ const jobs =[
         ]
       },
       {
-        title:"Shortcut fall",
+        title:"Gif from Gifer",
         image:{link:"https://i.gifer.com/3dBC.gif"}
       },
       {
-        title:"Test gif",
+        title:"Gif from github",
         image:{link:"https://github.com/shaynedsouza/PortfolioMedia/blob/main/underDOGS/a.gif"}
+      },
+      {
+        title:"Gif2 from drive",
+        image:{link:"https://drive.google.com/file/d/1NywH5-cT4RUnMtO8u1KTUbg6px8OKw2C/view?usp=share_link"}
       },
       // {
       // title: "Dev Tasks in Brief",
