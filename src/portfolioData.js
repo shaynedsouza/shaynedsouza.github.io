@@ -453,7 +453,7 @@ const jobs =[
       },
       {
         title:"Shortcut fall",
-        image:{link:"https://github.com/shaynedsouza/PortfolioMedia/blob/main/underDOGS/ShortcutFall.gif?raw=true"}
+        image:{link:"https://i.gifer.com/3dBC.gif"}
       },
       // {
       // title: "Dev Tasks in Brief",
