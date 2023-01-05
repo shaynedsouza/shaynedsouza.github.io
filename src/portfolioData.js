@@ -421,17 +421,17 @@ const blogs =
 const jobs =[
   {
     id: 'appetizer',
-    time: "06/2020-12/2020",
-    team: "Gourav Acharya, Unnamed Developer",
+    time: "2020-2021",
+    team: "Shayne Dsouza with a 2D artist",
     image: {
       link: 'https://appetizermobile.com/wp-content/uploads/2016/01/AppetizerMobile-logo_dark.png'
     },
 
     //Grid Data for home page
-    title: 'Unity Developer Intern',
+    title: 'Unity Developer at underDOGS',
     span: 1,
     externallink: "/job/appetizer",
-    description: 'Mask Yourself was the offical companion app of The Masked Singer® show on Fox.',
+    description: 'Made various prototypes for hyper casual games.',
 
     // Grid Data for Detail Project Page
     sections: [
@@ -439,63 +439,61 @@ const jobs =[
       
       {
         
-        title: 'As unity developer intern I was given the impossible task of solely developing the whole app from scratch within 3 months for Android, IOS and WebGL!'
+        title: 'The company\'s target was to create around 3 prototypes per month and hence quick implementation of various ideas was essential.'
 
       },
       {
         title:'Made using',
         list: [
       
-            {label: 'Unity'},
-            {label: 'Firebase'},
-            {label: 'Javascript'},
-            {label: 'html'},
-            {label: 'css'}
+            {label: 'Unity'}
+            // {label: 'html'},
+            // {label: 'css'}
         ]
       },
       {
-        title:"Mask Yourself was released in 2020!",
-        image:{link:"https://github.com/kvoththebloodless/MediaDump/blob/master/MaskYourself/mask3.gif?raw=true"}
+        title:"Shortcut fall",
+        image:{link:"https://github.com/shaynedsouza/PortfolioMedia/blob/main/underDOGS/ShortcutFall.gif?raw=true"}
       },
-      {
-      title: "Dev Tasks in Brief",
-      span :3,
-      list:[
-        {label: "Created a custom javascript plugin that used the browser implementation of camera for the WebGL version of the app."},
-        {label: "Along with all the customized UI screens I also developed an infinite scrollbar custom UI element by extending Unity's UI components. It had animations for scaling and fading too."},
-        {label: "Worked with another developer to setup a pipeline so that new costumes added to the app on a day to day basis were pre-processed for compositing user's head image and creating the costume."},
-        {label: "Optimized the memory usage and added variations for logic and content that allowed app to run similarly across the 3 platforms."},
-        {label: "Developed a workflow where branding was added to the images based on zipcode provided by the player."},
-        {label: "Integrated push message notification,analytics and remote control using Firebase. Remote control allowed app to be in maintainance mode when needed."},
-        {label: "Provided live hotfixes to get the app working for the Launch event."},
-        {label: "Deployed the app to AppStore, PlayStore and to Fox's official Mask Yourself Website."}
-      ],
-      tweet:"1339259774504902656",
-      },
-      {span:1,
-       tweet:"1331689113943240704"
-      },
-      { span:2,
-        title: "Mask yourself advt.",
-        video:{
-          link:"https://www.youtube.com/embed/Zn7_0jN12cs" 
-        }
-      }
+      // {
+      // title: "Dev Tasks in Brief",
+      // span :3,
+      // list:[
+      //   {label: "Created a custom javascript plugin that used the browser implementation of camera for the WebGL version of the app."},
+      //   {label: "Along with all the customized UI screens I also developed an infinite scrollbar custom UI element by extending Unity's UI components. It had animations for scaling and fading too."},
+      //   {label: "Worked with another developer to setup a pipeline so that new costumes added to the app on a day to day basis were pre-processed for compositing user's head image and creating the costume."},
+      //   {label: "Optimized the memory usage and added variations for logic and content that allowed app to run similarly across the 3 platforms."},
+      //   {label: "Developed a workflow where branding was added to the images based on zipcode provided by the player."},
+      //   {label: "Integrated push message notification,analytics and remote control using Firebase. Remote control allowed app to be in maintainance mode when needed."},
+      //   {label: "Provided live hotfixes to get the app working for the Launch event."},
+      //   {label: "Deployed the app to AppStore, PlayStore and to Fox's official Mask Yourself Website."}
+      // ],
+      // tweet:"1339259774504902656",
+      // },
+      // {span:1,
+      //  tweet:"1331689113943240704"
+      // },
+      // { span:2,
+      //   title: "Mask yourself advt.",
+      //   video:{
+      //     link:"https://www.youtube.com/embed/Zn7_0jN12cs" 
+      //   }
+      // }
     ]
   },
   {
     id: 'summitvr',
-    time: "Dec 2020-July 2022",
-    team: "Gourav Acharya, Jill Wallitschek, Aaron Lau, Thomas Vause",
+    time: "2021-2022",
+    team: "Shayne Dsouza as lead developer with 3 other Unity, React developers",
     image: {
       link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/SciVista/Summitvrlogo.gif?raw=true'
     },
 
     //Grid Data for home page
-    title: 'Unity Developer at Scivista',
+    title: 'Unity Developer at Zeus Learning',
     span: 1,
     externallink: "/job/summitvr",
-    description: 'SummitVR is a VR based data visualization software that allows collaboration and contains a family of tools to provide a high utility workflow',
+    description: 'Worked as a lead developer on a project which promotes learning through games, maintenance of existing games and an augmented reality (AR) app.',
 
     // Grid Data for Detail Project Page
     sections: [
@@ -503,7 +501,7 @@ const jobs =[
       
       {
         
-        title: 'As unity developer my primary work was in creation of various widgets, systems and the biggest addition which was the DLC management system.'
+        title: 'Learning through games was the idea. The game I worked on was built for WebGL which required to store a user\'s data in a database and resume the session, the next time they logged in.'
 
       },
       {
@@ -511,10 +509,8 @@ const jobs =[
         list: [
       
             {label: 'Unity'},
-            {label: 'Angular'},
-            {label: 'AWS stack'},
-            {label: 'PostgreSQL'},
-            {label: 'Python'}
+            {label: 'React'},
+            {label: 'MySQL'}
          
         ]
       },
