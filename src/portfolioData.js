@@ -590,7 +590,7 @@ const jobs =[
         }
       },
       {
-        span: 1, 
+        span: 2, 
         title:"Gif2",
         image:{
           link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/ZeusLearning/DoIHaveARight2.gif"
