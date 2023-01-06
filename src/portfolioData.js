@@ -452,16 +452,76 @@ const jobs =[
         ]
       },
       {
-        title:"Gif from Gifer",
-        image:{link:"https://i.gifer.com/3dBC.gif"}
+        title:"Action Figurine",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/ActionFigurine.gif"}
       },
       {
-        title:"Gif from github",
-        image:{link:"https://github.com/shaynedsouza/PortfolioMedia/blob/main/underDOGS/a.gif"}
+        title:"Bellow rush",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/BellowRush.gif"}
       },
       {
-        title:"Gif2 from drive",
-        image:{link:"https://drive.google.com/file/d/1NywH5-cT4RUnMtO8u1KTUbg6px8OKw2C/view?usp=share_link"}
+        title:"Burst mania",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/BurstMania.gif"}
+      },  
+      {
+        title:"Car raise",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/CarRaise.gif"}
+      },      
+      { 
+        title:"Clothes run",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/ClothesRun.gif"}
+      },
+      {
+        title:"Crowd follow",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/CrowdFollow.gif"}
+      },
+      {
+        title:"Hole in the wall",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/Hole_In_The_Wall.gif"}
+      },
+      {
+        title:"Imposter fall",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/ImpostersFall.gif"}
+      },
+      {
+        title:"Master push",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/MasterPush.gif"}
+      },
+      {
+        title:"Meteor multiplier",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/MeteorMultiplier.gif"}
+      },
+      {
+        title:"Open the lane",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/OpenTheLane.gif"}
+      },
+      {
+        title:"Particle flip",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/Particle_Flip.gif"}
+      },
+      {
+        title:"Poster reveal",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/PosterReveal.gif"}
+      },
+      {
+        title:"Race wars",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/Race_Wars.gif"}
+      },
+      {
+        title:"Shortcut fall",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/ShortcutFall.gif"}
+      },
+      {
+        title:"Slice infinite",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/Slice_Infinite.gif"}
+      },
+      {
+        title:"Slice",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/Slice.gif"}
+      },
+      {
+        title:"Titan hand",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/TitanHand.gif"}
       },
       // {
       // title: "Dev Tasks in Brief",
@@ -524,24 +584,18 @@ const jobs =[
       },
       {
         span: 2, 
+        title:"Gif",
         image: {
-          link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/SciVista/Summitvrlogo.gif?raw=true'
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/ZeusLearning/DoIHaveARight1.gif'
         }
       },
       {
         span: 1, 
-        title:"The DLC Management system helped deliver new environments in the form of assetbundles that get cached and improved loading times by 70% [Click on the picture to see in full]",
+        title:"Gif2",
         image:{
-          link:"https://github.com/kvoththebloodless/MediaDump/blob/master/SciVista/environments.JPG?raw=true"
+          link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/ZeusLearning/DoIHaveARight2.gif"
         }
         
-      },
-      {
-        span: 2, 
-        title: "HelperText System: Helped display points of interest around a virtual room and the controller itself",
-        image: {
-          link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/SciVista/helpertext.gif?raw=true'
-        }
       },
       {
       title: "Features of the HelperText System",
@@ -551,48 +605,6 @@ const jobs =[
         {label: "Had a Data Driven setup where a JSON file of tags and information to display for objects of that type were fetched and localized and displayed when the player needed help"}
       ]
       },
-      {span:2,
-        title: "Static Lobby Space: Developed the mechanics for movement and interaction in a static space with an infinite space inside it.",
-        image:{
-          link:"https://github.com/kvoththebloodless/MediaDump/blob/master/SciVista/lobbyspace.gif?raw=true"
-        }
-      },
-      { span:2,
-        title: "Features of Static Lobby Space",
-        list:[
-          {label: "The movement was carried out by pulling youself around the room"},
-          {label: "A ball of infinite space lay in the middle which was the workspace."},
-          {label: "Once you click the force field you enter the infinite space and collaborators outside in the static space still see you as a small player working."}
-        ]
-      },
-      {
-        span: 2, 
-        title: "QuickActionWidget: Made a widget wheel which helps cache your top most used widgets and allows you to quickly spawn them",
-        image: {
-          link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/SciVista/quickaction.gif?raw=true'
-        }
-      },
-      {
-        span: 2, 
-        title: "SharedWebBrowserWidget: Developed a widget that allows you to have a personal web browser and also stream its contents to the rest of the room",
-        image: {
-          link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/SciVista/webbrowser.gif?raw=true'
-        }
-      },
-      {
-        title: "WebBrowserWidget work breakdown",
-        span :2,
-        list:[
-          {label: "Created the widget on Unity side so that one could search for a webpage and also scale the resolution."},
-          {label: "Setup a socket streaming server that worked with sessions and would be responsible for streaming to all clients in a session"}
-        ]
-        },
-        { span:2,
-          title: "I integrated Stripe Payment into the platform to commercialize the product as a subscription service[Click to expanded view]",
-          image:{
-            link: "https://raw.githubusercontent.com/kvoththebloodless/MediaDump/master/SciVista/subscription.JPG"
-          }
-        },
       {
         span:1,
           title: "I also reworked the REST API using flask and PostgreSQL and separated dev from prod servers",
