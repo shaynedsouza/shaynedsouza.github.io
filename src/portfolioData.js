@@ -457,6 +457,12 @@ const jobs =[
         image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/ActionFigurine.gif"}
       },
       {
+        span:2,
+        title:"Barricade Builder",
+        description:"",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/BarricadeBuilder.gif"}
+      },
+      {
         title:"Bellow rush",
         image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/BellowRush.gif"}
       },
@@ -494,12 +500,13 @@ const jobs =[
         image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/MeteorMultiplier.gif"}
       },
       {
-        title:"Open the lane",
-        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/OpenTheLane.gif"}
+        span:2,
+        title:"Snack factory",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/SnackFactory.gif"}
       },
       {
-        title:"Particle flip",
-        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/Particle_Flip.gif"}
+        title:"Slice",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/Slice.gif"}
       },
       {
         title:"Poster reveal",
@@ -509,21 +516,36 @@ const jobs =[
         title:"Race wars",
         image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/Race_Wars.gif"}
       },
+     
       {
+        span:2,
+        title:"Infinite digger",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/InfiniteDigger.gif"}
+      },
+
+      {
+        span:2,
         title:"Shortcut fall",
         image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/ShortcutFall.gif"}
+      },
+      {
+        title:"Titan hand",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/TitanHand.gif"}
+      },
+
+
+      {
+        title:"Open the lane",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/OpenTheLane.gif"}
       },
       {
         title:"Slice infinite",
         image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/Slice_Infinite.gif"}
       },
       {
-        title:"Slice",
-        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/Slice.gif"}
-      },
-      {
-        title:"Titan hand",
-        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/TitanHand.gif"}
+        span:2,
+        title:"Particle flip",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/Particle_Flip.gif"}
       },
       // {
       // title: "Dev Tasks in Brief",
