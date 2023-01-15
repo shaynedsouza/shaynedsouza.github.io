@@ -421,11 +421,76 @@ const blogs =
 ]
 
 const jobs =[
+  
+  {
+    id: 'Freelance1',
+    time: "2019-2020",
+    team: "Shayne Dsouza with various individuals.",
+    image: {link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance1/Freelance.png'},
+
+    //Grid Data for home page
+    title: 'Unity Developer on hire',
+    span: 1,
+    externallink: "/job/Freelance1",
+    description: 'Worked on developing hyper-casual game prototypes.',
+
+    // Grid Data for Detail Project Page
+    sections: [
+      {
+        title:'Made using',
+        list: [
+      
+            {label: 'Unity'}
+            // {label: 'html'},
+            // {label: 'css'}
+        ]
+      },
+
+
+
+      {
+        title:"Player throw",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance1/PlayerThrow.gif"}
+      },
+      {
+        title:"Slice",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance1/Slice.gif"}
+      },
+
+      {
+        span:2,
+        title:"Flight rush",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance1/FlightRush.gif"}
+      },
+      {
+        title:"Hole in the wall",
+        list:[{label:'Made using spring joints.'}],
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance1/Hole_In_The_Wall.gif"}
+      },
+      {
+        span:2,
+
+        title:"Slice infinite",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance1/Slice_Infinite.gif"}
+      },
+      {
+        title:"Race wars",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance1/Race_Wars.gif"}
+      },
+      {
+        title:"Particle flip",
+        list:[{label:'Made using Obi fluid to increase performance.'}],
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance1/ParticleFlip.gif"}
+      },
+
+    ]
+  },
+  
   {
     id: 'underDOGS',
     time: "2020-2021",
     team: "Shayne Dsouza with a 2D artist",
-    image: {link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Images/underDOGS/underDOGS.png'},
+    image: {link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/underDOGS.png'},
 
     //Grid Data for home page
     title: 'Unity Developer at underDOGS',
@@ -473,6 +538,11 @@ const jobs =[
       {
         title:"Car raise",
         image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/CarRaise.gif"}
+      },
+      {
+        span:2,
+        title:"Snack factory",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/SnackFactory.gif"}
       },      
       { 
         title:"Clothes run",
@@ -484,13 +554,11 @@ const jobs =[
         image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/CrowdFollow.gif"}
       },
       {
-        title:"Hole in the wall",
-        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/Hole_In_The_Wall.gif"}
+        span:2,
+        title:"Shortcut fall",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/ShortcutFall.gif"}
       },
-      {
-        title:"Imposter fall",
-        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/ImpostersFall.gif"}
-      },
+
       {
         title:"Master push",
         image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/MasterPush.gif"}
@@ -499,85 +567,35 @@ const jobs =[
         title:"Meteor multiplier",
         image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/MeteorMultiplier.gif"}
       },
-      {
-        span:2,
-        title:"Snack factory",
-        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/SnackFactory.gif"}
-      },
-      {
-        title:"Slice",
-        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/Slice.gif"}
-      },
+
       {
         title:"Poster reveal",
         image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/PosterReveal.gif"}
       },
       {
-        title:"Race wars",
-        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/Race_Wars.gif"}
+        title:"Imposter fall",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/ImpostersFall.gif"}
       },
-     
-      {
-        span:2,
-        title:"Infinite digger",
-        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/InfiniteDigger.gif"}
-      },
-
-      {
-        span:2,
-        title:"Shortcut fall",
-        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/ShortcutFall.gif"}
-      },
-      {
-        title:"Titan hand",
-        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/TitanHand.gif"}
-      },
-
-
       {
         title:"Open the lane",
         image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/OpenTheLane.gif"}
       },
       {
-        title:"Slice infinite",
-        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/Slice_Infinite.gif"}
+        span:2,
+        title:"Infinite digger",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/InfiniteDigger.gif"}
       },
       {
-        span:2,
-        title:"Particle flip",
-        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/Particle_Flip.gif"}
-      },
-      // {
-      // title: "Dev Tasks in Brief",
-      // span :3,
-      // list:[
-      //   {label: "Created a custom javascript plugin that used the browser implementation of camera for the WebGL version of the app."},
-      //   {label: "Along with all the customized UI screens I also developed an infinite scrollbar custom UI element by extending Unity's UI components. It had animations for scaling and fading too."},
-      //   {label: "Worked with another developer to setup a pipeline so that new costumes added to the app on a day to day basis were pre-processed for compositing user's head image and creating the costume."},
-      //   {label: "Optimized the memory usage and added variations for logic and content that allowed app to run similarly across the 3 platforms."},
-      //   {label: "Developed a workflow where branding was added to the images based on zipcode provided by the player."},
-      //   {label: "Integrated push message notification,analytics and remote control using Firebase. Remote control allowed app to be in maintainance mode when needed."},
-      //   {label: "Provided live hotfixes to get the app working for the Launch event."},
-      //   {label: "Deployed the app to AppStore, PlayStore and to Fox's official Mask Yourself Website."}
-      // ],
-      // tweet:"1339259774504902656",
-      // },
-      // {span:1,
-      //  tweet:"1331689113943240704"
-      // },
-      // { span:2,
-      //   title: "Mask yourself advt.",
-      //   video:{
-      //     link:"https://www.youtube.com/embed/Zn7_0jN12cs" 
-      //   }
-      // }
+        title:"Titan hand",
+        image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/underDOGS/TitanHand.gif"}
+      }
     ]
   },
   {
     id: 'ZeusLearning',
     time: "2021-2022",
     team: "Shayne Dsouza as lead developer with 3 other Unity, NodeJS developers",
-    image: {link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Images/ZeusLearning/ZeusLearning.png'},
+    image: {link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/ZeusLearning/ZeusLearning.png'},
 
     //Grid Data for home page
     title: 'Unity Developer at Zeus Learning',
@@ -650,15 +668,15 @@ const jobs =[
   },
 
   {
-    id: 'Freelance',
+    id: 'Freelance2',
     time: "2022-current",
     team: "Shayne Dsouza with various individuals.",
-    image: {link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Images/Freelance/Freelance.png'},
+    image: {link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance1/Freelance.png'},
 
     //Grid Data for home page
     title: 'Unity Developer on hire',
     span: 1,
-    externallink: "/job/Freelance",
+    externallink: "/job/Freelance2",
     description: 'Worked on bug fixes, re-skinning, integrating Moralis sdk for web3 games, setting up scenes.',
 
     // Grid Data for Detail Project Page
@@ -667,44 +685,133 @@ const jobs =[
       
       {
         
-        title: 'Learning through games was the idea.'
-
-      },
-      {
-        title:'Made using',
+        title: 'Most of the projects were prototypes of web3 games which required users to connect via wallets like Metamask. They were made using:',
         list: [
-      
-            {label: 'Unity'},
-            {label: 'Moralis'}
-        ]
+          {label: 'Unity'},
+          {label: 'Moralis'}
+            ]
       },
+
       {
         span: 2, 
-        title:"Gif",
+        title:"Open world.",
         image: {
-          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/ZeusLearning/DoIHaveARight1.gif'
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance2/Rumblerz1.gif'
         }
       },
       {
         span: 2, 
-        title:"Gif2",
+        title:"Worked on reskinning and animating the characters.",
         image:{
-          link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/ZeusLearning/DoIHaveARight2.gif"
+          link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance2/Rumblerz2.gif"
         }
         
       },
       {
-      title: "Features of the HelperText System",
-      span :2,
-      list:[
-        {label: "Used a gaze based detection system finely tuned to dial in on player's gaze when put on the information button"},
-        {label: "Had a Data Driven setup where a JSON file of tags and information to display for objects of that type were fetched and localized and displayed when the player needed help"}
-      ]
+        span: 2, 
+        title:"Since the above 2D project was built for webGL, textures were compressed so as to save resources. Optimisation was key.",
       },
       {
-        span:1,
-          title: "I also reworked the REST API using flask and PostgreSQL and separated dev from prod servers",
+        span: 2, 
+        title:"Populating data from a database.",
+        image:{
+          link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance2/Lazarus1.gif"
+        }
+        
       },
+
+      {
+        span: 2, 
+        title:"Jumpy jump.",
+        image:{
+          link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance2/Lazarus2.gif"
+        }
+        
+      },
+      {
+        span: 1, 
+        title:"Character selection based on nfts owned by the player.",
+        image:{
+          link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance2/Lazarus3.gif"
+        }
+        
+      },
+      {
+        span: 2, 
+        title:"Worked on player movement.",
+        image:{
+          link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance2/Lazarus4.gif"
+        }
+        
+      },
+      {
+        span: 1, 
+        title:"UI for emoting.",
+        image:{
+          link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance2/Lazarus5.gif"
+        }
+        
+      },
+      {
+        span: 2, 
+        title:"Early level setup.",
+        image:{
+          link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance2/Lazarus6.gif"
+        }
+        
+      },
+      {  
+        title: 'Initially I used Mirror to showcase multiplayer for this project. But later on a multiplayer asset was used to handle various multiplayer issues.'
+      },
+      {
+        span: 2, 
+        title:"The weapon system was an asset which was implemented in the project.",
+        image:{
+          link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance2/Lazarus7.gif"
+        }
+        
+      },
+      {
+        span: 2, 
+        title:"Testing a character in an open world project.",
+        image:{
+          link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance2/Lazarus9.gif"
+        }
+        
+      },
+      {
+        span: 1, 
+        title:"UI reskinning.",
+        image:{
+          link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance2/Lazarus10.gif"
+        }
+      },
+      {
+        span: 1, 
+        title:"Minting an NFT in game.",
+        image:{
+          link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance2/DaisLabs.gif"
+        }
+        
+      },
+      {
+        span: 2, 
+        title:"Character selection.",
+        image:{
+          link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance2/AnimalKart.gif"
+        }
+        
+      },
+      {
+        span: 2, 
+        title:"Worked on the entire level design and optimising the environment since this project was for webGL.",
+        image:{
+          link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/Freelance2/AnimalKart2.gif"
+        }
+        
+      },
+
+
     ]
   }
 
@@ -899,7 +1006,7 @@ const portfolioData = {
       time: "1 week",
       team: "Gourav Acharya, Shayne Dsouza",
       image: {
-        link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/ItsNotReal/inr.JPG?raw=true'
+        link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/ItsNotReal/inr.jpg'
       },
 
       //Grid Data for home page
@@ -928,7 +1035,7 @@ const portfolioData = {
         {
           span: 2, 
           image: {
-            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/ItsNotReal/inrfishline.gif?raw=true'
+            link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/ItsNotReal/inrfishline.gif'
           }
         },
         {
@@ -944,7 +1051,7 @@ const portfolioData = {
       time: "1 week",
       team: "Gourav Acharya, Shayne Dsouza",
       image: {
-        link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwmainscreen.JPG?raw=true'
+        link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/WillWindowsWin/mainscreen.jpg'
       },
 
       //Grid Data for home page
@@ -973,29 +1080,29 @@ const portfolioData = {
         {
           span: 2, 
           image: {
-            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwmainscreen.JPG?raw=true'
+            link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/WillWindowsWin/mainscreen.jpg'
           }
         },
         {
         span:1,
         image:{
-          link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwbill.JPG?raw=true"
+          link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/WillWindowsWin/bill.jpg"
         }
         },
         {
           text:"The trickiest part was getting the sprite mask between the computer screen right so that if there's a gap between the screens, it never seems like will just glitched out.",
-          image:{link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/gap.gif?raw=true"}
+          image:{link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/WillWindowsWin/gap.gif"}
         },
         {
           title:"There was parallax also put into the background and some errors persisted in the back not attacking Will.",
           image:{
-            link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwerror.jpg?raw=true"
+            link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/WillWindowsWin/error.jpg"
           }
         },
         {
           title:"Had a fun final screen",
           image:{
-            link:"https://github.com/kvoththebloodless/MediaDump/blob/master/WillWindowsWin/wwwnevergonna.gif?raw=true"
+            link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/WillWindowsWin/nevergonna.gif"
           }
         }
         ,{
