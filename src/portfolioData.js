@@ -853,7 +853,7 @@ const portfolioData = {
         }
       ],
       image: {
-        link: 'https://img.itch.zone/aW1hZ2UvMTI0Njk5OS83MjY4NDQwLnBuZw==/original/GLRXLU.png'
+        link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/LetsStartAtTheBeginning/GLRXLU.png'
       },
 
       //Grid Data for home page
@@ -874,13 +874,13 @@ const portfolioData = {
         {
           span: 2, 
           image: {
-            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/Lets/letsallred.jpg?raw=true'
+            link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/LetsStartAtTheBeginning/letsallred.jpg'
           }
         },
         {
           span: 2, 
           image: {
-            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/Lets/letscrawlies.gif?raw=true'
+            link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/LetsStartAtTheBeginning/letscrawlies.gif'
           }
         },
         {
@@ -891,13 +891,13 @@ const portfolioData = {
         {
           span: 2, 
           image: {
-            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/Lets/letsdevil.jpg?raw=true'
+            link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/LetsStartAtTheBeginning/letsdevil.jpg'
           }
         },
         {
           span: 2, 
           image: {
-            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/Lets/letseyesred.gif?raw=true'
+            link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/LetsStartAtTheBeginning/letseyesred.gif'
           }
         },
         {
@@ -908,7 +908,7 @@ const portfolioData = {
         {
           span: 2, 
           image: {
-            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/Lets/letsheadturn.gif?raw=true'
+            link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/LetsStartAtTheBeginning/letsheadturn.gif'
           }
         },
 
@@ -950,7 +950,7 @@ const portfolioData = {
       time: "1 week",
       team: "Gourav Acharya, Shayne Dsouza",
       image: {
-        link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/YouAreNotAlone/YNAMENU.jpg?raw=true'
+        link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/YouAreNotAlone/menu.jpg'
       },
 
       //Grid Data for home page
@@ -979,7 +979,7 @@ const portfolioData = {
         {
           span: 2, 
           image: {
-            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/YouAreNotAlone/ynaplatfomring.gif?raw=true'
+            link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/YouAreNotAlone/platfomring.gif'
           }
         },
         {
@@ -990,7 +990,7 @@ const portfolioData = {
         {
           span: 2, 
           image: {
-            link: 'https://github.com/kvoththebloodless/MediaDump/blob/master/YouAreNotAlone/ynabulbeffect.gif?raw=true'
+            link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/YouAreNotAlone/bulbeffect.gif'
           }
         },
         {
