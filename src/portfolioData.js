@@ -933,6 +933,13 @@ const portfolioData = {
             }
           ]
         },
+        { title:"xpgordo walkthrough.",
+        video: {
+          link: 'https://www.youtube.com/embed/2ecRSwjzrjs'
+        },
+        
+        span: 1
+      },
         { title:"JayStudioGaming Reacts!",
           video: {
             link: 'https://www.youtube.com/embed//BiR9WzF13P8'
@@ -940,9 +947,7 @@ const portfolioData = {
           
           span: 2
         },
-        {
-          ...blogs[0]
-        },
+
       ]
     },
     {
@@ -995,10 +1000,8 @@ const portfolioData = {
         },
         {
         title: "Obi rope was also used to carry out some rope cutting and trolley systems."
-        },
-        {
-          ...blogs[1]
-        },
+        }
+
       ]
     },
     {
@@ -1037,13 +1040,8 @@ const portfolioData = {
           image: {
             link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/ItsNotReal/inrfishline.gif'
           }
-        },
-        {
-          ...blogs[2]
-        },
-        {
-          ...blogs[3]
         }
+
       ]
     },
     {
@@ -1105,9 +1103,7 @@ const portfolioData = {
             link:"https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Gifs/PersonalProjects/WillWindowsWin/nevergonna.gif"
           }
         }
-        ,{
-          ...blogs[4]
-        }
+
       ]
     }
   ],
