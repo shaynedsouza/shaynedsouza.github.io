@@ -521,7 +521,7 @@ const jobs = [
   },
 
   {
-    id: 'Parallax Labs',
+    id: 'ParallaxLabs',
     time: "2023-current",
     team: "Shayne Dsouza as XR developer collaborationg with 3D modelers, UI/UX artists, Art directors and other XR developers.",
     image: { link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/parallax_logo.png' },
@@ -552,7 +552,7 @@ const jobs = [
         ]
       },
       {
-        span: 2,
+        span: 1,
         title: "Aligning table",
         image: {
           link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/align_table.gif'
