@@ -524,7 +524,7 @@ const jobs = [
     id: 'Parallax Labs',
     time: "2023-current",
     team: "Shayne Dsouza as XR developer collaborationg with 3D modelers, UI/UX artists, Art directors and other XR developers.",
-    image: { link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ZeusLearning/ZeusLearning.png' },
+    image: { link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/parallax_logo.png' },
 
     //Grid Data for home page
     title: 'Unity Developer at Parallax Labs',
