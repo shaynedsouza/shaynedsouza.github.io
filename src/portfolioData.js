@@ -552,21 +552,33 @@ const jobs = [
         ]
       },
       {
-        span: 1,
+        span: 2,
         title: "Aligning table",
         image: {
           link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/align_table.gif'
         }
       },
-
       {
         span: 2,
-        title: "Aligning table",
+        title: "Placing busbars on the battery module",
         image: {
-          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/align_table_optimized.gif'
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/place_busbar.gif'
         }
       },
-
+      {
+        span: 2,
+        title: "Finding faults on the battery module",
+        image: {
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/finding_faults.gif'
+        }
+      },
+      {
+        span: 1,
+        title: "Battery assemply",
+        image: {
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/battery_assembly.gif'
+        }
+      },
     ]
   }
 
