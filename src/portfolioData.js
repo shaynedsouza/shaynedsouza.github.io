@@ -536,27 +536,63 @@ const jobs = [
     sections: [
 
 
-      {
 
-        title: 'Since Meta does not allow you to read camera data, AR was achieved by marking your table and then augmenting the desired objects on it.'
-
-      },
       {
         title: 'Made using',
         list: [
 
           { label: 'Unity' },
-          // { label: 'NodeJS' },
-          // { label: 'MySQL' }
+          { label: 'Photon' },
+          { label: 'Sentry' },
+          { label: ' Horizon Dashboard' },
+        ]
+      },
+      {
+        span: 3,
+        title: "Tidal Tactics, released on the Horizon store is a ship battle app based on the classic board game. But with a twist!",
+        video: {
+          link: 'https://www.youtube.com/embed/msfh4l6r6-4'
+        }
+      },
+
+      {
+        span: 2,
+        title: "Tiles wrap around the furniture",
+        image: {
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/tile_gen.jpg'
+        }
+      },
+      {
+        title: 'Contributions',
+        span: 2,
+        list: [
+
+          { label: 'Room adaptation from \'Space Setup\'' },
+          { label: 'Procedurally generated tiles to fit on the floor while wrapping around furniture' },
+          { label: 'Dictionary data structure to handle tile index and data associated with it' },
+          { label: 'Colocation for local mutiplayer' },
+          { label: 'Implementated stencil shader for depth effect' },
+          { label: 'Extensive optimisation to run 60fps+ on the Quest 2' },
 
         ]
       },
       {
         span: 2,
-        title: "Aligning table",
+        title: "Stencil effect providing portal like effect and showing depth",
         image: {
-          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/align_table.gif'
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/stencil_effect.jpg'
         }
+      },
+      {
+        span: 2,
+        title: "The development of this project has been a fun one albeit challenging",
+        image: {
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/multiplayer.png'
+        }
+      },
+      {
+        title: 'Battery assembly and inspection',
+        span: 4,
       },
       {
         span: 2,
@@ -567,6 +603,20 @@ const jobs = [
       },
       {
         span: 2,
+        title: "Aligning table",
+        image: {
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/align_table.gif'
+        }
+      },
+
+
+      {
+        title: 'During development of this project, Meta did not allow camera access, hence AR was achieved by marking your table and then augmenting the desired objects on it.',
+        span: 2,
+      },
+
+      {
+        span: 1,
         title: "Finding faults on the battery module",
         image: {
           link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/finding_faults.gif'
@@ -579,9 +629,9 @@ const jobs = [
           link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/battery_assembly.gif'
         }
       },
+
     ]
   }
-
 ]
 const portfolioData = {
 
