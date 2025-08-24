@@ -14,7 +14,7 @@ import { TwitterTweetEmbed } from 'react-twitter-embed';
 import { SectionContainer } from '../common/StyledComponents';
 
 const MyStaggeredTiles = ({ section, iter }) => {
-  const { title, image, list, video, span, externallink,tweet } = section;
+  const { title, image, list, video, span, externallink, tweet, time } = section;
   let [height, setHeight] = useState("px");
 
   const [open, setOpen] = useState(false);
@@ -36,9 +36,16 @@ const MyStaggeredTiles = ({ section, iter }) => {
           }
         }}
       >
+
         {!lodash.isEmpty(title) && (
           <CommonSectionDiv >
             <Text>{title}</Text>
+          </CommonSectionDiv>
+        )}
+
+        {!lodash.isEmpty(time) && (
+          <CommonSectionDiv>
+            <TimeText>{time}</TimeText>
           </CommonSectionDiv>
         )}
 
@@ -75,32 +82,32 @@ const MyStaggeredTiles = ({ section, iter }) => {
             </Modal>
           </CommonSectionDiv>
         )}
-        {!lodash.isEmpty(tweet)&&
-            (<TwitterTweetEmbed
-          tweetId={tweet}/>)
+        {!lodash.isEmpty(tweet) &&
+          (<TwitterTweetEmbed
+            tweetId={tweet} />)
         }
-        
+
       </SectionContainer>
     </StaggeredGridItem >
   )
-    
+
   useEffect(() => {
     setHeight(ref.current.clientHeight + "px")
   }, [])
 
 
- 
-   if(lodash.isEmpty(externallink))
-      return gridpart
-   if(externallink.includes("https"))   
-      return <a href={externallink} style={{textDecoration: 'none', color: "white"}}>
-        {gridpart}
-      </a>
+
+  if (lodash.isEmpty(externallink))
+    return gridpart
+  if (externallink.includes("https"))
+    return <a href={externallink} style={{ textDecoration: 'none', color: "white" }}>
+      {gridpart}
+    </a>
   return (
     <Link
       key={section.id}
       to={externallink}
-      style={{textDecoration: 'none', color: "white"}}
+      style={{ textDecoration: 'none', color: "white" }}
     >
       {gridpart}
     </Link>
@@ -139,6 +146,13 @@ const Text = styled.p`
   font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: 800;
+`;
+
+const TimeText = styled.p`
+  text-align: center;
+  font-size: 0.9em;
+  color: #888;
+  margin: 0.2em 0 0.5em 0;
 `;
 
 const CommonSectionDiv = styled.div`

@@ -127,246 +127,114 @@ const blogs =
   ]
 
 const jobs = [
-
   {
-    id: 'Freelance1',
-    time: "2019-2020",
-    team: "Shayne Dsouza with various individuals.",
-    image: { link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance1/Freelance.png' },
+    id: 'ParallaxLabs',
+    time: "2023-current",
+    team: "Shayne Dsouza as XR developer collaborationg with 3D modelers, UI/UX artists, Art directors and other XR developers.",
+    image: { link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/parallax_logo.png' },
 
     //Grid Data for home page
-    title: 'Unity Developer on hire',
+    title: 'Unity Developer at Parallax Labs',
     span: 1,
-    externallink: "/job/Freelance1",
-    description: 'Worked on developing hyper-casual game prototypes.',
-
-    // Grid Data for Detail Project Page
-    sections: [
-      {
-        title: 'Made using',
-        list: [
-
-          { label: 'Unity' }
-          // {label: 'html'},
-          // {label: 'css'}
-        ]
-      },
-
-
-
-      {
-        title: "Player throw",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance1/PlayerThrow.gif" }
-      },
-      {
-        title: "Slice",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance1/Slice.gif" }
-      },
-
-      {
-        span: 2,
-        title: "Flight rush",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance1/FlightRush.gif" }
-      },
-      {
-        title: "Hole in the wall",
-        list: [{ label: 'Made using spring joints.' }],
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance1/Hole_In_The_Wall.gif" }
-      },
-      {
-        span: 2,
-        title: "Slice infinite",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance1/Slice_Infinite.gif" }
-      },
-      {
-        title: "Race wars",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance1/Race_Wars.gif" }
-      },
-      {
-        title: "Particle flip",
-        list: [{ label: 'Made using Obi fluid to increase performance.' }],
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance1/ParticleFlip.gif" }
-      },
-
-    ]
-  },
-
-  {
-    id: 'underDOGS',
-    time: "2020-2021",
-    team: "Shayne Dsouza with a 2D artist",
-    image: { link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/underDOGS.png' },
-
-    //Grid Data for home page
-    title: 'Unity Developer at underDOGS',
-    span: 1,
-    externallink: "/job/underDOGS",
-    description: 'Made various prototypes for hyper casual games.',
+    externallink: "/job/ParallaxLabs",
+    description: 'Worked as an XR developer on projects for VR, AR and MR as well.',
 
     // Grid Data for Detail Project Page
     sections: [
 
 
-      {
 
-        title: 'The company\'s target was to create around 3 prototypes per month and hence quick implementation of various ideas was essential.'
-
-      },
-      {
-        title: 'Made using',
-        list: [
-
-          { label: 'Unity' }
-          // {label: 'html'},
-          // {label: 'css'}
-        ]
-      },
-      {
-        title: "Action Figurine",
-        description: "Add the correct body part, rotate and snap it to the required joint.",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/ActionFigurine.gif" }
-      },
-      {
-        span: 2,
-        title: "Barricade Builder",
-        description: "",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/BarricadeBuilder.gif" }
-      },
-      {
-        title: "Bellow rush",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/BellowRush.gif" }
-      },
-      {
-        title: "Burst mania",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/BurstMania.gif" }
-      },
-      {
-        title: "Car raise",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/CarRaise.gif" }
-      },
-      {
-        span: 2,
-        title: "Snack factory",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/SnackFactory.gif" }
-      },
-      {
-        title: "Clothes run",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/ClothesRun.gif" }
-      },
-      {
-        span: 2,
-        title: "Crowd follow",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/CrowdFollow.gif" }
-      },
-      {
-        span: 2,
-        title: "Shortcut fall",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/ShortcutFall.gif" }
-      },
-
-      {
-        title: "Master push",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/MasterPush.gif" }
-      },
-      {
-        title: "Meteor multiplier",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/MeteorMultiplier.gif" }
-      },
-
-      {
-        title: "Poster reveal",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/PosterReveal.gif" }
-      },
-      {
-        title: "Imposter fall",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/ImpostersFall.gif" }
-      },
-      {
-        title: "Open the lane",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/OpenTheLane.gif" }
-      },
-      {
-        span: 2,
-        title: "Infinite digger",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/InfiniteDigger.gif" }
-      },
-      {
-        title: "Titan hand",
-        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/TitanHand.gif" }
-      }
-    ]
-  },
-  {
-    id: 'ZeusLearning',
-    time: "2021-2022",
-    team: "Shayne Dsouza as lead developer with 3 other Unity, NodeJS developers",
-    image: { link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ZeusLearning/ZeusLearning.png' },
-
-    //Grid Data for home page
-    title: 'Unity Developer at Zeus Learning',
-    span: 1,
-    externallink: "/job/ZeusLearning",
-    description: 'Worked as a lead developer on a project which promotes learning through games, maintenance of existing games and an augmented reality (AR) app.',
-
-    // Grid Data for Detail Project Page
-    sections: [
-
-
-      {
-
-        title: 'Learning through interaction was the idea. I uwas tasked with handling the gaming aspect and collaborate with NodeJS developers for the backend.'
-
-      },
       {
         title: 'Made using',
         list: [
 
           { label: 'Unity' },
-          { label: 'NodeJS' },
-          { label: 'MySQL' }
+          { label: 'Photon' },
+          { label: 'Sentry' },
+          { label: ' Horizon Dashboard' },
+        ]
+      },
+      {
+        span: 3,
+        title: "Tidal Tactics, released on the Horizon store is a ship battle app based on the classic board game. But with a twist!",
+        video: {
+          link: 'https://www.youtube.com/embed/msfh4l6r6-4'
+        }
+      },
+
+      {
+        span: 2,
+        title: "Tiles wrap around the furniture",
+        image: {
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/tile_gen.jpg'
+        }
+      },
+      {
+        title: 'Contributions',
+        span: 2,
+        list: [
+
+          { label: 'Room adaptation from \'Space Setup\'' },
+          { label: 'Procedurally generated tiles to fit on the floor while wrapping around furniture' },
+          { label: 'Dictionary data structure to handle tile index and data associated with it' },
+          { label: 'Colocation for local mutiplayer' },
+          { label: 'Implementated stencil shader for depth effect' },
+          { label: 'Extensive optimisation to run 60fps+ on the Quest 2' },
 
         ]
       },
       {
         span: 2,
-        title: "The project was built for WebGL which required to store a user\'s data in a database and resume the session, everytime they logged in.",
+        title: "Stencil effect providing portal like effect and showing depth",
         image: {
-          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ZeusLearning/DoIHaveARight_Login.gif'
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/stencil_effect.jpg'
         }
+      },
+      {
+        span: 2,
+        title: "The development of this project has been a fun one albeit challenging",
+        image: {
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/multiplayer.png'
+        }
+      },
+      {
+        title: 'Battery assembly and inspection',
+        span: 4,
+      },
+      {
+        span: 2,
+        title: "Placing busbars on the battery module",
+        image: {
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/place_busbar.gif'
+        }
+      },
+      {
+        span: 2,
+        title: "Aligning table",
+        image: {
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/align_table.gif'
+        }
+      },
+
+
+      {
+        title: 'During development of this project, Meta did not allow camera access, hence AR was achieved by marking your table and then augmenting the desired objects on it.',
+        span: 2,
       },
 
       {
         span: 1,
-        title: "The window view from inside and out of the building were made using render textures to optimise the project and save resources.",
+        title: "Finding faults on the battery module",
         image: {
-          link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ZeusLearning/DoIHaveARight_Camera.gif"
-        }
-
-      },
-
-
-
-
-      {
-        title: "Tutorial",
-        span: 2,
-        image: {
-          link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ZeusLearning/DoIHaveARight1_Tutorial.gif",
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/finding_faults.gif'
         }
       },
-
       {
         span: 1,
-        title: "The project was built for WebGL which required to store a user\'s data in a database and resume the session, everytime they logged in.",
-      },
-
-      {
-        span: 2,
-        title: "Gameplay",
+        title: "Battery assemply",
         image: {
-          link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ZeusLearning/DoIHaveARight_Gameplay.gif"
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/battery_assembly.gif'
         }
-
       },
 
     ]
@@ -374,7 +242,7 @@ const jobs = [
 
   {
     id: 'Freelance2',
-    time: "2022-current",
+    time: "2022-2023",
     team: "Shayne Dsouza with various individuals.",
     image: { link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance1/Freelance.png' },
 
@@ -520,118 +388,250 @@ const jobs = [
     ]
   },
 
+
   {
-    id: 'ParallaxLabs',
-    time: "2023-current",
-    team: "Shayne Dsouza as XR developer collaborationg with 3D modelers, UI/UX artists, Art directors and other XR developers.",
-    image: { link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/parallax_logo.png' },
+    id: 'ZeusLearning',
+    time: "2021-2022",
+    team: "Shayne Dsouza as lead developer with 3 other Unity, NodeJS developers",
+    image: { link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ZeusLearning/ZeusLearning.png' },
 
     //Grid Data for home page
-    title: 'Unity Developer at Parallax Labs',
+    title: 'Unity Developer at Zeus Learning',
     span: 1,
-    externallink: "/job/ParallaxLabs",
-    description: 'Worked as an XR developer on projects for VR, AR and MR as well.',
+    externallink: "/job/ZeusLearning",
+    description: 'Worked as a lead developer on a project which promotes learning through games, maintenance of existing games and an augmented reality (AR) app.',
 
     // Grid Data for Detail Project Page
     sections: [
 
 
+      {
 
+        title: 'Learning through interaction was the idea. I uwas tasked with handling the gaming aspect and collaborate with NodeJS developers for the backend.'
+
+      },
       {
         title: 'Made using',
         list: [
 
           { label: 'Unity' },
-          { label: 'Photon' },
-          { label: 'Sentry' },
-          { label: ' Horizon Dashboard' },
+          { label: 'NodeJS' },
+          { label: 'MySQL' }
+
         ]
       },
       {
-        span: 3,
-        title: "Tidal Tactics, released on the Horizon store is a ship battle app based on the classic board game. But with a twist!",
-        video: {
-          link: 'https://www.youtube.com/embed/msfh4l6r6-4'
+        span: 2,
+        title: "The project was built for WebGL which required to store a user\'s data in a database and resume the session, everytime they logged in.",
+        image: {
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ZeusLearning/DoIHaveARight_Login.gif'
         }
       },
 
       {
-        span: 2,
-        title: "Tiles wrap around the furniture",
+        span: 1,
+        title: "The window view from inside and out of the building were made using render textures to optimise the project and save resources.",
         image: {
-          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/tile_gen.jpg'
+          link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ZeusLearning/DoIHaveARight_Camera.gif"
+        }
+
+      },
+
+
+
+
+      {
+        title: "Tutorial",
+        span: 2,
+        image: {
+          link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ZeusLearning/DoIHaveARight1_Tutorial.gif",
         }
       },
+
       {
-        title: 'Contributions',
+        span: 1,
+        title: "The project was built for WebGL which required to store a user\'s data in a database and resume the session, everytime they logged in.",
+      },
+
+      {
         span: 2,
+        title: "Gameplay",
+        image: {
+          link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ZeusLearning/DoIHaveARight_Gameplay.gif"
+        }
+
+      },
+
+    ]
+  },
+  {
+    id: 'underDOGS',
+    time: "2020-2021",
+    team: "Shayne Dsouza with a 2D artist",
+    image: { link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/underDOGS.png' },
+
+    //Grid Data for home page
+    title: 'Unity Developer at underDOGS',
+    span: 1,
+    externallink: "/job/underDOGS",
+    description: 'Made various prototypes for hyper casual games.',
+
+    // Grid Data for Detail Project Page
+    sections: [
+
+
+      {
+
+        title: 'The company\'s target was to create around 3 prototypes per month and hence quick implementation of various ideas was essential.'
+
+      },
+      {
+        title: 'Made using',
         list: [
 
-          { label: 'Room adaptation from \'Space Setup\'' },
-          { label: 'Procedurally generated tiles to fit on the floor while wrapping around furniture' },
-          { label: 'Dictionary data structure to handle tile index and data associated with it' },
-          { label: 'Colocation for local mutiplayer' },
-          { label: 'Implementated stencil shader for depth effect' },
-          { label: 'Extensive optimisation to run 60fps+ on the Quest 2' },
-
+          { label: 'Unity' }
+          // {label: 'html'},
+          // {label: 'css'}
         ]
       },
       {
-        span: 2,
-        title: "Stencil effect providing portal like effect and showing depth",
-        image: {
-          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/stencil_effect.jpg'
-        }
+        title: "Action Figurine",
+        description: "Add the correct body part, rotate and snap it to the required joint.",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/ActionFigurine.gif" }
       },
       {
         span: 2,
-        title: "The development of this project has been a fun one albeit challenging",
-        image: {
-          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/multiplayer.png'
-        }
+        title: "Barricade Builder",
+        description: "",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/BarricadeBuilder.gif" }
       },
       {
-        title: 'Battery assembly and inspection',
-        span: 4,
+        title: "Bellow rush",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/BellowRush.gif" }
+      },
+      {
+        title: "Burst mania",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/BurstMania.gif" }
+      },
+      {
+        title: "Car raise",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/CarRaise.gif" }
       },
       {
         span: 2,
-        title: "Placing busbars on the battery module",
-        image: {
-          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/place_busbar.gif'
-        }
+        title: "Snack factory",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/SnackFactory.gif" }
+      },
+      {
+        title: "Clothes run",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/ClothesRun.gif" }
       },
       {
         span: 2,
-        title: "Aligning table",
-        image: {
-          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/align_table.gif'
-        }
+        title: "Crowd follow",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/CrowdFollow.gif" }
+      },
+      {
+        span: 2,
+        title: "Shortcut fall",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/ShortcutFall.gif" }
+      },
+
+      {
+        title: "Master push",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/MasterPush.gif" }
+      },
+      {
+        title: "Meteor multiplier",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/MeteorMultiplier.gif" }
+      },
+
+      {
+        title: "Poster reveal",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/PosterReveal.gif" }
+      },
+      {
+        title: "Imposter fall",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/ImpostersFall.gif" }
+      },
+      {
+        title: "Open the lane",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/OpenTheLane.gif" }
+      },
+      {
+        span: 2,
+        title: "Infinite digger",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/InfiniteDigger.gif" }
+      },
+      {
+        title: "Titan hand",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/underDOGS/TitanHand.gif" }
+      }
+    ]
+  },
+  {
+    id: 'Freelance1',
+    time: "2019-2020",
+    team: "Shayne Dsouza with various individuals.",
+    image: { link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance1/Freelance.png' },
+
+    //Grid Data for home page
+    title: 'Unity Developer on hire',
+    span: 1,
+    externallink: "/job/Freelance1",
+    description: 'Worked on developing hyper-casual game prototypes.',
+
+    // Grid Data for Detail Project Page
+    sections: [
+      {
+        title: 'Made using',
+        list: [
+
+          { label: 'Unity' }
+          // {label: 'html'},
+          // {label: 'css'}
+        ]
       },
 
 
+
       {
-        title: 'During development of this project, Meta did not allow camera access, hence AR was achieved by marking your table and then augmenting the desired objects on it.',
-        span: 2,
+        title: "Player throw",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance1/PlayerThrow.gif" }
+      },
+      {
+        title: "Slice",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance1/Slice.gif" }
       },
 
       {
-        span: 1,
-        title: "Finding faults on the battery module",
-        image: {
-          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/finding_faults.gif'
-        }
+        span: 2,
+        title: "Flight rush",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance1/FlightRush.gif" }
       },
       {
-        span: 1,
-        title: "Battery assemply",
-        image: {
-          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/battery_assembly.gif'
-        }
+        title: "Hole in the wall",
+        list: [{ label: 'Made using spring joints.' }],
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance1/Hole_In_The_Wall.gif" }
+      },
+      {
+        span: 2,
+        title: "Slice infinite",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance1/Slice_Infinite.gif" }
+      },
+      {
+        title: "Race wars",
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance1/Race_Wars.gif" }
+      },
+      {
+        title: "Particle flip",
+        list: [{ label: 'Made using Obi fluid to increase performance.' }],
+        image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance1/ParticleFlip.gif" }
       },
 
     ]
   }
+
 ]
 const portfolioData = {
 
