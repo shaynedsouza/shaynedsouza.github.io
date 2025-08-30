@@ -780,7 +780,7 @@ const portfolioData = {
       },
 
       //Grid Data for home page
-      title: 'You are not alone.',
+      title: 'You are not alone',
       span: 1,
       externallink: "/project/yna",
       description: 'A small prototype to try out light based mechanics.',
@@ -824,6 +824,82 @@ const portfolioData = {
 
         }
 
+      ]
+    },
+    {
+      id: 'notesforthelightless',
+      time: "1 week",
+      team: "Shayne Dsouza, Madhu Priya",
+      image: {
+        link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/PersonalProjects/NotesForTheLightless/img_3.png'
+      },
+
+      //Grid Data for home page
+      title: 'Notes for the lightless',
+      span: 1,
+      externallink: "/project/notesforthelightless",
+      description: 'Pitch estimation based on mic input',
+
+      // Grid Data for Detail Project Page
+      sections: [
+
+
+        {
+          span: 2,
+          title: 'Generosity transends giving and taking',
+          list: [
+
+            { label: 'The player sings into the microphone' },
+            { label: 'Behind the scene, a voice processor detects the pitch' },
+            { label: 'The note is compared to the required note' },
+            { label: 'The entity lights up if successful' },
+
+
+          ]
+        },
+
+        {
+          span: 2,
+          video: {
+            link: 'https://www.youtube.com/embed/6dG6_j9Wsko?si=bxO56k3SRfv3EfEB'
+          }
+        },
+        {
+          title: 'Made using',
+          list: [
+            {
+              label: 'Unity'
+            }
+          ]
+        },
+        {
+          span: 2,
+          image: {
+            link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/PersonalProjects/NotesForTheLightless/img_3.png'
+          }
+        },
+
+        {
+
+          title: '\"It\'s really interesting and unique. The whole premise of it is pretty touching from the start and the poetic signature and undertones are really refreshing especially for the jam." - an impressed game-reviewer',
+        }, {
+          span: 2,
+          image: {
+            link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/PersonalProjects/NotesForTheLightless/img_2.png'
+          }
+        },
+
+
+        {
+          span: 2,
+          image: {
+            link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/PersonalProjects/NotesForTheLightless/img_1.png'
+          }
+        },
+        {
+          span: 2,
+          title: ' "The game is so beautiful! I\'m in love with the art in the intro! And the voiceover! "',
+        },
       ]
     },
     {
