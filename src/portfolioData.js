@@ -89,7 +89,7 @@ const blogs =
       blogsections: [
         {
           blogsectiontitle: "Description",
-          blogsectiontext: "The characters were animated using the \'12 principles of animation\'. Atleast a few of them :D",
+          blogsectiontext: "The characters were animated using the \'12 principles of animation\'. At least a few of them :D",
           bloggridsections: []
         },
         {
@@ -116,7 +116,7 @@ const blogs =
               image: { link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/PersonalProjects/Other/poseidon_2.gif' }
             },
             {
-              title: "In the first gif, I worked on animation and in the second one, drawning and animation was done by me. Hoping that I might one day include this in a future project."
+              title: "In the first gif, I worked on animation and in the second one, drawing and animation was done by me. Hoping that I might one day include this in a future project."
             }
           ]
         }
@@ -130,7 +130,7 @@ const jobs = [
   {
     id: 'ParallaxLabs',
     time: "2023-current",
-    team: "Shayne Dsouza as XR developer collaborationg with 3D modelers, UI/UX artists, Art directors and other XR developers.",
+    team: "Shayne Dsouza as XR developer collaborating with 3D modelers, UI/UX artists, Art directors and other XR developers.",
     image: { link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/parallax_logo.png' },
 
     //Grid Data for home page
@@ -177,8 +177,8 @@ const jobs = [
           { label: 'Room adaptation from \'Space Setup\'' },
           { label: 'Procedurally generated tiles to fit on the floor while wrapping around furniture' },
           { label: 'Dictionary data structure to handle tile index and data associated with it' },
-          { label: 'Colocation for local mutiplayer' },
-          { label: 'Implementated stencil shader for depth effect' },
+          { label: 'Colocation for local multiplayer' },
+          { label: 'Implemented stencil shader for depth effect' },
           { label: 'Extensive optimisation to run 60fps+ on the Quest 2' },
 
         ]
@@ -231,12 +231,58 @@ const jobs = [
       },
       {
         span: 1,
-        title: "Battery assemply",
+        title: "Battery assembly",
         image: {
           link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/battery_assembly.gif'
         }
       },
+      {
+        title: 'Soft skills training for autistic individuals',
+        span: 4,
+      },
+      {
+        span: 2,
+        title: "Grounding technique of blocking sound",
+        image: {
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/autism_ears.gif'
+        }
+      },
+      {
+        span: 2,
+        title: 'This solution aims to empower individuals with autism by providing an immersive experience tailored to the challenges they may face when entering the workforce. ',
+      },
+      {
+        span: 2,
+        title: "Grounding techique of blocking sight",
+        image: {
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/autism_eyes.gif'
+        }
+      },
 
+      {
+        span: 2,
+        title: "Individuals were given choices that they could choose from",
+        image: {
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/autism_image_1.png'
+        }
+      },
+      {
+        title: 'Challenges that autistic individuals may face',
+        span: 2,
+        list: [
+
+          { label: 'Anxiety in Unfamiliar Environments' },
+          { label: 'Social Communication Challenges ' },
+          { label: 'Sensory Sensitivities ' },
+        ]
+      },
+      {
+        span: 2,
+        title: "Social norms were conveyed through actions",
+        image: {
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/autism_image_2.png'
+        }
+      },
     ]
   },
 
@@ -274,7 +320,7 @@ const jobs = [
       },
       {
         span: 2,
-        title: "Worked on reskinning and animating the characters.",
+        title: "Worked on re-skinning and animating the characters.",
         image: {
           link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/Freelance2/Rumblerz2.gif"
         }
@@ -407,7 +453,7 @@ const jobs = [
 
       {
 
-        title: 'Learning through interaction was the idea. I uwas tasked with handling the gaming aspect and collaborate with NodeJS developers for the backend.'
+        title: 'Learning through interaction was the idea. I was tasked with handling the gaming aspect and collaborate with NodeJS developers for the backend.'
 
       },
       {
@@ -846,7 +892,7 @@ const portfolioData = {
 
         {
           span: 2,
-          title: 'Generosity transends giving and taking',
+          title: 'Generosity transcends giving and taking',
           list: [
 
             { label: 'The player sings into the microphone' },
@@ -958,7 +1004,7 @@ const portfolioData = {
 
         {
 
-          title: 'You are Bill, creator of Doors XB OS. You are trapped in your own creation and have to collect  Commando Prompt icons and avoid viruses.'
+          title: 'You are Bill, creator of Doors XB OS. You are trapped in your own creation and have to collect Command Prompt icons and avoid viruses.'
 
         },
         {
@@ -982,11 +1028,11 @@ const portfolioData = {
           }
         },
         {
-          text: "The trickiest part was getting the sprite mask between the computer screen right so that if there's a gap between the screens, it never seems like will just glitched out.",
+          text: "The trickiest part was getting the sprite mask between the computer screen right so that if there's a gap between the screens, it never seems like Will just glitched out.",
           image: { link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/PersonalProjects/WillWindowsWin/gap.gif" }
         },
         {
-          title: "There was parallax also put into the background and some errors persisted in the back not attacking Will.",
+          title: "There was parallax also put into the background and some errors persisted in the back, not attacking Will.",
           image: {
             link: "https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/PersonalProjects/WillWindowsWin/error.jpg"
           }
