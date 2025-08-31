@@ -240,17 +240,7 @@ const jobs = [
         title: 'Soft skills training for autistic individuals',
         span: 4,
       },
-      {
-        span: 2,
-        title: "Grounding technique of blocking sound",
-        image: {
-          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/autism_ears.gif'
-        }
-      },
-      {
-        span: 2,
-        title: 'This solution aims to empower individuals with autism by providing an immersive experience tailored to the challenges they may face when entering the workforce. ',
-      },
+
       {
         span: 2,
         title: "Grounding techique of blocking sight",
@@ -258,7 +248,18 @@ const jobs = [
           link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/autism_eyes.gif'
         }
       },
+      {
+        span: 2,
+        title: 'This solution aims to empower individuals with autism by providing an immersive experience tailored to the challenges they may face when entering the workforce. ',
+      },
 
+      {
+        span: 2,
+        title: "Social norms were conveyed through actions",
+        image: {
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/autism_image_2.png'
+        }
+      },
       {
         span: 2,
         title: "Individuals were given choices that they could choose from",
@@ -278,9 +279,9 @@ const jobs = [
       },
       {
         span: 2,
-        title: "Social norms were conveyed through actions",
+        title: "Grounding technique of blocking sound",
         image: {
-          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/autism_image_2.png'
+          link: 'https://shayne-portfolio-media.s3.ap-south-1.amazonaws.com/ParallaxLabs/autism_ears.gif'
         }
       },
     ]
